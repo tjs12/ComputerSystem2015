@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\classes\grade_3_vacation\csproject2014\computer_experiment\alu.ncd
+OUTFILE=E:\classes\grade_3_vacation\csproject2014\computer_experiment\alu.bit
+FAMILY=Spartan6
+PART=xc6slx100-3fgg676
+WORKINGDIR=E:\classes\grade_3_vacation\csproject2014\computer_experiment
+LICENSE=ISE
+USER_INFO=__0_0_0

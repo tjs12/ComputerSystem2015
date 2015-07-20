@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Thu Jul 03 19:07:58 2014
+# Process ID: 7380
+# Log file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_2/planAhead.log
+# Journal file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/classes/grade_3_vacation/csproject2014/computer_experiment/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

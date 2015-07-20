@@ -1,0 +1,629 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Thu Jul 03 19:51:23 2014
+# Process ID: 7040
+# Log file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_3/planAhead.log
+# Journal file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/classes/grade_3_vacation/csproject2014/computer_experiment/pa.fromNetlist.tcl
+# create_project -name computer_experiment -dir "E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_3" -part xc6slx100fgg676-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/classes/grade_3_vacation/csproject2014/computer_experiment} {ipcore_dir} }
+# add_files [list {ipcore_dir/multiplier.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "cpu.ucf" [current_fileset -constrset]
+Adding file 'E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf' to fileset 'constrs_1'
+# add_files [list {cpu.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx100fgg676-3
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design cpu.ngc ...
+WARNING:NetListWriters:298 - No output is written to cpu.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus phy_mem1/FlashData<15 : 2> on block cpu
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus phy_mem1/Ram2Data<31 : 1> on block cpu
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus phy_mem1/Ram1Data<31 : 0> on block cpu
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file cpu.edif ...
+ngc2edif: Total memory usage is 82408 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/computer_experiment.data/cache/cpu_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_3/computer_experiment.data/cache/cpu_ngc_zx.edif]
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file multiplier.edif ...
+ngc2edif: Total memory usage is 86504 kilobytes
+
+Reading core file 'E:/classes/grade_3_vacation/csproject2014/computer_experiment/ipcore_dir/multiplier.ngc' for (cell view 'multiplier', library 'cpu_lib', file 'cpu.ngc')
+Parsing EDIF File [./planAhead_run_3/computer_experiment.data/cache/multiplier_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_3/computer_experiment.data/cache/multiplier_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'cpu' is not ideal for floorplanning, since the cellview 'mult_gen_v11_2_xst' defined in file 'multiplier.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockRegion.xml
+Loading clock buffers from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockBuffers.xml
+Loading package pin functions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/fgg676/Package.xml
+Loading io standards from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/ipcore_dir/multiplier.ncf]
+Finished Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/ipcore_dir/multiplier.ncf]
+Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf]
+Finished Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 47 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  IOBUF => IOBUF (OBUFT, IBUF): 46 instances
+
+Phase 0 | Netlist Checksum: a0090e5d
+link_design: Time (s): elapsed = 00:00:18 . Memory (MB): peak = 599.137 ; gain = 189.582
+startgroup
+set_property package_pin G5 [get_ports {FlashAddr[22]}]
+endgroup
+startgroup
+set_property package_pin D3 [get_ports {FlashAddr[21]}]
+endgroup
+startgroup
+set_property package_pin F5 [get_ports {FlashAddr[20]}]
+endgroup
+startgroup
+set_property package_pin C2 [get_ports {FlashAddr[19]}]
+endgroup
+startgroup
+set_property package_pin A2 [get_ports {FlashAddr[18]}]
+endgroup
+startgroup
+set_property package_pin B2 [get_ports {FlashAddr[17]}]
+endgroup
+startgroup
+set_property package_pin C3 [get_ports {FlashAddr[16]}]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports {FlashAddr[15]}]
+endgroup
+startgroup
+set_property package_pin A4 [get_ports {FlashAddr[14]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {FlashAddr[13]}]
+endgroup
+startgroup
+set_property package_pin E5 [get_ports {FlashAddr[12]}]
+endgroup
+startgroup
+set_property package_pin C5 [get_ports {FlashAddr[11]}]
+endgroup
+startgroup
+set_property package_pin B6 [get_ports {FlashAddr[10]}]
+endgroup
+startgroup
+set_property package_pin A6 [get_ports {FlashAddr[9]}]
+endgroup
+startgroup
+set_property package_pin D6 [get_ports {FlashAddr[8]}]
+endgroup
+startgroup
+set_property package_pin C6 [get_ports {FlashAddr[7]}]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports {FlashAddr[6]}]
+endgroup
+startgroup
+set_property package_pin A7 [get_ports {FlashAddr[5]}]
+endgroup
+startgroup
+set_property package_pin E8 [get_ports {FlashAddr[4]}]
+endgroup
+startgroup
+set_property package_pin D7 [get_ports {FlashAddr[3]}]
+endgroup
+startgroup
+set_property package_pin D8 [get_ports {FlashAddr[2]}]
+endgroup
+startgroup
+set_property package_pin C8 [get_ports {FlashAddr[1]}]
+endgroup
+startgroup
+set_property package_pin G3 [get_ports {FlashAddr[0]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {FlashData[15]}]
+endgroup
+startgroup
+set_property package_pin G2 [get_ports {FlashData[15]}]
+endgroup
+startgroup
+set_property package_pin E1 [get_ports {FlashData[14]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {FlashData[15]}]
+endgroup
+startgroup
+set_property package_pin G2 [get_ports {FlashData[14]}]
+endgroup
+startgroup
+set_property package_pin E1 [get_ports {FlashData[13]}]
+endgroup
+startgroup
+set_property package_pin D1 [get_ports {FlashData[12]}]
+endgroup
+startgroup
+set_property package_pin B1 [get_ports {FlashData[11]}]
+endgroup
+startgroup
+set_property package_pin H5 [get_ports {FlashData[10]}]
+endgroup
+startgroup
+set_property package_pin J4 [get_ports {FlashData[9]}]
+endgroup
+startgroup
+set_property package_pin H3 [get_ports {FlashData[8]}]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports {FlashData[7]}]
+endgroup
+startgroup
+set_property package_pin F1 [get_ports {FlashData[6]}]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports {FlashData[5]}]
+endgroup
+startgroup
+set_property package_pin C1 [get_ports {FlashData[4]}]
+endgroup
+startgroup
+set_property package_pin K5 [get_ports {FlashData[3]}]
+endgroup
+startgroup
+set_property package_pin K3 [get_ports {FlashData[2]}]
+endgroup
+startgroup
+set_property package_pin J3 [get_ports {FlashData[1]}]
+endgroup
+startgroup
+set_property package_pin G4 [get_ports {FlashData[0]}]
+endgroup
+startgroup
+set_property package_pin U25 [get_ports CLK11]
+endgroup
+startgroup
+set_property package_pin F3 [get_ports FlashBYTE]
+endgroup
+startgroup
+set_property package_pin E6 [get_ports FlashCE]
+endgroup
+startgroup
+set_property package_pin J1 [get_ports FlashOE]
+endgroup
+startgroup
+set_property package_pin A5 [get_ports FlashRP]
+endgroup
+startgroup
+set_property package_pin D5 [get_ports FlashVPEN]
+endgroup
+startgroup
+set_property package_pin K1 [get_ports FlashWE]
+endgroup
+set_property package_pin "" [get_ports [list  Ram1EN]]
+startgroup
+set_property package_pin AA26 [get_ports Ram1EN]
+endgroup
+startgroup
+set_property package_pin AD17 [get_ports Ram1OE]
+endgroup
+startgroup
+set_property package_pin AA25 [get_ports Ram1WE]
+endgroup
+startgroup
+set_property package_pin AC3 [get_ports Ram2EN]
+endgroup
+startgroup
+set_property package_pin AB9 [get_ports Ram2OE]
+endgroup
+startgroup
+set_property package_pin AC4 [get_ports Ram2WE]
+endgroup
+startgroup
+set_property package_pin N23 [get_ports u_rxd]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports u_txd]
+endgroup
+startgroup
+set_property package_pin W24 [get_ports {Ram1Addr[19]}]
+endgroup
+startgroup
+set_property package_pin W24 [get_ports {Ram1Addr[19]}]
+endgroup
+startgroup
+set_property package_pin W22 [get_ports {Ram1Addr[18]}]
+endgroup
+startgroup
+set_property package_pin V23 [get_ports {Ram1Addr[17]}]
+endgroup
+startgroup
+set_property package_pin AC23 [get_ports {Ram1Addr[16]}]
+endgroup
+startgroup
+set_property package_pin AA23 [get_ports {Ram1Addr[15]}]
+endgroup
+startgroup
+set_property package_pin AD22 [get_ports {Ram1Addr[14]}]
+endgroup
+startgroup
+set_property package_pin AB22 [get_ports {Ram1Addr[13]}]
+endgroup
+startgroup
+set_property package_pin AD21 [get_ports {Ram1Addr[12]}]
+endgroup
+startgroup
+set_property package_pin AC20 [get_ports {Ram1Addr[11]}]
+endgroup
+startgroup
+set_property package_pin AD20 [get_ports {Ram1Addr[10]}]
+endgroup
+startgroup
+set_property package_pin AC19 [get_ports {Ram1Addr[9]}]
+endgroup
+startgroup
+set_property package_pin AC16 [get_ports {Ram1Addr[8]}]
+endgroup
+startgroup
+set_property package_pin AC15 [get_ports {Ram1Addr[7]}]
+endgroup
+startgroup
+set_property package_pin AD15 [get_ports {Ram1Addr[6]}]
+endgroup
+startgroup
+set_property package_pin AC14 [get_ports {Ram1Addr[5]}]
+endgroup
+startgroup
+set_property package_pin V26 [get_ports {Ram1Addr[4]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {Ram1Addr[3]}]
+endgroup
+startgroup
+set_property package_pin W26 [get_ports {Ram1Addr[2]}]
+endgroup
+startgroup
+set_property package_pin W25 [get_ports {Ram1Addr[1]}]
+endgroup
+startgroup
+set_property package_pin Y26 [get_ports {Ram1Addr[0]}]
+endgroup
+startgroup
+set_property package_pin AE15 [get_ports {Ram1Data[31]}]
+endgroup
+startgroup
+set_property package_pin AF15 [get_ports {Ram1Data[31]}]
+endgroup
+startgroup
+set_property package_pin AF16 [get_ports {Ram1Data[30]}]
+endgroup
+startgroup
+set_property package_pin AE17 [get_ports {Ram1Data[29]}]
+endgroup
+startgroup
+set_property package_pin AF17 [get_ports {Ram1Data[28]}]
+endgroup
+startgroup
+set_property package_pin AF18 [get_ports {Ram1Data[27]}]
+endgroup
+startgroup
+set_property package_pin AE19 [get_ports {Ram1Data[26]}]
+endgroup
+startgroup
+set_property package_pin AF19 [get_ports {Ram1Data[25]}]
+endgroup
+startgroup
+set_property package_pin AC25 [get_ports {Ram1Data[24]}]
+endgroup
+startgroup
+set_property package_pin AD26 [get_ports {Ram1Data[23]}]
+endgroup
+startgroup
+set_property package_pin AE26 [get_ports {Ram1Data[22]}]
+endgroup
+startgroup
+set_property package_pin AE15 [get_ports {Ram1Data[31]}]
+endgroup
+startgroup
+set_property package_pin AF15 [get_ports {Ram1Data[30]}]
+endgroup
+startgroup
+set_property package_pin AF16 [get_ports {Ram1Data[29]}]
+endgroup
+startgroup
+set_property package_pin AE17 [get_ports {Ram1Data[28]}]
+endgroup
+startgroup
+set_property package_pin AF17 [get_ports {Ram1Data[27]}]
+endgroup
+startgroup
+set_property package_pin AF18 [get_ports {Ram1Data[26]}]
+endgroup
+startgroup
+set_property package_pin AE19 [get_ports {Ram1Data[25]}]
+endgroup
+startgroup
+set_property package_pin AF19 [get_ports {Ram1Data[24]}]
+endgroup
+startgroup
+set_property package_pin AC25 [get_ports {Ram1Data[23]}]
+endgroup
+startgroup
+set_property package_pin AD26 [get_ports {Ram1Data[22]}]
+endgroup
+startgroup
+set_property package_pin AE26 [get_ports {Ram1Data[21]}]
+endgroup
+startgroup
+set_property package_pin AE25 [get_ports {Ram1Data[20]}]
+endgroup
+startgroup
+set_property package_pin AF25 [get_ports {Ram1Data[19]}]
+endgroup
+startgroup
+set_property package_pin AE24 [get_ports {Ram1Data[18]}]
+endgroup
+startgroup
+set_property package_pin AF24 [get_ports {Ram1Data[17]}]
+endgroup
+startgroup
+set_property package_pin AE23 [get_ports {Ram1Data[16]}]
+endgroup
+startgroup
+set_property package_pin AF20 [get_ports {Ram1Data[15]}]
+endgroup
+startgroup
+set_property package_pin AE21 [get_ports {Ram1Data[14]}]
+endgroup
+startgroup
+set_property package_pin AF21 [get_ports {Ram1Data[13]}]
+endgroup
+startgroup
+set_property package_pin AB17 [get_ports {Ram1Data[12]}]
+endgroup
+startgroup
+set_property package_pin AC17 [get_ports {Ram1Data[11]}]
+endgroup
+startgroup
+set_property package_pin AD18 [get_ports {Ram1Data[10]}]
+endgroup
+startgroup
+set_property package_pin AB18 [get_ports {Ram1Data[9]}]
+endgroup
+startgroup
+set_property package_pin AD19 [get_ports {Ram1Data[8]}]
+endgroup
+startgroup
+set_property package_pin AB24 [get_ports {Ram1Data[7]}]
+endgroup
+startgroup
+set_property package_pin Y22 [get_ports {Ram1Data[6]}]
+endgroup
+startgroup
+set_property package_pin AA24 [get_ports {Ram1Data[5]}]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports {Ram1Data[4]}]
+endgroup
+startgroup
+set_property package_pin AB26 [get_ports {Ram1Data[3]}]
+endgroup
+startgroup
+set_property package_pin AC26 [get_ports {Ram1Data[2]}]
+endgroup
+startgroup
+set_property package_pin AD24 [get_ports {Ram1Data[1]}]
+endgroup
+startgroup
+set_property package_pin AC24 [get_ports {Ram1Data[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {Ram2Addr[18]}]]
+startgroup
+set_property package_pin AB6 [get_ports {Ram2Addr[19]}]
+endgroup
+startgroup
+set_property package_pin AB6 [get_ports {Ram2Addr[19]}]
+endgroup
+startgroup
+set_property package_pin AB5 [get_ports {Ram2Addr[18]}]
+endgroup
+startgroup
+set_property package_pin AB4 [get_ports {Ram2Addr[17]}]
+endgroup
+startgroup
+set_property package_pin AB3 [get_ports {Ram2Addr[16]}]
+endgroup
+startgroup
+set_property package_pin AA4 [get_ports {Ram2Addr[15]}]
+endgroup
+startgroup
+set_property package_pin AC7 [get_ports {Ram2Addr[14]}]
+endgroup
+startgroup
+set_property package_pin AD7 [get_ports {Ram2Addr[13]}]
+endgroup
+startgroup
+set_property package_pin AB8 [get_ports {Ram2Addr[12]}]
+endgroup
+startgroup
+set_property package_pin AD8 [get_ports {Ram2Addr[11]}]
+endgroup
+startgroup
+set_property package_pin AC9 [get_ports {Ram2Addr[10]}]
+endgroup
+startgroup
+set_property package_pin AD9 [get_ports {Ram2Addr[9]}]
+endgroup
+startgroup
+set_property package_pin AD10 [get_ports {Ram2Addr[8]}]
+endgroup
+startgroup
+set_property package_pin AB10 [get_ports {Ram2Addr[7]}]
+endgroup
+startgroup
+set_property package_pin AC13 [get_ports {Ram2Addr[6]}]
+endgroup
+startgroup
+set_property package_pin AD14 [get_ports {Ram2Addr[5]}]
+endgroup
+startgroup
+set_property package_pin AD5 [get_ports {Ram2Addr[4]}]
+endgroup
+startgroup
+set_property package_pin AC5 [get_ports {Ram2Addr[3]}]
+endgroup
+startgroup
+set_property package_pin AD6 [get_ports {Ram2Addr[2]}]
+endgroup
+startgroup
+set_property package_pin AD3 [get_ports {Ram2Addr[1]}]
+endgroup
+startgroup
+set_property package_pin AD4 [get_ports {Ram2Addr[0]}]
+endgroup
+startgroup
+set_property package_pin AF12 [get_ports {Ram2Data[31]}]
+endgroup
+startgroup
+set_property package_pin AF11 [get_ports {Ram2Data[30]}]
+endgroup
+startgroup
+set_property package_pin AE11 [get_ports {Ram2Data[29]}]
+endgroup
+startgroup
+set_property package_pin AF10 [get_ports {Ram2Data[28]}]
+endgroup
+startgroup
+set_property package_pin AF9 [get_ports {Ram2Data[27]}]
+endgroup
+startgroup
+set_property package_pin AE9 [get_ports {Ram2Data[26]}]
+endgroup
+startgroup
+set_property package_pin AF8 [get_ports {Ram2Data[25]}]
+endgroup
+startgroup
+set_property package_pin AF7 [get_ports {Ram2Data[24]}]
+endgroup
+startgroup
+set_property package_pin AA1 [get_ports {Ram2Data[23]}]
+endgroup
+startgroup
+set_property package_pin AA2 [get_ports {Ram2Data[22]}]
+endgroup
+startgroup
+set_property package_pin AB1 [get_ports {Ram2Data[21]}]
+endgroup
+startgroup
+set_property package_pin AC2 [get_ports {Ram2Data[20]}]
+endgroup
+startgroup
+set_property package_pin AC1 [get_ports {Ram2Data[19]}]
+endgroup
+startgroup
+set_property package_pin AD1 [get_ports {Ram2Data[18]}]
+endgroup
+startgroup
+set_property package_pin AE1 [get_ports {Ram2Data[17]}]
+endgroup
+startgroup
+set_property package_pin AE2 [get_ports {Ram2Data[16]}]
+endgroup
+startgroup
+set_property package_pin AF14 [get_ports {Ram2Data[15]}]
+endgroup
+startgroup
+set_property package_pin AD13 [get_ports {Ram2Data[14]}]
+endgroup
+startgroup
+set_property package_pin AC12 [get_ports {Ram2Data[13]}]
+endgroup
+startgroup
+set_property package_pin AD12 [get_ports {Ram2Data[12]}]
+endgroup
+startgroup
+set_property package_pin AC11 [get_ports {Ram2Data[11]}]
+endgroup
+startgroup
+set_property package_pin AD11 [get_ports {Ram2Data[10]}]
+endgroup
+startgroup
+set_property package_pin AF13 [get_ports {Ram2Data[9]}]
+endgroup
+startgroup
+set_property package_pin AE13 [get_ports {Ram2Data[8]}]
+endgroup
+startgroup
+set_property package_pin AE7 [get_ports {Ram2Data[7]}]
+endgroup
+startgroup
+set_property package_pin AF6 [get_ports {Ram2Data[6]}]
+endgroup
+startgroup
+set_property package_pin AF5 [get_ports {Ram2Data[5]}]
+endgroup
+startgroup
+set_property package_pin AE5 [get_ports {Ram2Data[4]}]
+endgroup
+startgroup
+set_property package_pin AF4 [get_ports {Ram2Data[3]}]
+endgroup
+startgroup
+set_property package_pin AE4 [get_ports {Ram2Data[3]}]
+endgroup
+startgroup
+set_property package_pin AE3 [get_ports {Ram2Data[2]}]
+endgroup
+startgroup
+set_property package_pin AF2 [get_ports {Ram2Data[1]}]
+endgroup
+startgroup
+set_property package_pin AF4 [get_ports {Ram2Data[3]}]
+endgroup
+startgroup
+set_property package_pin AE4 [get_ports {Ram2Data[2]}]
+endgroup
+startgroup
+set_property package_pin AE3 [get_ports {Ram2Data[1]}]
+endgroup
+startgroup
+set_property package_pin AF2 [get_ports {Ram2Data[0]}]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See E:/classes/grade_3_vacation/csproject2014/computer_experiment\planAhead_pid7040.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Jul 03 20:06:37 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

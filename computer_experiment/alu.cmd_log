@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc cpu.ucf -p xc6slx100-fgg676-3 alu.ngc alu.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc cpu.ucf -p xc6slx100-fgg676-3 alu.ngc alu.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_map.ncd alu.ngd alu.pcf 
+par -w -intstyle ise -ol high -mt off alu_map.ncd alu.ncd alu.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf -ucf cpu.ucf 
+bitgen -intstyle ise -f alu.ut alu.ncd 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 
+xst -intstyle ise -ifn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.xst" -ofn "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.syr" 

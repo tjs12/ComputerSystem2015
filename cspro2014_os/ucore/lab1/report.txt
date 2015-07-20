@@ -1,0 +1,175 @@
+练习 1
+-----
+1. ucore.img 由 dd 将 bootblock 和 kernel 拼接而成。
+   bootblock 最初来自 ELF 格式的 bootblock.o 文件，用 objcopy 将其 .text 和
+       .eh_frame 段提取得到 raw binary 格式的 bootblock.out，然后使用 sign 将其补
+       齐至 510 字节，并在最后添加 55AA 使之成为合法的 boot loader。
+   bootblock.o 文件由 bootasm.o 和 bootmain.o 链接而成，且在链接时指定起始地址为
+       0x7C00。二者分别由 bootasm.S 和 bootmain.c 编译得到。
+   kernel 由 以下文件根据自定义脚本 tools/kernel.ld 链接而成：
+       init/init.o
+       libs/readline.o libs/stdio.o
+       debug/kdebug.o debug/kmonitor.o debug/panic.o
+       driver/clock.o driver/console.o driver/intr.o driver/picirq.o
+       trap/trap.o trap/trapentry.o trap/vectors.o
+       mm/pmm.o
+       obj/libs/printfmt.o obj/libs/string.o
+   以上 o 文件均根据对应 c 或 S 文件编译得到。
+2. 符合规范的 MBR 在偏移 510 处的两个字节为 55AA，且偏移 0 处应该包含可执行机器码，
+       以引导操作系统。之后还应该包含分区表，但是 lab1 中的 bootblock 不含分区表。
+
+练习 2
+-----
+1. 从 CPU 加电第一条指令单步跟踪 BIOS
+    $ qemu -s -S -hda bin/ucore.img -monitor stdio
+    $ gdb
+    (gdb) target remote :1234
+    (gdb) set arch i8086
+    (gdb) x/10i ($cs<<4)+$eip
+    (gdb) si
+   跟踪得到 BIOS 起始部分指令如下
+>   0xffff0:	ljmp   $0xf000,$0xe05b
+>
+>   0xfe05b:	cmpl   $0x0,%cs:0x65f4
+>   0xfe062:	jne    0xfd3ac
+>   0xfe066:	xor    %ax,%ax
+>   0xfe068:	mov    %ax,%ss
+>   0xfe06a:	mov    $0x7000,%esp
+>   0xfe070:	mov    $0xf438a,%edx
+>   0xfe076:	jmp    0xfd235
+>
+>   0xfd235:	mov    %eax,%ecx
+>   0xfd238:	cli    
+>   0xfd239:	cld    
+>   0xfd23a:	mov    $0x8f,%eax
+>   0xfd240:	out    %al,$0x70
+>   0xfd242:	in     $0x71,%al
+>   0xfd244:	in     $0x92,%al
+>   0xfd246:	or     $0x2,%al
+>   0xfd248:	out    %al,$0x92
+>   0xfd24a:	lidtw  %cs:0x6938
+>   0xfd250:	lgdtw  %cs:0x68f4
+>   0xfd256:	mov    %cr0,%eax
+>   0xfd259:	or     $0x1,%eax
+>   0xfd25d:	mov    %eax,%cr0
+>   0xfd260:	ljmpl  $0x8,$0xfd268
+>   0xfd268:	mov    $0x10,%ax
+>   0xfd26b:	add    %al,(%bx,%si)
+>   0xfd26d:	mov    %ax,%ds
+>   0xfd26f:	mov    %ax,%es
+>   0xfd271:	mov    %ax,%ss
+>   0xfd273:	mov    %ax,%fs
+>   0xfd275:	mov    %ax,%gs
+>   0xfd277:	mov    %cx,%ax
+>   0xfd279:	jmp    *%dx		; 0x438a
+>
+>   0xf438a:	push   %bx
+>   0xf438b:	sub    $0x2c,%sp
+>   0xf438e:	movw   $0x7c04,0x24(%si)	; ???
+>   0xf4396:	movw   $0x7724,(%si)		; ???
+>   0xf439d:	call   0xf2472			; ???
+>
+>   0xf2474:	lea    0x24(%si),%cx		; ???
+>   0xf2478:	mov    0x24(%si),%dx		; ???
+>   0xf247c:	mov    $0x6178,%ax		; ???
+>   0xf2481:	call   0xf2125
+>
+>   0xf2127:	push   %bp
+>   0xf2128:	push   %di
+>   0xf2129:	push   %si
+>   0xf212a:	push   %bx
+>   0xf212b:	sub    $0xc,%sp
+>   0xf212e:	mov    %ax,0x24(%si)		; ???
+>   0xf2132:	mov    %dx,%bp
+>   0xf2134:	mov    %cx,%si
+>   0xf2136:	movsbw 0x0(%di),%dx
+>   0xf213a:	test   %dl,%dl
+>   0xf213c:	je     0xf2309
+>   0xf2142:	cmp    $0x25,%dl
+>   0xf2145:	jne    0xf22f2			; ???
+>
+>   0xf22f4:	mov    0x24(%si),%ax		; ???
+>   0xf22f8:	call   0xf1953			; ???
+>
+>   0xf1955:	mov    %ax,%cx
+>   0xf1957:	movsbw %dl,%dx
+>   0xf195a:	call   *(%bx,%di)		; ??? 0
+>
+>   0xf194a:	mov    %dx,%ax
+>   0xf194c:	mov    (%di),%edx		; ???
+>   0xf1953:	out    %al,(%dx)
+>   0xf1954:	ret				; ???
+>   0xf195c:	ret				; ???
+> 
+>   0xf22fd:	mov    %bp,%bx
+>   0xf22ff:	jmp    0xf2303
+>
+>   0xf2303:	lea    0x1(%bp,%di),%bp
+>   0xf2306:	jmp    0xf2134			; ???
+>
+>   0xf2136:	movsbw 0x0(%di),%dx
+>   0xf213a:	test   %dl,%dl
+>   0xf213c:	je     0xf2309			; ???
+>   0xf2142:	cmp    $0x25,%dl
+>   0xf2145:	jne    0xf22f2			; ???
+
+2. 实地址 0x7c00 断点
+    $ qemu -s -S -hda bin/ucore.img -monitor stdio
+    $ gdb
+    (gdb) target remote :1234
+    (gdb) set arch i8086
+    (gdb) b *0x7c00
+    (gdb) c
+    (gdb) p $eip
+3. 实地址 0x7c00 单步跟踪
+    $ qemu -s -S -hda bin/ucore.img -monitor stdio
+    $ gdb -tui obj/bootblock.o
+    (gdb) target remote :1234
+    (gdb) set arch i8086
+    (gdb) b *0x7c00
+    (gdb) c
+    (gdb) tui reg general
+    (gdb) disas
+    (gdb) si
+   可看到 disas 的反汇编结果与 tui 中 bootasm.S 一致，而 bootasm.S 与 objdump 反汇
+       编得到的 bootblock.asm 一致。
+4. 断点测试 bootloader 或内核任一位置
+    (gdb) b bootmain
+    (gdb) c
+    (gdb) s
+
+练习 3
+-----
+bootloader 从实模式进入保护模式的步骤如下：关中断，打开 A20，加载 GDT，将 CR0 中保
+    护模式位置 1，长跳转到保护模式代码段（同时设置 cs），设置 ds/ss/es/fs/gs。
+
+练习 4
+-----
+1. 首先读取 0x1f7 端口直到硬盘不忙，向 0x1f2 发送 1 表示要读 1 个扇区，然后向
+       0x1f3, 0x1f4, 0x1f5 以及 0x1f6 的低 4 位写入扇区编号，0x1f6 高 4 位赋 1110
+       表示 LBA 模式读主盘，向 0x1f7 发送读命令 0x20。等待硬盘不忙后从 0x1f0 读取数
+       据。
+2. bootloader 首先从 1 号（从 0 数起）扇区读入 ELF 文件头，根据 elf header 中的
+       program header table 起始地址和表项个数，循环读入各 program header 对应的程
+       序段到 program header 中指定的位置，最后跳转到 elf header 中指示的程序入口。
+
+练习 5
+-----
+调用提供的函数得当前 ebp 和 eip 作为起始，对于每一个栈帧，输出 ebp, eip 以及 ebp 所
+    指向位置 +2/3/4/5 个（32位）字处的参数，调用 print_debuginfo 输出文件名、行号、
+    函数名信息，然后根据以下规则得到上一层栈帧的 ebp 和 eip：旧的 ebp 位于当前 ebp
+    所指的位置，上一层 eip 即函数返回地址，位于比旧 ebp 高 1 个字的位置。
+最后一行（第一次unknown）的 args 即 bootloader 的机器码：fa fc 31 c0 8e d8 8e
+    c0 ...，被按照 x86 小尾端 32 位字解释成了：0xc031fcfa 0xc08ed88e ...；eip 即
+    bootmain 中调用 kernel 入口函数的下一条指令地址；而 ebp 的 0x7bf8 来自于进入
+    bootmain 之后的 esp：esp 在 bootasm 中被设为 0x7c00，减去调用 bootmain 时需要
+    压入栈的返回地址和旧 ebp，则为 0x7bf8。
+
+练习 6
+-----
+1. 一个表项 8 个字节，最开始的 2 个字节和最后的 2 个字节代表中断处理代码的入口。
+2. 对于中断号从 0 到 256（不含）循环调用 SETGATE 设置中断描述符表项，表项位置
+       idt[i]，选择子 KERNEL_CS，入口 __vectors[i]，对于 T_SYSCALL 则置 istrap 且
+       DPL 为 USER，其它中断 istrap 置 0 且只能在内核态被触发。
+3. 每次时钟中断对全局变量 ticks 加一，每当 ticks 达到 TICK_NUM 的整数倍就调用
+       print_ticks。

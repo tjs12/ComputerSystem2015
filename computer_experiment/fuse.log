@@ -1,0 +1,33 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem1_test_isim_beh.exe -prj C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem1_test_beh.prj work.phy_mem1_test 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/txmit.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/rcvr.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/clkcon.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/uart.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/rom.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/mmu.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem.vhd" into library work
+Parsing VHDL file "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem1_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 100428 KB
+Fuse CPU Usage: 374 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture v1 of entity txmit [txmit_default]
+Compiling architecture v1 of entity rcvr [rcvr_default]
+Compiling architecture v1 of entity clkcon [clkcon_default]
+Compiling architecture v1 of entity uart [uart_default]
+Compiling architecture behavioral of entity mmu [mmu_default]
+Compiling architecture behavioral of entity rom [rom_default]
+Compiling architecture behavioral of entity phy_mem [phy_mem_default]
+Compiling architecture behavior of entity phy_mem1_test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+FATAL_ERROR:Simulator:Fuse.cpp:209:1.133 - Failed to compile one of the generated C files. Please recompile with -mt off -v 1 switch to identify which design unit failed.  For technical support on this issue, please visit http://www.xilinx.com/support.

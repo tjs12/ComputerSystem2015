@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem1_test_isim_beh.exe" -prj "C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/phy_mem1_test_beh.prj" "work.phy_mem1_test" 

@@ -1,0 +1,56 @@
+Release 14.7 - par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Jul 17 17:09:28 2015
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 44 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   KEY<0>_IBUF
+   KEY<1>_IBUF
+   KEY<2>_IBUF
+   KEY<3>_IBUF
+   SW<10>_IBUF
+   SW<11>_IBUF
+   SW<12>_IBUF
+   SW<13>_IBUF
+   SW<14>_IBUF
+   SW<7>_IBUF
+   SW<8>_IBUF
+   SW<9>_IBUF
+   phy_mem1/Mram_ComBuffer10_RAMD_O
+   phy_mem1/Mram_ComBuffer11_RAMD_O
+   phy_mem1/Mram_ComBuffer12_RAMD_O
+   phy_mem1/Mram_ComBuffer13_RAMD_O
+   phy_mem1/Mram_ComBuffer14_RAMD_O
+   phy_mem1/Mram_ComBuffer15_RAMD_O
+   phy_mem1/Mram_ComBuffer16_RAMD_O
+   phy_mem1/Mram_ComBuffer17_RAMD_O
+   phy_mem1/Mram_ComBuffer18_RAMD_O
+   phy_mem1/Mram_ComBuffer19_RAMD_O
+   phy_mem1/Mram_ComBuffer1_RAMD_O
+   phy_mem1/Mram_ComBuffer20_RAMD_O
+   phy_mem1/Mram_ComBuffer21_RAMD_O
+   phy_mem1/Mram_ComBuffer22_RAMD_O
+   phy_mem1/Mram_ComBuffer23_RAMD_O
+   phy_mem1/Mram_ComBuffer24_RAMD_O
+   phy_mem1/Mram_ComBuffer25_RAMD_O
+   phy_mem1/Mram_ComBuffer26_RAMD_O
+   phy_mem1/Mram_ComBuffer27_RAMD_O
+   phy_mem1/Mram_ComBuffer28_RAMD_O
+   phy_mem1/Mram_ComBuffer29_RAMD_O
+   phy_mem1/Mram_ComBuffer2_RAMD_O
+   phy_mem1/Mram_ComBuffer30_RAMD_O
+   phy_mem1/Mram_ComBuffer31_RAMD_O
+   phy_mem1/Mram_ComBuffer32_RAMD_O
+   phy_mem1/Mram_ComBuffer3_RAMD_O
+   phy_mem1/Mram_ComBuffer4_RAMD_O
+   phy_mem1/Mram_ComBuffer5_RAMD_O
+   phy_mem1/Mram_ComBuffer6_RAMD_O
+   phy_mem1/Mram_ComBuffer7_RAMD_O
+   phy_mem1/Mram_ComBuffer8_RAMD_O
+   phy_mem1/Mram_ComBuffer9_RAMD_O
+
+

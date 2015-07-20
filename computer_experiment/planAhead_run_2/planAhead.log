@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Thu Jul 03 19:07:58 2014
+# Process ID: 7380
+# Log file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_2/planAhead.log
+# Journal file: E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/classes/grade_3_vacation/csproject2014/computer_experiment/pa.fromHdl.tcl
+# create_project -name computer_experiment -dir "E:/classes/grade_3_vacation/csproject2014/computer_experiment/planAhead_run_2" -part xc6slx100fgg676-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "cpu.ucf" [current_fileset -constrset]
+Adding file 'E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ipcore_dir/multiplier.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {registers.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {multiplication.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {alu.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {cpu.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top cpu $srcset
+# add_files [list {cpu.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/multiplier.ncf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx100fgg676-3
+Using Verific elaboration
+Parsing VHDL file "F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/ipcore_dir/multiplier.vhd" into library work
+Parsing VHDL file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/registers.vhd" into library work
+Parsing VHDL file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/multiplication.vhd" into library work
+Parsing VHDL file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/alu.vhd" into library work
+Parsing VHDL file "E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.vhd" into library work
+CRITICAL WARNING: [EDIF 20-96] Could not resolve non-primitive black box cell 'multiplier' instantiated as 'multiplier1' [E:/classes/grade_3_vacation/csproject2014/computer_experiment/multiplication.vhd:60]
+Resolution: File names need to match cell names: an EDIF definition will be found in multiplier.edf; an HDL definition may be placed in any Verilog/VHDL file.
+Loading clock regions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockRegion.xml
+Loading clock buffers from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockBuffers.xml
+Loading package pin functions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/fgg676/Package.xml
+Loading io standards from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf]
+Finished Parsing UCF File [E:/classes/grade_3_vacation/csproject2014/computer_experiment/cpu.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: b1a5d21d
+open_rtl_design: Time (s): elapsed = 00:00:13 . Memory (MB): peak = 640.492 ; gain = 224.016
+update_compile_order -fileset sim_1
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See E:/classes/grade_3_vacation/csproject2014/computer_experiment\planAhead_pid7380.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Jul 03 19:08:49 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

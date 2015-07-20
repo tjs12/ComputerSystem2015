@@ -1,0 +1,238 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Tue Jul 01 15:30:18 2014
+# Process ID: 2868
+# Log file: E:/classes/grade_3_vacation/computer_experiment/planAhead_run_1/planAhead.log
+# Journal file: E:/classes/grade_3_vacation/computer_experiment/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/classes/grade_3_vacation/computer_experiment/pa.fromNetlist.tcl
+# create_project -name computer_experiment -dir "E:/classes/grade_3_vacation/computer_experiment/planAhead_run_1" -part xc6slx100fgg676-3
+create_project: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 429.121 ; gain = 52.121
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/classes/grade_3_vacation/computer_experiment/cpu.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/classes/grade_3_vacation/computer_experiment} {ipcore_dir} }
+# add_files [list {ipcore_dir/multiplier.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "cpu.ucf" [current_fileset -constrset]
+Adding file 'E:/classes/grade_3_vacation/computer_experiment/cpu.ucf' to fileset 'constrs_1'
+# add_files [list {cpu.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx100fgg676-3
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design cpu.ngc ...
+WARNING:NetListWriters:298 - No output is written to cpu.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file cpu.edif ...
+ngc2edif: Total memory usage is 81468 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/computer_experiment.data/cache/cpu_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/computer_experiment.data/cache/cpu_ngc_zx.edif]
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file multiplier.edif ...
+ngc2edif: Total memory usage is 88636 kilobytes
+
+Reading core file 'E:/classes/grade_3_vacation/computer_experiment/ipcore_dir/multiplier.ngc' for (cell view 'multiplier', library 'cpu_lib', file 'cpu.ngc')
+Parsing EDIF File [./planAhead_run_1/computer_experiment.data/cache/multiplier_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/computer_experiment.data/cache/multiplier_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'cpu' is not ideal for floorplanning, since the cellview 'mult_gen_v11_2_xst' defined in file 'multiplier.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockRegion.xml
+Loading clock buffers from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockBuffers.xml
+Loading package pin functions from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/fgg676/Package.xml
+Loading io standards from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : F:/XILINX_ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [E:/classes/grade_3_vacation/computer_experiment/ipcore_dir/multiplier.ncf]
+Finished Parsing UCF File [E:/classes/grade_3_vacation/computer_experiment/ipcore_dir/multiplier.ncf]
+Parsing UCF File [E:/classes/grade_3_vacation/computer_experiment/cpu.ucf]
+Finished Parsing UCF File [E:/classes/grade_3_vacation/computer_experiment/cpu.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: bc7e7114
+link_design: Time (s): elapsed = 00:00:33 . Memory (MB): peak = 609.348 ; gain = 173.063
+set_property package_pin "" [get_ports [list  {led[14]}]]
+startgroup
+set_property package_pin N26 [get_ports {led[15]}]
+endgroup
+startgroup
+set_property package_pin M26 [get_ports {led[14]}]
+endgroup
+startgroup
+set_property package_pin L25 [get_ports {led[13]}]
+endgroup
+startgroup
+set_property package_pin L26 [get_ports {led[12]}]
+endgroup
+startgroup
+set_property package_pin K26 [get_ports {led[11]}]
+endgroup
+startgroup
+set_property package_pin M23 [get_ports {led[10]}]
+endgroup
+startgroup
+set_property package_pin K24 [get_ports {led[9]}]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports {led[8]}]
+endgroup
+startgroup
+set_property package_pin J24 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin G23 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin J25 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin J26 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin H26 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin G25 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin G26 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin F26 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin L3 [get_ports {SW[31]}]
+endgroup
+startgroup
+set_property package_pin L4 [get_ports {SW[30]}]
+endgroup
+startgroup
+set_property package_pin M3 [get_ports {SW[29]}]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports {SW[28]}]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports {SW[27]}]
+endgroup
+startgroup
+set_property package_pin N3 [get_ports {SW[26]}]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports {SW[25]}]
+endgroup
+startgroup
+set_property package_pin P3 [get_ports {SW[24]}]
+endgroup
+startgroup
+set_property package_pin P5 [get_ports {SW[23]}]
+endgroup
+startgroup
+set_property package_pin R3 [get_ports {SW[22]}]
+endgroup
+startgroup
+set_property package_pin R4 [get_ports {SW[21]}]
+endgroup
+startgroup
+set_property package_pin T4 [get_ports {SW[20]}]
+endgroup
+startgroup
+set_property package_pin U3 [get_ports {SW[19]}]
+endgroup
+startgroup
+set_property package_pin U4 [get_ports {SW[18]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {SW[17]}]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports {SW[16]}]
+endgroup
+startgroup
+set_property package_pin W3 [get_ports {SW[15]}]
+endgroup
+startgroup
+set_property package_pin W5 [get_ports {SW[14]}]
+endgroup
+startgroup
+set_property package_pin L2 [get_ports {SW[13]}]
+endgroup
+startgroup
+set_property package_pin L1 [get_ports {SW[12]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports {SW[11]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {SW[10]}]
+endgroup
+startgroup
+set_property package_pin N1 [get_ports {SW[9]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {SW[8]}]
+endgroup
+startgroup
+set_property package_pin R2 [get_ports {SW[7]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {SW[6]}]
+endgroup
+startgroup
+set_property package_pin U2 [get_ports {SW[5]}]
+endgroup
+startgroup
+set_property package_pin U1 [get_ports {SW[4]}]
+endgroup
+startgroup
+set_property package_pin V1 [get_ports {SW[3]}]
+endgroup
+startgroup
+set_property package_pin W2 [get_ports {SW[2]}]
+endgroup
+startgroup
+set_property package_pin W1 [get_ports {SW[1]}]
+endgroup
+startgroup
+set_property package_pin Y5 [get_ports {SW[0]}]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports CLK]
+endgroup
+startgroup
+set_property package_pin T1 [get_ports RST]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See E:/classes/grade_3_vacation/computer_experiment\planAhead_pid2868.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Jul 01 15:36:07 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

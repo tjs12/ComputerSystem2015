@@ -1,0 +1,7 @@
+work	"clkcon.vhd"
+work	"mmu.vhd"
+work	"phy_mem.vhd"
+work	"rcvr.vhd"
+work	"rom.vhd"
+work	"txmit.vhd"
+work	"uart.vhd"

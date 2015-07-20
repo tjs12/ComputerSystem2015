@@ -1,0 +1,5 @@
+vhdl work "txmit.vhd"
+vhdl work "rcvr.vhd"
+vhdl work "clkcon.vhd"
+vhdl work "uart.vhd"
+vhdl work "phy_mem.vhd"
