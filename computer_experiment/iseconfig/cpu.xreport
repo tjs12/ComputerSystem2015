@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-17T17:03:21</DateModified>
+  <DateModified>2015-07-21T11:09:46</DateModified>
   <ModuleName>cpu</ModuleName>
   <SummaryTimeStamp>2014-07-21T21:33:15</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment/iseconfig/cpu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Francis/Documents/Lectiones/MMXV Aestas/code1/computer_experiment/computer_experiment\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/iseconfig/cpu.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment\</ImplementationReportsDirectory>
   <DateInitialized>2014-07-02T14:47:43</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,0 +1,34 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily spartan6
+SET_PREFERENCE device xc6slx100
+SET_PREFERENCE speedgrade -3
+SET_PREFERENCE package fgg676
+SET_PREFERENCE verilogsim false
+SET_PREFERENCE vhdlsim true
+SET_PREFERENCE simulationfiles Structural
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/ipcore_dir/
+SET_PREFERENCE workingdirectory C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/ipcore_dir/tmp/
+SET_PREFERENCE subworkingdirectory C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/ipcore_dir/tmp/_cg/
+SET_PREFERENCE transientdirectory C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/ipcore_dir/tmp/_cg/_dbg/
+SET_PREFERENCE designentry VHDL
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_SIM_PARAMETER c_component_name gig_eth_pcs_pma_v11_5
+SET_CORE_NAME Ethernet 1000BASE-X PCS/PMA or SGMII
+SET_CORE_VERSION 11.5
+SET_CORE_VLNV xilinx.com:ip:gig_eth_pcs_pma:11.5
+SET_CORE_CLASS com.xilinx.ip.gig_eth_pcs_pma_v11_5.gig_eth_pcs_pma_v11_5
+SET_CORE_PATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/network/com/xilinx/ip/gig_eth_pcs_pma_v11_5
+SET_CORE_GUIPATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/network/com/xilinx/ip/gig_eth_pcs_pma_v11_5/gui/gig_eth_pcs_pma_v11_5.tcl
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\network\com\xilinx\ip\gig_eth_pcs_pma_v11_5\doc\pg047-gig-eth-pcs-pma.pdf><pg047-gig-eth-pcs-pma.pdf>
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\network\com\xilinx\ip\gig_eth_pcs_pma_v11_5\doc\gig_eth_pcs_pma_v11_5_vinfo.html><gig_eth_pcs_pma_v11_5_vinfo.html>
