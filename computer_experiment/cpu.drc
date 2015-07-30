@@ -1,10 +1,13 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Jul 17 17:10:07 2015
+Thu Jul 30 12:03:35 2015
 
 drc -z cpu.ncd cpu.pcf
 
+WARNING:PhysDesignRules:372 - Gated clock. Clock net RST_inv is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net phy_mem1/uart1/u1/clkdiv<3>
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
@@ -43,12 +46,35 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    registers1/RegWrite_instruction[31]_AND_128_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net RegWrite is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   registers1/RegWrite_instruction[31]_AND_320_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   registers1/RegWrite_instruction[31]_AND_192_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   registers1/RegWrite_instruction[31]_AND_256_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    registers1/RegWrite_instruction[31]_AND_640_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    registers1/RegWrite_instruction[31]_AND_1152_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   registers1/RegWrite_instruction[31]_AND_384_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   registers1/RegWrite_instruction[31]_AND_448_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -60,15 +86,7 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_512_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_1024_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_448_o is sourced by a combinatorial
+   registers1/RegWrite_instruction[31]_AND_832_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -76,27 +94,15 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_384_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
    registers1/RegWrite_instruction[31]_AND_896_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_320_o is sourced by a combinatorial
+   registers1/RegWrite_instruction[31]_AND_512_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_832_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_192_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading
-   of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   registers1/RegWrite_instruction[31]_AND_256_o is sourced by a combinatorial
+   registers1/RegWrite_instruction[31]_AND_1024_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -122,73 +128,76 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
 WARNING:PhysDesignRules:372 - Gated clock. Clock net phy_mem1/mmu1/DYP2_1_G is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net phy_mem1/wrn is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer13_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer14_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer10_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer15_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer9_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer11_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer8_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer3_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer16_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer7_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer12_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer5_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer4_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer2_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer24_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer1_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer19_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer29_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer25_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer21_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer18_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer6_RAMD_O> is
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer31_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer17_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer31_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer23_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer32_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer28_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer27_RAMD_O> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer30_RAMD_O> is
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer22_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer20_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer24_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer29_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer18_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer27_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer19_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer21_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer25_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer32_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer26_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer22_RAMD_O> is
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer28_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
-DRC detected 0 errors and 63 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer8_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer9_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer3_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer6_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer2_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer16_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer13_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer11_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer10_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer1_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer30_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer5_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer7_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer4_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer15_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer14_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer12_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <phy_mem1/Mram_ComBuffer23_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 66 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

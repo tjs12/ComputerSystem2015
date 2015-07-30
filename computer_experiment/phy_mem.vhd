@@ -73,6 +73,16 @@ entity phy_mem is
 			 tlb_write : in STD_LOGIC;
 			 BadVAddr : out STD_LOGIC_VECTOR (31 downto 0);
 			 
+			 enet_data : inout STD_LOGIC_VECTOR(15 downto 0);
+			 enet_cmd : out STD_LOGIC;
+			 enet_cs : out STD_LOGIC;
+			 enet_int : in STD_LOGIC;
+			 enet_ior : out STD_LOGIC;
+			 enet_iow : out STD_LOGIC;
+			 enet_reset : out STD_LOGIC;
+			 clk_25 : out STD_LOGIC;
+			 clk_50 : in STD_LOGIC;
+			 
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 u_txd : in std_logic;
@@ -129,6 +139,34 @@ architecture Behavioral of phy_mem is
 		tlb_write : in STD_LOGIC
 	);
 	end component;
+	
+	component network is
+	PORT (
+			  data_enet : inout  STD_LOGIC_VECTOR (15 downto 0);
+           ior : out  STD_LOGIC;
+           iow : out  STD_LOGIC;
+           cs : out  STD_LOGIC;
+           cmd : out  STD_LOGIC;
+           int : in  STD_LOGIC;
+           rst_enet : out  STD_LOGIC;
+           clk25 : out  STD_LOGIC;
+           clk50 : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+			  addr : in STD_LOGIC_VECTOR(2 downto 0);
+			  r : in STD_LOGIC;
+			  w : in STD_LOGIC;
+			  data_in : in STD_LOGIC_VECTOR(15 downto 0);
+			  data_out : out STD_LOGIC_VECTOR(15 downto 0);
+			  status_out : out STD_LOGIC_VECTOR(2 downto 0));
+	end component;
+	
+	signal netr, netw : STD_LOGIC;
+	signal nd_in, nd_out : STD_LOGIC_VECTOR(15 downto 0);
+	signal n_st : STD_LOGIC_VECTOR(2 downto 0);
+	
+	
+
+	
 	signal Paddr : STD_LOGIC_VECTOR (31 downto 0);
 	signal flag_missing : STD_LOGIC;
 	signal flag_writable : STD_LOGIC;
@@ -183,6 +221,27 @@ begin
 		data => RomData
 	);
 
+	
+	net : network
+	PORT MAP(
+			  data_enet => enet_data,
+           ior => enet_ior,
+           iow => enet_iow,
+           cs => enet_cs,
+           cmd => enet_cmd,
+           int => enet_int,
+           rst_enet => enet_reset,
+           clk25 => clk_25,
+           clk50 => clk_50,
+           rst => rst,
+			  addr => addr(2 downto 0),
+			  r => netr,
+			  w => netw,
+			  data_in => nd_in,
+			  data_out => nd_out,
+			  status_out => n_st
+	);
+			  
 --RomAddr <= addr(11 downto 0);
 --RomData <= addr;
 --led <= condi;
@@ -214,6 +273,8 @@ process(RST, CLK, MemRead, MemWrite)
 			ready <= '0';
 			--wrn <= '1';
 			mem_error <= "00";
+			netr <= '0';
+			netw <= '0';
 		elsif CLK'event and CLK = '1' then
 			if condi = "111111" then
 				if (Vaddr(31) = '1' and Status(4) = '1' and Status(1) = '0') 
@@ -633,6 +694,49 @@ process(RST, CLK, MemRead, MemWrite)
 				elsif condi = 1 then
 					ready <= '1';
 					condi <= condi + 1;
+				end if;
+				
+			elsif addr = x"1FD003400" then --Íø¿ÚINDEX
+				if MemRead = '1' then
+					netr <= '1';
+					netw <= '0';
+					if n_st = "011" then
+						data_read(15 downto 0) <= nd_out;
+						data_read(31 downto 16) <= x"0000";
+						ready <= '1';
+					else
+						ready <= '0';
+					end if;
+				elsif MemWrite = '1' then
+					netr <= '0';
+					netw <= '1';
+					nd_in <= data_write(15 downto 0);
+					if n_st = "011" then
+						ready <= '1';
+					else
+						ready <= '0';
+					end if;
+				end if;
+			elsif addr = x"1FD003404" then --Íø¿ÚDATA
+				if MemRead = '1' then
+					netr <= '1';
+					netw <= '0';
+					if n_st = "000" then
+						data_read(15 downto 0) <= nd_out;
+						data_read(31 downto 16) <= x"0000";
+						ready <= '1';
+					else
+						ready <= '0';
+					end if;
+				elsif MemWrite = '1' then
+					netr <= '0';
+					netw <= '1';
+					nd_in <= data_write(15 downto 0);
+					if n_st = "000" then
+						ready <= '1';
+					else
+						ready <= '0';
+					end if;
 				end if;
 			else
 				BadVAddr <= Vaddr;

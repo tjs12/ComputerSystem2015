@@ -61,6 +61,15 @@ entity cpu is
 			  FlashVPEN : out  STD_LOGIC;
            FlashAddr : out  STD_LOGIC_VECTOR (22 downto 0);
            FlashData : inout  STD_LOGIC_VECTOR (15 downto 0);
+			  
+			  enet_data : inout STD_LOGIC_VECTOR(15 downto 0);
+			  enet_cmd : out STD_LOGIC;
+			  enet_cs : out STD_LOGIC;
+			  enet_int : in STD_LOGIC;
+			  enet_ior : out STD_LOGIC;
+			  enet_iow : out STD_LOGIC;
+			  enet_reset : out STD_LOGIC;
+			  clk_25 : out STD_LOGIC;
 			 
 			  CLK11 : in STD_LOGIC;
 			  u_txd : in std_logic;
@@ -190,6 +199,16 @@ architecture Behavioral of cpu is
 			 tlb_write : in STD_LOGIC;
 			 BadVAddr : out STD_LOGIC_VECTOR (31 downto 0);
 			 
+			 enet_data : inout STD_LOGIC_VECTOR(15 downto 0);
+			 enet_cmd : out STD_LOGIC;
+			 enet_cs : out STD_LOGIC;
+			 enet_int : in STD_LOGIC;
+			 enet_ior : out STD_LOGIC;
+			 enet_iow : out STD_LOGIC;
+			 enet_reset : out STD_LOGIC;
+			 clk_25 : out STD_LOGIC;
+			 clk_50 : in STD_LOGIC;
+			 
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 u_txd : in std_logic;
@@ -294,6 +313,16 @@ begin
 		Status => Status,
 		tlb_write => tlb_write,
 		BadVAddr => BadVAddr,	
+		
+		enet_data => enet_data,
+		enet_cmd => enet_cmd,
+		enet_cs => enet_cs,
+		enet_int => enet_int,
+		enet_ior => enet_ior,
+		enet_iow => enet_iow,
+		enet_reset => enet_reset,
+		clk_25 => clk_25,
+		clk_50 => CLK50,
 			
 		CLK11 => CLK11,
 		com_int => com_int,

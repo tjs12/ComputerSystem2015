@@ -19,6 +19,9 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -43,71 +46,110 @@ entity network is
 			  addr : in STD_LOGIC_VECTOR(2 downto 0);
 			  r : in STD_LOGIC;
 			  w : in STD_LOGIC;
-			  data : inout STD_LOGIC_VECTOR(15 downto 0));
+			  data_in : in STD_LOGIC_VECTOR(15 downto 0);
+			  data_out : out STD_LOGIC_VECTOR(15 downto 0);
+			  status_out : out STD_LOGIC_VECTOR(2 downto 0)
+			  );
 end network;
 
 architecture Behavioral of network is
 
 	signal status : integer := 0;
 	signal next_status : integer;
+	signal clk25_1, clk125 : STD_LOGIC;
+	
+	signal last_reg : STD_LOGIC_VECTOR(8 downto 0);
 	
 begin
 
+	cs <= '0';
 
 	rst_enet <= rst;
+	
+	clk25 <= clk25_1;
+	
+	status_out <= conv_std_logic_vector(status, 3);
 	
 	process(clk50)
 	begin
 		if clk50'event and clk50 = '1' then
-			clk25 <= not clk25;
+			--if clk25_1 /= '0' and clk25_1 /= '1' then
+				--clk25_1 <= '0';
+			--else
+				clk25_1 <= not clk25_1;
+			--end if;
 		end if;
 		
-		if clk25 /= '0' and clk25 /= '1' then
-			clk25 <= '0';
+		
+	end process;
+	
+	process(clk25_1)
+	begin
+		if clk25_1'event and clk25_1 = '1' then
+			clk125 <= not clk125;
+		end if;
+		if clk125 /= '0' and clk125 /= '1' then
+			clk125 <= '0';
 		end if;
 	end process;
 	
 	process(rst, clk50)
 	begin
 		if rst = '0' then
-			status := 0;
-		elsif clk50'event and clk50 = '1' then
+			status <= 0;
+			--ior <= '1';
+			--iow <= '1';
+			--cs <= '1';
+		elsif clk25_1'event and clk25_1 = '1' then
 			status <= next_status;
 		end if;
 	end process;
 	
-	process(status)
+	process(status, r, w, addr, data_in, data_enet)
 	begin
 		if w = '1' then
 			if addr(2 downto 0) = "000" then --register
 				case status is
 				when 0 =>
-					cs <= '0';
 					cmd <= '0';
 					iow <= '0';
+					ior <= '1';
 					next_status <= 1;
 				when 1 =>
-					data_enet(15 downto 0) <= data(15 downto 0);
+					data_enet(15 downto 0) <= data_in(15 downto 0);
+					last_reg (7 downto 0) <= data_in(7 downto 0);
 					next_status <= 2;
 				when 2 =>
 					iow <= '1';
 					next_status <= 3;
+				when 3 =>
+					iow <= '1';
+					ior <= '1';
+					next_status <= 3;
+				when others =>
+					next_status <= 0;
 				end case;
 				
 			elsif addr(2 downto 0) = "100" then --data
 				case status is
 				when 3 =>
+					--cs <= '0';
 					cmd <= '1';
 					iow <= '0';
+					--ior <= '1';
 					next_status <= 1;
+					data_enet(15 downto 0) <= data_in(15 downto 0);
 				when 1 =>
-					data_enet(15 downto 0) <= data(15 downto 0);
+					--iow <= '1';
 					next_status <= 2;
 				when 2 =>
-					iow <= '1';
-					next_status <= 4;
-				when 4 =>
 					next_status <= 0;
+				when 0 =>
+					iow <= '1';
+					--ior <= '1';
+					next_status <= 0;
+				when others =>
+					next_status <= 3;
 				end case;
 			end if;
 			
@@ -115,16 +157,22 @@ begin
 			if addr(2 downto 0) = "000" then --register
 				case status is
 				when 0 =>
-					cs <= '0';
 					cmd <= '0';
 					ior <= '0';
+					iow <= '1';
 					next_status <= 1;
+					data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
 				when 1 =>
-					data_enet(15 downto 0) <= data(15 downto 0);
+					--data_enet(15 downto 0) <= data_in(15 downto 0);
+					data_out(15 downto 0) <= data_enet(15 downto 0);
 					next_status <= 2;
 				when 2 =>
 					ior <= '1';
 					next_status <= 3;
+				when 3 => 
+					next_status	<= 3;
+				when others =>
+					next_status <= 0;
 				end case;
 				
 			elsif addr(2 downto 0) = "100" then --data
@@ -132,17 +180,32 @@ begin
 				when 3 =>
 					cmd <= '1';
 					ior <= '0';
+					iow <= '1';
 					next_status <= 1;
+					data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
 				when 1 =>
-					data(15 downto 0) <= data_enet(15 downto 0);
+					--data_out(15 downto 0) <= data_enet(15 downto 0);
+					data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
+					next_status <= 5;
+				when 5 =>
+					data_out(15 downto 0) <= data_enet(15 downto 0);
 					next_status <= 2;
 				when 2 =>
 					ior <= '1';
 					next_status <= 4;
 				when 4 =>
+					ior <= '1';
+					next_status <= 0;--0
+				when 0 =>
+					ior <= '1';
 					next_status <= 0;
+				when others =>
+					next_status <= 3;
 				end case;
 			end if;
+		else
+			ior <= '1';
+			iow <= '1';
 		end if;
 
 	end process;

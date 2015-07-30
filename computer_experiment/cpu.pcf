@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jul 17 17:08:15 2015
+// Written by: Map P.20131013 on Thu Jul 30 12:01:41 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -39,6 +39,7 @@ COMP "FlashAddr<16>" LOCATE = SITE "C3" LEVEL 1;
 COMP "FlashAddr<17>" LOCATE = SITE "B2" LEVEL 1;
 COMP "FlashAddr<18>" LOCATE = SITE "A2" LEVEL 1;
 COMP "FlashAddr<19>" LOCATE = SITE "C2" LEVEL 1;
+COMP "enet_cs" LOCATE = SITE "B14" LEVEL 1;
 COMP "FlashData<10>" LOCATE = SITE "H5" LEVEL 1;
 COMP "FlashData<11>" LOCATE = SITE "B1" LEVEL 1;
 COMP "FlashData<12>" LOCATE = SITE "D1" LEVEL 1;
@@ -109,6 +110,7 @@ COMP "led<4>" LOCATE = SITE "J26" LEVEL 1;
 COMP "led<5>" LOCATE = SITE "J25" LEVEL 1;
 COMP "led<6>" LOCATE = SITE "G23" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "J24" LEVEL 1;
+COMP "clk_25" LOCATE = SITE "D14" LEVEL 1;
 COMP "led<8>" LOCATE = SITE "L24" LEVEL 1;
 COMP "led<9>" LOCATE = SITE "K24" LEVEL 1;
 COMP "Ram1Data<10>" LOCATE = SITE "AD18" LEVEL 1;
@@ -143,6 +145,11 @@ COMP "FlashAddr<6>" LOCATE = SITE "C7" LEVEL 1;
 COMP "FlashAddr<7>" LOCATE = SITE "C6" LEVEL 1;
 COMP "FlashAddr<8>" LOCATE = SITE "D6" LEVEL 1;
 COMP "FlashAddr<9>" LOCATE = SITE "A6" LEVEL 1;
+COMP "enet_cmd" LOCATE = SITE "B12" LEVEL 1;
+COMP "enet_int" LOCATE = SITE "D13" LEVEL 1;
+COMP "enet_ior" LOCATE = SITE "C13" LEVEL 1;
+COMP "enet_iow" LOCATE = SITE "A13" LEVEL 1;
+COMP "enet_reset" LOCATE = SITE "A14" LEVEL 1;
 COMP "FlashData<0>" LOCATE = SITE "G4" LEVEL 1;
 COMP "FlashData<1>" LOCATE = SITE "J3" LEVEL 1;
 COMP "FlashData<2>" LOCATE = SITE "K3" LEVEL 1;
