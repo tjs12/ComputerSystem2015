@@ -10,6 +10,12 @@
 #define COM1            0xbfd003f8
 #define COM1_STATE      (COM1+4)
 
+/***** VGA, Keyboard *****/
+#define VGA            0xbfc03000
+#define KBD            0xAF000000 //Nota bene!
+
+
+
 static bool serial_exists = 0;
 
 static void
@@ -39,6 +45,12 @@ serial_putc(int c) {
         serial_putc_sub(' ');
         serial_putc_sub('\b');
     }
+}
+
+/* vga_putc - print character to serial port */
+static void
+vga_putc(int c) {
+    *(uint32_t *)VGA = (uint32_t)c;
 }
 
 /* *
@@ -111,6 +123,7 @@ cons_putc(int c) {
     local_intr_save(intr_flag);
     {
         serial_putc(c);
+		vga_putc(c);
     }
     local_intr_restore(intr_flag);
 }

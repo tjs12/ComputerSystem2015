@@ -743,7 +743,7 @@ process(RST, CLK, MemRead, MemWrite)
 					condi <= condi + 1;
 				end if;
 				
-			elsif addr = x"1FD003400" then --网口INDEX
+			elsif addr = x"1A000000" then --网口INDEX
 				if MemRead = '1' then
 					netr <= '1';
 					netw <= '0';
@@ -764,7 +764,7 @@ process(RST, CLK, MemRead, MemWrite)
 						ready <= '0';
 					end if;
 				end if;
-			elsif addr = x"1FD003404" then --网口DATA
+			elsif addr = x"1A000004" then --网口DATA
 				if MemRead = '1' then
 					netr <= '1';
 					netw <= '0';

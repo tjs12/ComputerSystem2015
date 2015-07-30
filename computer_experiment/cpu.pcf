@@ -1,9 +1,15 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jul 30 22:13:51 2015
+// Written by: Map P.20131013 on Fri Jul 31 01:59:26 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "RST" LOCATE = SITE "T1" LEVEL 1;
+COMP "enet_data<10>" LOCATE = SITE "C12" LEVEL 1;
+COMP "enet_data<11>" LOCATE = SITE "A11" LEVEL 1;
+COMP "enet_data<12>" LOCATE = SITE "C11" LEVEL 1;
+COMP "enet_data<13>" LOCATE = SITE "D11" LEVEL 1;
+COMP "enet_data<14>" LOCATE = SITE "A10" LEVEL 1;
+COMP "enet_data<15>" LOCATE = SITE "B10" LEVEL 1;
 COMP "FlashOE" LOCATE = SITE "J1" LEVEL 1;
 COMP "FlashWE" LOCATE = SITE "K1" LEVEL 1;
 COMP "FlashRP" LOCATE = SITE "A5" LEVEL 1;
@@ -77,6 +83,16 @@ COMP "SW<19>" LOCATE = SITE "U3" LEVEL 1;
 COMP "SW<27>" LOCATE = SITE "N5" LEVEL 1;
 COMP "SW<28>" LOCATE = SITE "M4" LEVEL 1;
 COMP "SW<29>" LOCATE = SITE "M3" LEVEL 1;
+COMP "enet_data<0>" LOCATE = SITE "C10" LEVEL 1;
+COMP "enet_data<1>" LOCATE = SITE "D10" LEVEL 1;
+COMP "enet_data<2>" LOCATE = SITE "E9" LEVEL 1;
+COMP "enet_data<3>" LOCATE = SITE "E10" LEVEL 1;
+COMP "enet_data<4>" LOCATE = SITE "A9" LEVEL 1;
+COMP "enet_data<5>" LOCATE = SITE "C9" LEVEL 1;
+COMP "enet_data<6>" LOCATE = SITE "A8" LEVEL 1;
+COMP "enet_data<7>" LOCATE = SITE "B8" LEVEL 1;
+COMP "enet_data<8>" LOCATE = SITE "A12" LEVEL 1;
+COMP "enet_data<9>" LOCATE = SITE "D12" LEVEL 1;
 COMP "Ram1EN" LOCATE = SITE "AA26" LEVEL 1;
 COMP "Ram2EN" LOCATE = SITE "AC3" LEVEL 1;
 COMP "Ram1OE" LOCATE = SITE "AD17" LEVEL 1;

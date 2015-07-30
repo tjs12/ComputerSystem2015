@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.51 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.51 secs
  
 --> Reading design: cpu.prj
 
@@ -100,7 +100,7 @@ Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
 ---- Other Options
-Cores Search Directories           : {"ipcore_dir"  }
+Cores Search Directories           : {"../PS2KB_to_VGA/VGA" "ipcore_dir"  }
 
 =========================================================================
 
@@ -325,7 +325,7 @@ WARNING:Xst:653 - Signal <Cause<1:0>> is used but never assigned. This sourceles
     Found 1-bit 4-to-1 multiplexer for signal <alu_R[1]_mem_data_read[25]_Mux_623_o> created at line 1119.
     Found 1-bit 4-to-1 multiplexer for signal <alu_R[1]_mem_data_read[24]_Mux_624_o> created at line 1119.
     Found 32-bit 4-to-1 multiplexer for signal <alu_R[1]_reg_ReadData2[7]_wide_mux_634_OUT> created at line 1150.
-    Found 5-bit 8-to-1 multiplexer for signal <_n1907> created at line 374.
+    Found 5-bit 8-to-1 multiplexer for signal <_n1903> created at line 374.
     Found 32-bit comparator equal for signal <reg_ReadData1[31]_reg_ReadData2[31]_equal_234_o> created at line 540
     Found 32-bit comparator equal for signal <Count[31]_Compare[31]_equal_825_o> created at line 1482
     Found 16-bit comparator equal for signal <PC[15]_SW[31]_equal_828_o> created at line 1505
@@ -1432,6 +1432,7 @@ INFO:Xst:3210 - "C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_e
     Found 23-bit register for signal <FlashAddr>.
     Found 8-bit register for signal <ComDataIn>.
     Found 1-bit register for signal <wrn>.
+    Found 16-bit register for signal <nd_in>.
     Found 16-bit register for signal <vga_data>.
     Found 1-bit register for signal <vga_ctl>.
     Found 1-bit register for signal <keyboard_r>.
@@ -1623,9 +1624,9 @@ WARNING:Xst:3015 - Contents of array <ComBuffer> may be accessed with an index t
     Summary:
 	inferred   1 RAM(s).
 	inferred   7 Adder/Subtractor(s).
-	inferred 356 D-type flip-flop(s).
+	inferred 372 D-type flip-flop(s).
 	inferred  15 Comparator(s).
-	inferred 342 Multiplexer(s).
+	inferred 348 Multiplexer(s).
 	inferred  80 Tristate(s).
 Unit <phy_mem> synthesized.
 
@@ -4241,11 +4242,11 @@ Macro Statistics
  5-bit adder                                           : 1
  6-bit adder                                           : 1
  8-bit subtractor                                      : 2
-# Registers                                            : 413
+# Registers                                            : 414
  1-bit register                                        : 347
  10-bit register                                       : 2
  12-bit register                                       : 1
- 16-bit register                                       : 3
+ 16-bit register                                       : 4
  2-bit register                                        : 2
  20-bit register                                       : 2
  23-bit register                                       : 1
@@ -4271,8 +4272,8 @@ Macro Statistics
  4-bit comparator lessequal                            : 4
  6-bit comparator greater                              : 4
  6-bit comparator lessequal                            : 3
-# Multiplexers                                         : 5183
- 1-bit 2-to-1 multiplexer                              : 4712
+# Multiplexers                                         : 5189
+ 1-bit 2-to-1 multiplexer                              : 4716
  1-bit 30-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 8
  1-bit 8-to-1 multiplexer                              : 1
@@ -4282,7 +4283,7 @@ Macro Statistics
  23-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 1
  30-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 140
+ 32-bit 2-to-1 multiplexer                             : 142
  32-bit 32-to-1 multiplexer                            : 3
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 21
@@ -4313,12 +4314,14 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 Reading core <ipcore_dir/multiplier.ngc>.
 Reading Secure Unit <blk00000001>.
+Reading core <../PS2KB_to_VGA/VGA/VGA_RAM_Text.ngc>.
+Reading core <../PS2KB_to_VGA/VGA/VGA_ROM_Font.ngc>.
 Loading core <multiplier> for timing and area information for instance <multiplier1>.
-INFO:Xst:2261 - The FF/Latch <MemRead_CLK_DFF_1258> in Unit <phy_mem1> is equivalent to the following 31 FFs/Latches, which will be removed : <MemRead_CLK_DFF_1259> <MemRead_CLK_DFF_1260> <MemRead_CLK_DFF_1261> <MemRead_CLK_DFF_1262> <MemRead_CLK_DFF_1263> <MemRead_CLK_DFF_1264> <MemRead_CLK_DFF_1265> <MemRead_CLK_DFF_1266> <MemRead_CLK_DFF_1267> <MemRead_CLK_DFF_1270> <MemRead_CLK_DFF_1268> <MemRead_CLK_DFF_1269> <MemRead_CLK_DFF_1271> <MemRead_CLK_DFF_1272> <MemRead_CLK_DFF_1273> <MemRead_CLK_DFF_1274> <MemRead_CLK_DFF_1275> <MemRead_CLK_DFF_1276> <MemRead_CLK_DFF_1279> <MemRead_CLK_DFF_1277> <MemRead_CLK_DFF_1278> <MemRead_CLK_DFF_1280> <MemRead_CLK_DFF_1281> <MemRead_CLK_DFF_1282> <MemRead_CLK_DFF_1283> <MemRead_CLK_DFF_1284> <MemRead_CLK_DFF_1285> <MemRead_CLK_DFF_1288> <MemRead_CLK_DFF_1286> <MemRead_CLK_DFF_1287> <MemRead_CLK_DFF_1289> 
+Loading core <VGA_RAM_Text> for timing and area information for instance <ram>.
+Loading core <VGA_ROM_Font> for timing and area information for instance <rom>.
+INFO:Xst:2261 - The FF/Latch <MemRead_CLK_DFF_1258> in Unit <phy_mem1> is equivalent to the following 31 FFs/Latches, which will be removed : <MemRead_CLK_DFF_1261> <MemRead_CLK_DFF_1259> <MemRead_CLK_DFF_1260> <MemRead_CLK_DFF_1262> <MemRead_CLK_DFF_1263> <MemRead_CLK_DFF_1264> <MemRead_CLK_DFF_1265> <MemRead_CLK_DFF_1266> <MemRead_CLK_DFF_1267> <MemRead_CLK_DFF_1270> <MemRead_CLK_DFF_1268> <MemRead_CLK_DFF_1269> <MemRead_CLK_DFF_1271> <MemRead_CLK_DFF_1272> <MemRead_CLK_DFF_1273> <MemRead_CLK_DFF_1274> <MemRead_CLK_DFF_1275> <MemRead_CLK_DFF_1276> <MemRead_CLK_DFF_1279> <MemRead_CLK_DFF_1277> <MemRead_CLK_DFF_1278> <MemRead_CLK_DFF_1280> <MemRead_CLK_DFF_1281> <MemRead_CLK_DFF_1282> <MemRead_CLK_DFF_1283> <MemRead_CLK_DFF_1284> <MemRead_CLK_DFF_1285> <MemRead_CLK_DFF_1288> <MemRead_CLK_DFF_1286> <MemRead_CLK_DFF_1287> <MemRead_CLK_DFF_1289> 
 INFO:Xst:2261 - The FF/Latch <GND_1037_o_CLK_DFF_1323> in Unit <phy_mem1> is equivalent to the following 15 FFs/Latches, which will be removed : <GND_1037_o_CLK_DFF_1322> <GND_1037_o_CLK_DFF_1324> <GND_1037_o_CLK_DFF_1325> <GND_1037_o_CLK_DFF_1326> <GND_1037_o_CLK_DFF_1327> <GND_1037_o_CLK_DFF_1328> <GND_1037_o_CLK_DFF_1329> <GND_1037_o_CLK_DFF_1330> <GND_1037_o_CLK_DFF_1331> <GND_1037_o_CLK_DFF_1332> <GND_1037_o_CLK_DFF_1333> <GND_1037_o_CLK_DFF_1334> <GND_1037_o_CLK_DFF_1335> <GND_1037_o_CLK_DFF_1336> <GND_1037_o_CLK_DFF_1337> 
 INFO:Xst:2261 - The FF/Latch <MemRead_CLK_DFF_1290> in Unit <phy_mem1> is equivalent to the following 31 FFs/Latches, which will be removed : <MemRead_CLK_DFF_1291> <MemRead_CLK_DFF_1292> <MemRead_CLK_DFF_1293> <MemRead_CLK_DFF_1294> <MemRead_CLK_DFF_1295> <MemRead_CLK_DFF_1296> <MemRead_CLK_DFF_1297> <MemRead_CLK_DFF_1298> <MemRead_CLK_DFF_1299> <MemRead_CLK_DFF_1300> <MemRead_CLK_DFF_1301> <MemRead_CLK_DFF_1302> <MemRead_CLK_DFF_1305> <MemRead_CLK_DFF_1303> <MemRead_CLK_DFF_1304> <MemRead_CLK_DFF_1306> <MemRead_CLK_DFF_1307> <MemRead_CLK_DFF_1308> <MemRead_CLK_DFF_1309> <MemRead_CLK_DFF_1310> <MemRead_CLK_DFF_1311> <MemRead_CLK_DFF_1314> <MemRead_CLK_DFF_1312> <MemRead_CLK_DFF_1313> <MemRead_CLK_DFF_1315> <MemRead_CLK_DFF_1316> <MemRead_CLK_DFF_1317> <MemRead_CLK_DFF_1318> <MemRead_CLK_DFF_1319> <MemRead_CLK_DFF_1320> <MemRead_CLK_DFF_1321> 
-WARNING:Xst:1710 - FF/Latch <netr> (without init value) has a constant value of 0 in block <phy_mem1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <netw> (without init value) has a constant value of 0 in block <phy_mem1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <prev_data_8> of sequential type is unconnected in block <dec>.
 WARNING:Xst:2677 - Node <prev_data_9> of sequential type is unconnected in block <dec>.
 WARNING:Xst:2677 - Node <prev_data_10> of sequential type is unconnected in block <dec>.
@@ -4356,7 +4359,7 @@ INFO:Xst:3226 - The RAM <phy_mem1/rom1/Mram_data> will be implemented as a BLOCK
     |     clkA           | connected to signal <CLK>           | rise     |
     |     enA            | connected to internal node          | low      |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <_n1913<11:2>>  |          |
+    |     addrA          | connected to signal <_n1909<11:2>>  |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <phy_mem1/RomData> |          |
     -----------------------------------------------------------------------
@@ -4382,7 +4385,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <phy_mem1/Mram_ComBuffer> will be implemen
     |     clkA           | connected to signal <CLK>           | rise     |
     |     weA            | connected to internal node          | high     |
     |     addrA          | connected to signal <(phy_mem1/head,DYP2<3:2>)> |          |
-    |     diA            | connected to signal <phy_mem1/_n5369> |          |
+    |     diA            | connected to signal <phy_mem1/_n5556> |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
     |     aspect ratio   | 1024-word x 8-bit                   |          |
@@ -4476,8 +4479,8 @@ Macro Statistics
  10-bit up counter                                     : 2
  32-bit up counter                                     : 3
  4-bit up counter                                      : 5
-# Registers                                            : 1684
- Flip-Flops                                            : 1684
+# Registers                                            : 1700
+ Flip-Flops                                            : 1700
 # Comparators                                          : 68
  10-bit comparator equal                               : 2
  16-bit comparator equal                               : 1
@@ -4490,8 +4493,8 @@ Macro Statistics
  4-bit comparator lessequal                            : 4
  6-bit comparator greater                              : 4
  6-bit comparator lessequal                            : 3
-# Multiplexers                                         : 5297
- 1-bit 2-to-1 multiplexer                              : 4832
+# Multiplexers                                         : 5303
+ 1-bit 2-to-1 multiplexer                              : 4836
  1-bit 30-to-1 multiplexer                             : 1
  1-bit 4-to-1 multiplexer                              : 8
  1-bit 8-to-1 multiplexer                              : 1
@@ -4501,7 +4504,7 @@ Macro Statistics
  23-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 1
  30-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 136
+ 32-bit 2-to-1 multiplexer                             : 138
  32-bit 32-to-1 multiplexer                            : 3
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 21
@@ -4526,29 +4529,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <phy_mem1/netw> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <phy_mem1/netr> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <phy_mem1/MemRead_CLK_DFF_1320> in Unit <cpu> is equivalent to the following 31 FFs/Latches, which will be removed : <phy_mem1/MemRead_CLK_DFF_1321> <phy_mem1/MemRead_CLK_DFF_1319> <phy_mem1/MemRead_CLK_DFF_1318> <phy_mem1/MemRead_CLK_DFF_1315> <phy_mem1/MemRead_CLK_DFF_1317> <phy_mem1/MemRead_CLK_DFF_1316> <phy_mem1/MemRead_CLK_DFF_1314> <phy_mem1/MemRead_CLK_DFF_1313> <phy_mem1/MemRead_CLK_DFF_1310> <phy_mem1/MemRead_CLK_DFF_1312> <phy_mem1/MemRead_CLK_DFF_1311> <phy_mem1/MemRead_CLK_DFF_1309> <phy_mem1/MemRead_CLK_DFF_1308> <phy_mem1/MemRead_CLK_DFF_1305> <phy_mem1/MemRead_CLK_DFF_1307> <phy_mem1/MemRead_CLK_DFF_1306> <phy_mem1/MemRead_CLK_DFF_1302> <phy_mem1/MemRead_CLK_DFF_1304> <phy_mem1/MemRead_CLK_DFF_1303> <phy_mem1/MemRead_CLK_DFF_1299> <phy_mem1/MemRead_CLK_DFF_1301> <phy_mem1/MemRead_CLK_DFF_1300> <phy_mem1/MemRead_CLK_DFF_1298> <phy_mem1/MemRead_CLK_DFF_1297> <phy_mem1/MemRead_CLK_DFF_1294> <phy_mem1/MemRead_CLK_DFF_1296> <phy_mem1/MemRead_CLK_DFF_1295>
-   <phy_mem1/MemRead_CLK_DFF_1293> <phy_mem1/MemRead_CLK_DFF_1292> <phy_mem1/MemRead_CLK_DFF_1291> <phy_mem1/MemRead_CLK_DFF_1290> 
+INFO:Xst:2261 - The FF/Latch <phy_mem1/MemRead_CLK_DFF_1289> in Unit <cpu> is equivalent to the following 31 FFs/Latches, which will be removed : <phy_mem1/MemRead_CLK_DFF_1288> <phy_mem1/MemRead_CLK_DFF_1287> <phy_mem1/MemRead_CLK_DFF_1284> <phy_mem1/MemRead_CLK_DFF_1286> <phy_mem1/MemRead_CLK_DFF_1285> <phy_mem1/MemRead_CLK_DFF_1283> <phy_mem1/MemRead_CLK_DFF_1282> <phy_mem1/MemRead_CLK_DFF_1279> <phy_mem1/MemRead_CLK_DFF_1281> <phy_mem1/MemRead_CLK_DFF_1280> <phy_mem1/MemRead_CLK_DFF_1278> <phy_mem1/MemRead_CLK_DFF_1277> <phy_mem1/MemRead_CLK_DFF_1274> <phy_mem1/MemRead_CLK_DFF_1276> <phy_mem1/MemRead_CLK_DFF_1275> <phy_mem1/MemRead_CLK_DFF_1273> <phy_mem1/MemRead_CLK_DFF_1272> <phy_mem1/MemRead_CLK_DFF_1269> <phy_mem1/MemRead_CLK_DFF_1271> <phy_mem1/MemRead_CLK_DFF_1270> <phy_mem1/MemRead_CLK_DFF_1266> <phy_mem1/MemRead_CLK_DFF_1268> <phy_mem1/MemRead_CLK_DFF_1267> <phy_mem1/MemRead_CLK_DFF_1263> <phy_mem1/MemRead_CLK_DFF_1265> <phy_mem1/MemRead_CLK_DFF_1264> <phy_mem1/MemRead_CLK_DFF_1262>
+   <phy_mem1/MemRead_CLK_DFF_1261> <phy_mem1/MemRead_CLK_DFF_1258> <phy_mem1/MemRead_CLK_DFF_1260> <phy_mem1/MemRead_CLK_DFF_1259> 
 INFO:Xst:2261 - The FF/Latch <phy_mem1/GND_1037_o_CLK_DFF_1335> in Unit <cpu> is equivalent to the following 15 FFs/Latches, which will be removed : <phy_mem1/GND_1037_o_CLK_DFF_1337> <phy_mem1/GND_1037_o_CLK_DFF_1336> <phy_mem1/GND_1037_o_CLK_DFF_1334> <phy_mem1/GND_1037_o_CLK_DFF_1333> <phy_mem1/GND_1037_o_CLK_DFF_1330> <phy_mem1/GND_1037_o_CLK_DFF_1332> <phy_mem1/GND_1037_o_CLK_DFF_1331> <phy_mem1/GND_1037_o_CLK_DFF_1329> <phy_mem1/GND_1037_o_CLK_DFF_1328> <phy_mem1/GND_1037_o_CLK_DFF_1325> <phy_mem1/GND_1037_o_CLK_DFF_1327> <phy_mem1/GND_1037_o_CLK_DFF_1326> <phy_mem1/GND_1037_o_CLK_DFF_1324> <phy_mem1/GND_1037_o_CLK_DFF_1323> <phy_mem1/GND_1037_o_CLK_DFF_1322> 
-INFO:Xst:2261 - The FF/Latch <phy_mem1/MemRead_CLK_DFF_1289> in Unit <cpu> is equivalent to the following 31 FFs/Latches, which will be removed : <phy_mem1/MemRead_CLK_DFF_1288> <phy_mem1/MemRead_CLK_DFF_1287> <phy_mem1/MemRead_CLK_DFF_1284> <phy_mem1/MemRead_CLK_DFF_1286> <phy_mem1/MemRead_CLK_DFF_1285> <phy_mem1/MemRead_CLK_DFF_1283> <phy_mem1/MemRead_CLK_DFF_1282> <phy_mem1/MemRead_CLK_DFF_1279> <phy_mem1/MemRead_CLK_DFF_1281> <phy_mem1/MemRead_CLK_DFF_1280> <phy_mem1/MemRead_CLK_DFF_1278> <phy_mem1/MemRead_CLK_DFF_1277> <phy_mem1/MemRead_CLK_DFF_1274> <phy_mem1/MemRead_CLK_DFF_1276> <phy_mem1/MemRead_CLK_DFF_1275> <phy_mem1/MemRead_CLK_DFF_1273> <phy_mem1/MemRead_CLK_DFF_1272> <phy_mem1/MemRead_CLK_DFF_1269> <phy_mem1/MemRead_CLK_DFF_1271> <phy_mem1/MemRead_CLK_DFF_1270> <phy_mem1/MemRead_CLK_DFF_1268> <phy_mem1/MemRead_CLK_DFF_1267> <phy_mem1/MemRead_CLK_DFF_1264> <phy_mem1/MemRead_CLK_DFF_1266> <phy_mem1/MemRead_CLK_DFF_1265> <phy_mem1/MemRead_CLK_DFF_1261> <phy_mem1/MemRead_CLK_DFF_1263>
-   <phy_mem1/MemRead_CLK_DFF_1262> <phy_mem1/MemRead_CLK_DFF_1258> <phy_mem1/MemRead_CLK_DFF_1260> <phy_mem1/MemRead_CLK_DFF_1259> 
-WARNING:Xst:1710 - FF/Latch <data_out_14> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_13> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_12> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_11> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_15> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <phy_mem1/MemRead_CLK_DFF_1320> in Unit <cpu> is equivalent to the following 31 FFs/Latches, which will be removed : <phy_mem1/MemRead_CLK_DFF_1321> <phy_mem1/MemRead_CLK_DFF_1319> <phy_mem1/MemRead_CLK_DFF_1318> <phy_mem1/MemRead_CLK_DFF_1315> <phy_mem1/MemRead_CLK_DFF_1317> <phy_mem1/MemRead_CLK_DFF_1316> <phy_mem1/MemRead_CLK_DFF_1314> <phy_mem1/MemRead_CLK_DFF_1313> <phy_mem1/MemRead_CLK_DFF_1310> <phy_mem1/MemRead_CLK_DFF_1312> <phy_mem1/MemRead_CLK_DFF_1311> <phy_mem1/MemRead_CLK_DFF_1307> <phy_mem1/MemRead_CLK_DFF_1309> <phy_mem1/MemRead_CLK_DFF_1308> <phy_mem1/MemRead_CLK_DFF_1304> <phy_mem1/MemRead_CLK_DFF_1306> <phy_mem1/MemRead_CLK_DFF_1305> <phy_mem1/MemRead_CLK_DFF_1303> <phy_mem1/MemRead_CLK_DFF_1302> <phy_mem1/MemRead_CLK_DFF_1299> <phy_mem1/MemRead_CLK_DFF_1301> <phy_mem1/MemRead_CLK_DFF_1300> <phy_mem1/MemRead_CLK_DFF_1298> <phy_mem1/MemRead_CLK_DFF_1297> <phy_mem1/MemRead_CLK_DFF_1294> <phy_mem1/MemRead_CLK_DFF_1296> <phy_mem1/MemRead_CLK_DFF_1295>
+   <phy_mem1/MemRead_CLK_DFF_1293> <phy_mem1/MemRead_CLK_DFF_1292> <phy_mem1/MemRead_CLK_DFF_1291> <phy_mem1/MemRead_CLK_DFF_1290> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <phy_mem1/kbd/kb/lis/FSM_0> on signal <state[1:3]> with gray encoding.
 -------------------------
@@ -4560,39 +4545,20 @@ Optimizing FSM <phy_mem1/kbd/kb/lis/FSM_0> on signal <state[1:3]> with gray enco
  st_ending   | 110
  st_refusing | 001
 -------------------------
-WARNING:Xst:1426 - The value init of the FF/Latch next_status_31 hinder the constant cleaning in the block network.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1293 - FF/Latch <next_status_9> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_8> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_5> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_7> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_6> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_4> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_3> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2091_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2093_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2095_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2097_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2099_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2101_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2103_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2105_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2107_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2113_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2109_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2111_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2115_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2117_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2119_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_2> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_1> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_0> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_enet[15]_r_DLATCH_2121_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <w_r_DLATCH_2092_q> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cmd> (without init value) has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <iow> (without init value) has a constant value of 1 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ior> (without init value) has a constant value of 1 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_31> has a constant value of 1 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_4> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_6> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_7> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_5> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_8> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_9> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_10> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_11> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_12> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_13> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_14> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_15> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_16> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_30> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_29> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_28> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
@@ -4601,33 +4567,26 @@ WARNING:Xst:1293 - FF/Latch <next_status_26> has a constant value of 0 in block 
 WARNING:Xst:1293 - FF/Latch <next_status_25> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_22> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_24> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_10> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_11> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_12> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_13> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_14> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_15> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_23> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_21> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_20> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_16> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <next_status_17> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_19> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <next_status_18> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_30> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_29> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_28> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_27> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_26> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_25> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_24> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_23> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_22> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_21> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_20> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_19> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_18> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_status_17> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_17> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_18> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_19> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_20> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_21> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_22> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_23> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_24> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_25> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_26> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_27> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_28> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_29> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_30> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_16> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_15> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_14> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
@@ -4642,10 +4601,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_6> has a con
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_5> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_4> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_3> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_2> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_1> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <status_0> has a constant value of 0 in block <network>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <status_31> is unconnected in block <network>.
 WARNING:Xst:1710 - FF/Latch <char_7> (without init value) has a constant value of 0 in block <PS2KB_Decoder>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <phy_mem1/FlashAddr_0> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <exc_code_4> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
@@ -4836,20 +4791,20 @@ Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 15.
 WARNING:Xst:1426 - The value init of the FF/Latch phy_mem1/kbd/kb/lis/pos_31_LD hinder the constant cleaning in the block cpu.
    You should achieve better results by setting this init to 0.
-FlipFlop IR_11 has been replicated 1 time(s)
-FlipFlop IR_12 has been replicated 1 time(s)
 FlipFlop IR_13 has been replicated 1 time(s)
-FlipFlop IR_16 has been replicated 10 time(s)
-FlipFlop IR_17 has been replicated 10 time(s)
+FlipFlop IR_17 has been replicated 1 time(s)
+FlipFlop IR_19 has been replicated 1 time(s)
 FlipFlop IR_20 has been replicated 1 time(s)
-FlipFlop IR_21 has been replicated 13 time(s)
-FlipFlop IR_22 has been replicated 13 time(s)
+FlipFlop IR_21 has been replicated 11 time(s)
+FlipFlop IR_22 has been replicated 8 time(s)
 FlipFlop IR_23 has been replicated 1 time(s)
 FlipFlop IR_24 has been replicated 1 time(s)
 FlipFlop IR_25 has been replicated 1 time(s)
+FlipFlop mem_addr_30 has been replicated 1 time(s)
+FlipFlop mem_addr_31 has been replicated 1 time(s)
 FlipFlop phy_mem1/vga_component/con/line_0 has been replicated 4 time(s)
-FlipFlop phy_mem1/vga_component/con/line_1 has been replicated 5 time(s)
-FlipFlop phy_mem1/vga_component/con/line_2 has been replicated 1 time(s)
+FlipFlop phy_mem1/vga_component/con/line_1 has been replicated 4 time(s)
+FlipFlop phy_mem1/vga_component/con/line_2 has been replicated 2 time(s)
 FlipFlop phy_mem1/vga_component/con/line_3 has been replicated 1 time(s)
 FlipFlop phy_mem1/vga_component/con/line_4 has been replicated 1 time(s)
 
@@ -4859,8 +4814,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1784
- Flip-Flops                                            : 1784
+# Registers                                            : 1781
+ Flip-Flops                                            : 1781
 
 =========================================================================
 
@@ -4883,53 +4838,50 @@ Top Level Output File Name         : cpu.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 12535
-#      GND                         : 2
-#      INV                         : 74
+# BELS                             : 12622
+#      GND                         : 4
+#      INV                         : 76
 #      LUT1                        : 406
-#      LUT2                        : 677
-#      LUT3                        : 525
-#      LUT4                        : 2213
-#      LUT5                        : 1096
-#      LUT6                        : 3347
+#      LUT2                        : 680
+#      LUT3                        : 479
+#      LUT4                        : 2330
+#      LUT5                        : 855
+#      LUT6                        : 3567
 #      MULT_AND                    : 528
-#      MUXCY                       : 1915
-#      MUXF7                       : 108
+#      MUXCY                       : 1911
+#      MUXF7                       : 140
 #      MUXF8                       : 8
-#      VCC                         : 1
+#      VCC                         : 3
 #      XORCY                       : 1635
-# FlipFlops/Latches                : 3912
+# FlipFlops/Latches                : 3949
 #      FD                          : 173
-#      FDC                         : 158
+#      FDC                         : 179
 #      FDC_1                       : 1
-#      FDCE                        : 556
-#      FDE                         : 810
+#      FDCE                        : 541
+#      FDE                         : 801
 #      FDE_1                       : 17
-#      FDP                         : 9
-#      FDPE                        : 47
+#      FDP                         : 18
+#      FDPE                        : 38
 #      FDPE_1                      : 2
-#      FDR                         : 72
+#      FDR                         : 70
+#      FDRE                        : 2
 #      FDSE                        : 3
-#      LD                          : 1018
+#      LD                          : 1058
 #      LDC                         : 5
 #      LDCE                        : 1008
 #      LDE                         : 32
 #      LDP                         : 1
-# RAMS                             : 66
+# RAMS                             : 72
 #      RAM64M                      : 32
 #      RAM64X1D                    : 32
-#      RAMB16BWER                  : 2
+#      RAMB16BWER                  : 8
 # Clock Buffers                    : 8
-#      BUFG                        : 7
-#      BUFGP                       : 1
-# IO Buffers                       : 251
-#      IBUF                        : 29
-#      IOBUF                       : 81
+#      BUFG                        : 6
+#      BUFGP                       : 2
+# IO Buffers                       : 250
+#      IBUF                        : 28
+#      IOBUF                       : 97
 #      OBUF                        : 125
-#      OBUFT                       : 16
-# Others                           : 2
-#      VGA_RAM_Text                : 1
-#      VGA_ROM_Font                : 1
 
 Device utilization summary:
 ---------------------------
@@ -4938,27 +4890,27 @@ Selected Device : 6slx100fgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3910  out of  126576     3%  
- Number of Slice LUTs:                 8530  out of  63288    13%  
-    Number used as Logic:              8338  out of  63288    13%  
+ Number of Slice Registers:            3928  out of  126576     3%  
+ Number of Slice LUTs:                 8585  out of  63288    13%  
+    Number used as Logic:              8393  out of  63288    13%  
     Number used as Memory:              192  out of  15616     1%  
        Number used as RAM:              192
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9633
-   Number with an unused Flip Flop:    5723  out of   9633    59%  
-   Number with an unused LUT:          1103  out of   9633    11%  
-   Number of fully used LUT-FF pairs:  2807  out of   9633    29%  
-   Number of unique control sets:       317
+ Number of LUT Flip Flop pairs used:   9707
+   Number with an unused Flip Flop:    5779  out of   9707    59%  
+   Number with an unused LUT:          1122  out of   9707    11%  
+   Number of fully used LUT-FF pairs:  2806  out of   9707    28%  
+   Number of unique control sets:       296
 
 IO Utilization: 
  Number of IOs:                         265
  Number of bonded IOBs:                 252  out of    480    52%  
-    IOB Flip Flops/Latches:               2
+    IOB Flip Flops/Latches:              21
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                2  out of    268     0%  
-    Number using Block RAM only:          2
+ Number of Block RAM/FIFO:                8  out of    268     2%  
+    Number using Block RAM only:          8
  Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
 
 ---------------------------
@@ -4979,63 +4931,71 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------+---------------------------------------+-------+
-Clock Signal                                                                                     | Clock buffer(FF name)                 | Load  |
--------------------------------------------------------------------------------------------------+---------------------------------------+-------+
-CLK50                                                                                            | IBUF+BUFG                             | 88    |
-CLK(Mmux_CLK11:O)                                                                                | BUFG(*)(mult_start)                   | 1189  |
-tlb_write                                                                                        | BUFG                                  | 1008  |
-phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o(phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o3:O)    | NONE(*)(phy_mem1/mmu1/DYP2_2)         | 5     |
-phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o(phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o1:O)        | NONE(*)(phy_mem1/mmu1/Paddr_14)       | 17    |
-phy_mem1/keyboard_r                                                                              | NONE(phy_mem1/kbd/data_1)             | 7     |
-phy_mem1/kbd/kb/dec/clk_chr                                                                      | NONE(phy_mem1/kbd/buff_6)             | 7     |
-phy_mem1/kbd/kb/div/clk                                                                          | BUFG                                  | 81    |
-registers1/RegWrite_instruction[31]_AND_2048_o(registers1/RegWrite_instruction[31]_AND_2048_o1:O)| NONE(*)(registers1/reg<0>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1984_o(registers1/RegWrite_instruction[31]_AND_1984_o1:O)| NONE(*)(registers1/reg<1>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1920_o(registers1/RegWrite_instruction[31]_AND_1920_o1:O)| NONE(*)(registers1/reg<2>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1856_o(registers1/RegWrite_instruction[31]_AND_1856_o1:O)| NONE(*)(registers1/reg<3>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1792_o(registers1/RegWrite_instruction[31]_AND_1792_o1:O)| NONE(*)(registers1/reg<4>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1728_o(registers1/RegWrite_instruction[31]_AND_1728_o1:O)| NONE(*)(registers1/reg<5>_1)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1664_o(registers1/RegWrite_instruction[31]_AND_1664_o1:O)| NONE(*)(registers1/reg<6>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1600_o(registers1/RegWrite_instruction[31]_AND_1600_o1:O)| NONE(*)(registers1/reg<7>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1536_o(registers1/RegWrite_instruction[31]_AND_1536_o1:O)| NONE(*)(registers1/reg<8>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1472_o(registers1/RegWrite_instruction[31]_AND_1472_o1:O)| NONE(*)(registers1/reg<9>_0)          | 32    |
-registers1/RegWrite_instruction[31]_AND_1408_o(registers1/RegWrite_instruction[31]_AND_1408_o1:O)| NONE(*)(registers1/reg<10>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1344_o(registers1/RegWrite_instruction[31]_AND_1344_o1:O)| NONE(*)(registers1/reg<11>_1)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1280_o(registers1/RegWrite_instruction[31]_AND_1280_o1:O)| NONE(*)(registers1/reg<12>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1216_o(registers1/RegWrite_instruction[31]_AND_1216_o1:O)| NONE(*)(registers1/reg<13>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1152_o(registers1/RegWrite_instruction[31]_AND_1152_o1:O)| NONE(*)(registers1/reg<14>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1088_o(registers1/RegWrite_instruction[31]_AND_1088_o1:O)| NONE(*)(registers1/reg<15>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_1024_o(registers1/RegWrite_instruction[31]_AND_1024_o1:O)| NONE(*)(registers1/reg<16>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_960_o(registers1/RegWrite_instruction[31]_AND_960_o1:O)  | NONE(*)(registers1/reg<17>_1)         | 32    |
-registers1/RegWrite_instruction[31]_AND_896_o(registers1/RegWrite_instruction[31]_AND_896_o1:O)  | NONE(*)(registers1/reg<18>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_832_o(registers1/RegWrite_instruction[31]_AND_832_o1:O)  | NONE(*)(registers1/reg<19>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_768_o(registers1/RegWrite_instruction[31]_AND_768_o1:O)  | NONE(*)(registers1/reg<20>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_704_o(registers1/RegWrite_instruction[31]_AND_704_o1:O)  | NONE(*)(registers1/reg<21>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_640_o(registers1/RegWrite_instruction[31]_AND_640_o1:O)  | NONE(*)(registers1/reg<22>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_576_o(registers1/RegWrite_instruction[31]_AND_576_o1:O)  | NONE(*)(registers1/reg<23>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_512_o(registers1/RegWrite_instruction[31]_AND_512_o1:O)  | NONE(*)(registers1/reg<24>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_448_o(registers1/RegWrite_instruction[31]_AND_448_o1:O)  | NONE(*)(registers1/reg<25>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_384_o(registers1/RegWrite_instruction[31]_AND_384_o1:O)  | NONE(*)(registers1/reg<26>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_320_o(registers1/RegWrite_instruction[31]_AND_320_o1:O)  | NONE(*)(registers1/reg<27>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_256_o(registers1/RegWrite_instruction[31]_AND_256_o1:O)  | NONE(*)(registers1/reg<28>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_192_o(registers1/RegWrite_instruction[31]_AND_192_o1:O)  | NONE(*)(registers1/reg<29>_0)         | 32    |
-registers1/RegWrite_instruction[31]_AND_128_o(registers1/RegWrite_instruction[31]_AND_128_o1:O)  | NONE(*)(registers1/reg<30>_0)         | 32    |
-RegWrite                                                                                         | NONE(registers1/reg<31>_31)           | 32    |
-phy_mem1/uart1/u3/clk                                                                            | NONE(phy_mem1/uart1/u1/clkdiv_3)      | 8     |
-phy_mem1/uart1/u1/clkdiv_3                                                                       | NONE(phy_mem1/uart1/u1/no_bits_sent_3)| 15    |
-phy_mem1/wrn                                                                                     | NONE(phy_mem1/uart1/u1/tbre_t)        | 9     |
-CLK11                                                                                            | BUFGP                                 | 34    |
-phy_mem1/uart1/u2/clkdiv_3                                                                       | NONE(phy_mem1/uart1/u2/no_bits_rcvd_3)| 24    |
-phy_mem1/uart1/u2/readover                                                                       | NONE(phy_mem1/uart1/u2/data_ready)    | 2     |
-phy_mem1/vga_ctl                                                                                 | BUFG                                  | 388   |
-phy_mem1/vga_component/div/clk1                                                                  | BUFG                                  | 35    |
-phy_mem1/vga_component/ren/hSync                                                                 | BUFG                                  | 34    |
-phy_mem1/mmu1/DYP2_1_G(phy_mem1/mmu1/DYP2_1_G:O)                                                 | NONE(*)(phy_mem1/mmu1/DYP2_1)         | 1     |
-RST                                                                                              | IBUF                                  | 1     |
-u_txd                                                                                            | IBUF                                  | 1     |
--------------------------------------------------------------------------------------------------+---------------------------------------+-------+
-(*) These 35 clock signal(s) are generated by combinatorial logic,
+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                     | Clock buffer(FF name)                                                                                                                                   | Load  |
+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+CLK50                                                                                            | BUFGP                                                                                                                                                   | 94    |
+CLK(Mmux_CLK11:O)                                                                                | BUFG(*)(mult_start)                                                                                                                                     | 1182  |
+tlb_write                                                                                        | BUFG                                                                                                                                                    | 1008  |
+phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o(phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o1:O)    | NONE(*)(phy_mem1/mmu1/DYP2_2)                                                                                                                           | 5     |
+phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o(phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o1:O)        | NONE(*)(phy_mem1/mmu1/Paddr_14)                                                                                                                         | 17    |
+phy_mem1/net/w_r_AND_3293_o(phy_mem1/net/w_r_AND_3293_o:O)                                       | NONE(*)(phy_mem1/net/data_out_15)                                                                                                                       | 16    |
+phy_mem1/net/r_addr[2]_MUX_12024_o(phy_mem1/net/Mmux_r_addr[2]_MUX_12024_o1:O)                   | NONE(*)(phy_mem1/net/data_enet[15]_r_DLATCH_2121_q)                                                                                                     | 17    |
+phy_mem1/net/clk25_1                                                                             | NONE(phy_mem1/net/status_31)                                                                                                                            | 4     |
+phy_mem1/net/r_addr[2]_MUX_11798_o(phy_mem1/net/Mmux_r_addr[2]_MUX_11798_o11:O)                  | NONE(*)(phy_mem1/net/next_status_0)                                                                                                                     | 4     |
+phy_mem1/net/r_addr[2]_MUX_11791_o(phy_mem1/net/Mmux_r_addr[2]_MUX_11791_o12:O)                  | NONE(*)(phy_mem1/net/ior)                                                                                                                               | 1     |
+phy_mem1/net/r_addr[2]_MUX_11783_o(phy_mem1/net/Mmux_r_addr[2]_MUX_11783_o12:O)                  | NONE(*)(phy_mem1/net/iow)                                                                                                                               | 1     |
+phy_mem1/net/r_addr[2]_MUX_11772_o(phy_mem1/net/Mmux_r_addr[2]_MUX_11772_o1:O)                   | NONE(*)(phy_mem1/net/cmd)                                                                                                                               | 1     |
+phy_mem1/keyboard_r                                                                              | NONE(phy_mem1/kbd/data_1)                                                                                                                               | 7     |
+phy_mem1/kbd/kb/dec/clk_chr                                                                      | NONE(phy_mem1/kbd/buff_6)                                                                                                                               | 7     |
+phy_mem1/kbd/kb/div/clk                                                                          | BUFG                                                                                                                                                    | 81    |
+registers1/RegWrite_instruction[31]_AND_2048_o(registers1/RegWrite_instruction[31]_AND_2048_o1:O)| NONE(*)(registers1/reg<0>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1984_o(registers1/RegWrite_instruction[31]_AND_1984_o1:O)| NONE(*)(registers1/reg<1>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1920_o(registers1/RegWrite_instruction[31]_AND_1920_o1:O)| NONE(*)(registers1/reg<2>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1856_o(registers1/RegWrite_instruction[31]_AND_1856_o1:O)| NONE(*)(registers1/reg<3>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1792_o(registers1/RegWrite_instruction[31]_AND_1792_o1:O)| NONE(*)(registers1/reg<4>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1728_o(registers1/RegWrite_instruction[31]_AND_1728_o1:O)| NONE(*)(registers1/reg<5>_1)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1664_o(registers1/RegWrite_instruction[31]_AND_1664_o1:O)| NONE(*)(registers1/reg<6>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1600_o(registers1/RegWrite_instruction[31]_AND_1600_o1:O)| NONE(*)(registers1/reg<7>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1536_o(registers1/RegWrite_instruction[31]_AND_1536_o1:O)| NONE(*)(registers1/reg<8>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1472_o(registers1/RegWrite_instruction[31]_AND_1472_o1:O)| NONE(*)(registers1/reg<9>_0)                                                                                                                            | 32    |
+registers1/RegWrite_instruction[31]_AND_1408_o(registers1/RegWrite_instruction[31]_AND_1408_o1:O)| NONE(*)(registers1/reg<10>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1344_o(registers1/RegWrite_instruction[31]_AND_1344_o1:O)| NONE(*)(registers1/reg<11>_1)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1280_o(registers1/RegWrite_instruction[31]_AND_1280_o1:O)| NONE(*)(registers1/reg<12>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1216_o(registers1/RegWrite_instruction[31]_AND_1216_o1:O)| NONE(*)(registers1/reg<13>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1152_o(registers1/RegWrite_instruction[31]_AND_1152_o1:O)| NONE(*)(registers1/reg<14>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1088_o(registers1/RegWrite_instruction[31]_AND_1088_o1:O)| NONE(*)(registers1/reg<15>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_1024_o(registers1/RegWrite_instruction[31]_AND_1024_o1:O)| NONE(*)(registers1/reg<16>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_960_o(registers1/RegWrite_instruction[31]_AND_960_o1:O)  | NONE(*)(registers1/reg<17>_1)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_896_o(registers1/RegWrite_instruction[31]_AND_896_o1:O)  | NONE(*)(registers1/reg<18>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_832_o(registers1/RegWrite_instruction[31]_AND_832_o1:O)  | NONE(*)(registers1/reg<19>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_768_o(registers1/RegWrite_instruction[31]_AND_768_o1:O)  | NONE(*)(registers1/reg<20>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_704_o(registers1/RegWrite_instruction[31]_AND_704_o1:O)  | NONE(*)(registers1/reg<21>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_640_o(registers1/RegWrite_instruction[31]_AND_640_o1:O)  | NONE(*)(registers1/reg<22>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_576_o(registers1/RegWrite_instruction[31]_AND_576_o1:O)  | NONE(*)(registers1/reg<23>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_512_o(registers1/RegWrite_instruction[31]_AND_512_o1:O)  | NONE(*)(registers1/reg<24>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_448_o(registers1/RegWrite_instruction[31]_AND_448_o1:O)  | NONE(*)(registers1/reg<25>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_384_o(registers1/RegWrite_instruction[31]_AND_384_o1:O)  | NONE(*)(registers1/reg<26>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_320_o(registers1/RegWrite_instruction[31]_AND_320_o1:O)  | NONE(*)(registers1/reg<27>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_256_o(registers1/RegWrite_instruction[31]_AND_256_o1:O)  | NONE(*)(registers1/reg<28>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_192_o(registers1/RegWrite_instruction[31]_AND_192_o1:O)  | NONE(*)(registers1/reg<29>_0)                                                                                                                           | 32    |
+registers1/RegWrite_instruction[31]_AND_128_o(registers1/RegWrite_instruction[31]_AND_128_o1:O)  | NONE(*)(registers1/reg<30>_0)                                                                                                                           | 32    |
+RegWrite                                                                                         | NONE(registers1/reg<31>_31)                                                                                                                             | 32    |
+phy_mem1/uart1/u3/clk                                                                            | NONE(phy_mem1/uart1/u1/clkdiv_3)                                                                                                                        | 8     |
+phy_mem1/uart1/u1/clkdiv_3                                                                       | NONE(phy_mem1/uart1/u1/no_bits_sent_3)                                                                                                                  | 15    |
+phy_mem1/wrn                                                                                     | NONE(phy_mem1/uart1/u1/tbre_t)                                                                                                                          | 9     |
+CLK11                                                                                            | BUFGP                                                                                                                                                   | 34    |
+phy_mem1/uart1/u2/clkdiv_3                                                                       | NONE(phy_mem1/uart1/u2/no_bits_rcvd_3)                                                                                                                  | 24    |
+phy_mem1/uart1/u2/readover                                                                       | NONE(phy_mem1/uart1/u2/data_ready)                                                                                                                      | 2     |
+phy_mem1/vga_ctl                                                                                 | BUFG                                                                                                                                                    | 388   |
+phy_mem1/vga_component/div/clk1                                                                  | BUFG                                                                                                                                                    | 35    |
+phy_mem1/vga_component/ren/hSync                                                                 | BUFG                                                                                                                                                    | 34    |
+phy_mem1/vga_component/dec/rom/N1                                                                | NONE(phy_mem1/vga_component/dec/rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
+phy_mem1/mmu1/DYP2_1_G(phy_mem1/mmu1/DYP2_1_G:O)                                                 | NONE(*)(phy_mem1/mmu1/DYP2_1)                                                                                                                           | 1     |
+RST                                                                                              | IBUF                                                                                                                                                    | 1     |
+u_txd                                                                                            | IBUF                                                                                                                                                    | 1     |
+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 41 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -5048,10 +5008,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 11.379ns (Maximum Frequency: 87.878MHz)
-   Minimum input arrival time before clock: 7.364ns
-   Maximum output required time after clock: 18.395ns
-   Maximum combinational path delay: 11.500ns
+   Minimum period: 10.541ns (Maximum Frequency: 94.869MHz)
+   Minimum input arrival time before clock: 7.819ns
+   Maximum output required time after clock: 18.421ns
+   Maximum combinational path delay: 11.141ns
 
 Timing Details:
 ---------------
@@ -5059,10 +5019,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 5.779ns (frequency: 173.027MHz)
-  Total number of paths / destination ports: 4671 / 160
+  Clock period: 5.551ns (frequency: 180.133MHz)
+  Total number of paths / destination ports: 4687 / 176
 -------------------------------------------------------------------------
-Delay:               5.779ns (Levels of Logic = 4)
+Delay:               5.551ns (Levels of Logic = 4)
   Source:            phy_mem1/kbd/kb/dec/prev_data_3 (FF)
   Destination:       phy_mem1/kbd/kb/dec/clk_chr (FF)
   Source Clock:      CLK50 rising
@@ -5073,51 +5033,94 @@ Delay:               5.779ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.447   0.808  phy_mem1/kbd/kb/dec/prev_data_3 (phy_mem1/kbd/kb/dec/prev_data_3)
-     LUT3:I0->O            2   0.205   0.845  phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o<7>_SW0 (N1591)
-     LUT6:I3->O            2   0.205   0.981  phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o<7> (phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o)
+     LUT3:I0->O            2   0.205   0.617  phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o<7>_SW0 (N428)
+     LUT6:I5->O            2   0.205   0.981  phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o<7> (phy_mem1/kbd/kb/dec/PWR_184_o_prev_data[7]_equal_1_o)
      LUT6:I0->O            2   0.203   0.981  phy_mem1/kbd/kb/dec/_n0516_inv23 (phy_mem1/kbd/kb/dec/_n0516_inv2)
      LUT6:I0->O            1   0.203   0.579  phy_mem1/kbd/kb/dec/_n0516_inv1 (phy_mem1/kbd/kb/dec/_n0516_inv)
      FDCE:CE                   0.322          phy_mem1/kbd/kb/dec/clk_chr
     ----------------------------------------
-    Total                      5.779ns (1.585ns logic, 4.194ns route)
-                                       (27.4% logic, 72.6% route)
+    Total                      5.551ns (1.585ns logic, 3.966ns route)
+                                       (28.6% logic, 71.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 10.587ns (frequency: 94.456MHz)
-  Total number of paths / destination ports: 11881951963 / 2839
+  Clock period: 10.099ns (frequency: 99.020MHz)
+  Total number of paths / destination ports: 11881965589 / 2799
 -------------------------------------------------------------------------
-Delay:               10.587ns (Levels of Logic = 9)
+Delay:               10.099ns (Levels of Logic = 8)
   Source:            IR_6 (FF)
-  Destination:       PC_0 (FF)
+  Destination:       reg_WriteData_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: IR_6 to PC_0
+  Data Path: IR_6 to reg_WriteData_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              5   0.447   1.059  IR_6 (IR_6)
-     LUT5:I0->O           16   0.203   1.005  _n4723<10>1 (_n4723)
-     LUT5:I4->O            3   0.205   0.651  IR[15]_GND_6_o_equal_29_o<15>11 (IR[15]_GND_6_o_equal_29_o<15>1)
-     LUT6:I5->O            4   0.205   0.684  Mmux__n1886211 (Mmux__n188621)
-     LUT5:I4->O           10   0.205   0.857  GND_6_o_GND_6_o_equal_37_o<20>21 (GND_6_o_GND_6_o_equal_37_o<20>2)
-     LUT3:I2->O            3   0.205   0.651  Mmux__n19073411 (Mmux__n1907341)
-     LUT5:I4->O            2   0.205   0.617  _n3156_inv161 (_n3156_inv16)
-     LUT5:I4->O            1   0.205   0.580  _n2732_inv3 (_n2732_inv3)
-     LUT6:I5->O            1   0.205   0.580  _n2732_inv11 (_n2732_inv11)
-     LUT6:I5->O           32   0.205   1.291  _n2732_inv13 (_n2732_inv)
-     FDCE:CE                   0.322          PC_0
+     FDE:C->Q              7   0.447   1.118  IR_6 (IR_6)
+     LUT5:I0->O           19   0.203   1.072  _n4719<10>1 (_n4719)
+     LUT3:I2->O            3   0.205   0.651  IR[25]_GND_6_o_AND_4423_o121 (IR[25]_GND_6_o_AND_4423_o12)
+     LUT6:I5->O            5   0.205   0.715  IR[25]_GND_6_o_AND_4423_o11 (IR[25]_GND_6_o_AND_4423_o1)
+     LUT5:I4->O            8   0.205   1.031  GND_6_o_GND_6_o_equal_542_o<20>1 (GND_6_o_GND_6_o_equal_542_o)
+     LUT6:I3->O            2   0.205   0.617  _n2417_inv11 (_n2417_inv1)
+     LUT6:I5->O            2   0.205   0.617  _n4080_inv2321 (_n4080_inv232)
+     LUT3:I2->O            1   0.205   0.580  _n4080_inv3 (_n4080_inv3)
+     LUT6:I5->O           32   0.205   1.291  _n4080_inv8 (_n4080_inv)
+     FDE:CE                    0.322          reg_WriteData_0
     ----------------------------------------
-    Total                     10.587ns (2.612ns logic, 7.975ns route)
-                                       (24.7% logic, 75.3% route)
+    Total                     10.099ns (2.407ns logic, 7.692ns route)
+                                       (23.8% logic, 76.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'phy_mem1/net/w_r_AND_3293_o'
+  Clock period: 1.357ns (frequency: 736.784MHz)
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.357ns (Levels of Logic = 1)
+  Source:            phy_mem1/net/data_out_15 (LATCH)
+  Destination:       phy_mem1/net/data_out_15 (LATCH)
+  Source Clock:      phy_mem1/net/w_r_AND_3293_o falling
+  Destination Clock: phy_mem1/net/w_r_AND_3293_o falling
+
+  Data Path: phy_mem1/net/data_out_15 to phy_mem1/net/data_out_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.617  phy_mem1/net/data_out_15 (phy_mem1/net/data_out_15)
+     LUT6:I5->O            1   0.205   0.000  phy_mem1/net/Mmux_data_out[15]_GND_2085_o_MUX_12210_o11 (phy_mem1/net/data_out[15]_GND_2085_o_MUX_12210_o)
+     LD:D                      0.037          phy_mem1/net/data_out_15
+    ----------------------------------------
+    Total                      1.357ns (0.740ns logic, 0.617ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'phy_mem1/net/r_addr[2]_MUX_11798_o'
+  Clock period: 1.602ns (frequency: 624.122MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.602ns (Levels of Logic = 1)
+  Source:            phy_mem1/net/next_status_31 (LATCH)
+  Destination:       phy_mem1/net/next_status_31 (LATCH)
+  Source Clock:      phy_mem1/net/r_addr[2]_MUX_11798_o falling
+  Destination Clock: phy_mem1/net/r_addr[2]_MUX_11798_o falling
+
+  Data Path: phy_mem1/net/next_status_31 to phy_mem1/net/next_status_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.864  phy_mem1/net/next_status_31 (phy_mem1/net/next_status_31)
+     LUT4:I0->O            1   0.203   0.000  phy_mem1/net/Mmux_next_status[31]_next_status[31]_MUX_11795_o11 (phy_mem1/net/next_status[31]_next_status[31]_MUX_11795_o)
+     LD:D                      0.037          phy_mem1/net/next_status_31
+    ----------------------------------------
+    Total                      1.602ns (0.738ns logic, 0.864ns route)
+                                       (46.1% logic, 53.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'phy_mem1/kbd/kb/div/clk'
-  Clock period: 6.403ns (frequency: 156.166MHz)
-  Total number of paths / destination ports: 4993 / 156
+  Clock period: 5.975ns (frequency: 167.375MHz)
+  Total number of paths / destination ports: 5039 / 156
 -------------------------------------------------------------------------
-Delay:               6.403ns (Levels of Logic = 5)
+Delay:               5.975ns (Levels of Logic = 5)
   Source:            phy_mem1/kbd/kb/lis/pos_31_C_31 (FF)
   Destination:       phy_mem1/kbd/kb/lis/pos_30 (FF)
   Source Clock:      phy_mem1/kbd/kb/div/clk rising
@@ -5128,15 +5131,15 @@ Delay:               6.403ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.447   0.684  phy_mem1/kbd/kb/lis/pos_31_C_31 (phy_mem1/kbd/kb/lis/pos_31_C_31)
-     LUT3:I1->O            2   0.203   0.845  phy_mem1/kbd/kb/lis/pos_311 (phy_mem1/kbd/kb/lis/pos_31)
-     LUT5:I2->O            1   0.205   0.580  phy_mem1/kbd/kb/lis/state_FSM_FFd3-In24 (phy_mem1/kbd/kb/lis/state_FSM_FFd3-In24)
-     LUT6:I5->O            1   0.205   0.580  phy_mem1/kbd/kb/lis/state_FSM_FFd3-In25 (phy_mem1/kbd/kb/lis/state_FSM_FFd3-In25)
-     LUT5:I4->O            2   0.205   0.617  phy_mem1/kbd/kb/lis/state_FSM_FFd3-In27 (phy_mem1/kbd/kb/lis/state_FSM_FFd3-In2)
-     LUT6:I5->O           33   0.205   1.305  phy_mem1/kbd/kb/lis/_n0143_inv1 (phy_mem1/kbd/kb/lis/_n0143_inv)
+     LUT3:I1->O            2   0.203   0.721  phy_mem1/kbd/kb/lis/pos_311 (phy_mem1/kbd/kb/lis/pos_31)
+     LUT6:I4->O            1   0.203   0.924  phy_mem1/kbd/kb/lis/GND_2232_o_pos[31]_equal_4_o<31>2 (phy_mem1/kbd/kb/lis/GND_2232_o_pos[31]_equal_4_o<31>1)
+     LUT6:I1->O            2   0.203   0.617  phy_mem1/kbd/kb/lis/GND_2232_o_pos[31]_equal_4_o<31>7 (phy_mem1/kbd/kb/lis/GND_2232_o_pos[31]_equal_4_o)
+     LUT6:I5->O            1   0.205   0.000  phy_mem1/kbd/kb/lis/_n0143_inv_G (N1092)
+     MUXF7:I1->O          33   0.140   1.305  phy_mem1/kbd/kb/lis/_n0143_inv (phy_mem1/kbd/kb/lis/_n0143_inv)
      FDCE:CE                   0.322          phy_mem1/kbd/kb/lis/pos_0
     ----------------------------------------
-    Total                      6.403ns (1.792ns logic, 4.611ns route)
-                                       (28.0% logic, 72.0% route)
+    Total                      5.975ns (1.723ns logic, 4.252ns route)
+                                       (28.8% logic, 71.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'registers1/RegWrite_instruction[31]_AND_2048_o'
@@ -5888,10 +5891,10 @@ Delay:               3.093ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK11'
-  Clock period: 6.521ns (frequency: 153.341MHz)
+  Clock period: 6.501ns (frequency: 153.813MHz)
   Total number of paths / destination ports: 1718 / 35
 -------------------------------------------------------------------------
-Delay:               6.521ns (Levels of Logic = 4)
+Delay:               6.501ns (Levels of Logic = 4)
   Source:            phy_mem1/uart1/u3/cnt72_31_C_31 (FF)
   Destination:       phy_mem1/uart1/u3/clk (FF)
   Source Clock:      CLK11 rising
@@ -5902,68 +5905,67 @@ Delay:               6.521ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              1   0.447   0.684  phy_mem1/uart1/u3/cnt72_31_C_31 (phy_mem1/uart1/u3/cnt72_31_C_31)
-     LUT3:I1->O            2   0.203   0.981  phy_mem1/uart1/u3/cnt72_311 (phy_mem1/uart1/u3/cnt72_31)
-     LUT6:I0->O            1   0.203   0.924  phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>11 (phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>11)
+     LUT3:I1->O            2   0.203   0.961  phy_mem1/uart1/u3/cnt72_311 (phy_mem1/uart1/u3/cnt72_31)
+     LUT6:I1->O            1   0.203   0.924  phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>11 (phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>11)
      LUT5:I0->O           34   0.203   1.665  phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>16 (phy_mem1/uart1/u3/GND_1050_o_cnt72[31]_equal_2_o<31>1)
      LUT5:I0->O            1   0.203   0.579  phy_mem1/uart1/u3/_n00201 (phy_mem1/uart1/u3/_n0020)
      FDR:R                     0.430          phy_mem1/uart1/u3/clk
     ----------------------------------------
-    Total                      6.521ns (1.689ns logic, 4.832ns route)
-                                       (25.9% logic, 74.1% route)
+    Total                      6.501ns (1.689ns logic, 4.812ns route)
+                                       (26.0% logic, 74.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'phy_mem1/uart1/u2/clkdiv_3'
-  Clock period: 3.854ns (frequency: 259.477MHz)
+  Clock period: 3.845ns (frequency: 260.051MHz)
   Total number of paths / destination ports: 141 / 48
 -------------------------------------------------------------------------
-Delay:               3.854ns (Levels of Logic = 2)
-  Source:            phy_mem1/uart1/u2/no_bits_rcvd_0 (FF)
-  Destination:       phy_mem1/uart1/u2/framing_error (FF)
+Delay:               3.845ns (Levels of Logic = 2)
+  Source:            phy_mem1/uart1/u2/no_bits_rcvd_2 (FF)
+  Destination:       phy_mem1/uart1/u2/parity_error (FF)
   Source Clock:      phy_mem1/uart1/u2/clkdiv_3 rising
   Destination Clock: phy_mem1/uart1/u2/clkdiv_3 rising
 
-  Data Path: phy_mem1/uart1/u2/no_bits_rcvd_0 to phy_mem1/uart1/u2/framing_error
+  Data Path: phy_mem1/uart1/u2/no_bits_rcvd_2 to phy_mem1/uart1/u2/parity_error
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.447   1.137  phy_mem1/uart1/u2/no_bits_rcvd_0 (phy_mem1/uart1/u2/no_bits_rcvd_0)
-     LUT5:I2->O            2   0.205   0.961  phy_mem1/uart1/u2/_n0132_inv311 (phy_mem1/uart1/u2/_n0132_inv31)
-     LUT5:I0->O            1   0.203   0.579  phy_mem1/uart1/u2/_n0132_inv2 (phy_mem1/uart1/u2/_n0132_inv)
-     FDCE:CE                   0.322          phy_mem1/uart1/u2/framing_error
+     FDCE:C->Q            11   0.447   1.227  phy_mem1/uart1/u2/no_bits_rcvd_2 (phy_mem1/uart1/u2/no_bits_rcvd_2)
+     LUT6:I1->O            2   0.203   0.864  phy_mem1/uart1/u2/_n0132_inv11 (phy_mem1/uart1/u2/_n0132_inv1)
+     LUT4:I0->O            1   0.203   0.579  phy_mem1/uart1/u2/_n0143_inv1 (phy_mem1/uart1/u2/_n0143_inv)
+     FDCE:CE                   0.322          phy_mem1/uart1/u2/parity_error
     ----------------------------------------
-    Total                      3.854ns (1.177ns logic, 2.677ns route)
-                                       (30.5% logic, 69.5% route)
+    Total                      3.845ns (1.175ns logic, 2.670ns route)
+                                       (30.6% logic, 69.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'phy_mem1/vga_ctl'
-  Clock period: 11.379ns (frequency: 87.878MHz)
-  Total number of paths / destination ports: 1689091 / 726
+  Clock period: 10.541ns (frequency: 94.869MHz)
+  Total number of paths / destination ports: 1587884 / 730
 -------------------------------------------------------------------------
-Delay:               11.379ns (Levels of Logic = 10)
+Delay:               10.541ns (Levels of Logic = 9)
   Source:            phy_mem1/vga_component/con/line_31_C_31 (FF)
-  Destination:       phy_mem1/vga_component/con/eol_0_6_C_6 (FF)
+  Destination:       phy_mem1/vga_component/con/eol_0_5 (FF)
   Source Clock:      phy_mem1/vga_ctl rising
   Destination Clock: phy_mem1/vga_ctl rising
 
-  Data Path: phy_mem1/vga_component/con/line_31_C_31 to phy_mem1/vga_component/con/eol_0_6_C_6
+  Data Path: phy_mem1/vga_component/con/line_31_C_31 to phy_mem1/vga_component/con/eol_0_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            12   0.447   1.013  phy_mem1/vga_component/con/line_31_C_31 (phy_mem1/vga_component/con/line_31_C_31)
-     LUT3:I1->O            3   0.203   0.650  phy_mem1/vga_component/con/line_311 (phy_mem1/vga_component/con/line_31)
-     MUXCY:DI->O          24   0.339   1.277  phy_mem1/vga_component/con/Mcompar_line[31]_GND_2171_o_LessThan_6_o_cy<6> (phy_mem1/vga_component/con/Mcompar_line[31]_GND_2171_o_LessThan_6_o_cy<6>)
-     LUT3:I1->O           22   0.203   1.134  phy_mem1/vga_component/con/Mmux_prev_line11_1 (phy_mem1/vga_component/con/Mmux_prev_line11)
-     LUT6:I5->O            1   0.205   0.827  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_10 (phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_10)
-     LUT6:I2->O            1   0.203   0.000  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_2_f7_G (N642)
-     MUXF7:I1->O          39   0.140   1.392  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_2_f7 (phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<0>)
-     LUT4:I3->O            8   0.205   0.803  phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<3>11 (phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<3>)
+     LUT3:I1->O            5   0.203   0.714  phy_mem1/vga_component/con/line_311 (phy_mem1/vga_component/con/line_31)
+     MUXCY:DI->O          25   0.339   1.297  phy_mem1/vga_component/con/Mcompar_GND_2171_o_line[31]_LessThan_7_o_cy<6> (phy_mem1/vga_component/con/GND_2171_o_line[31]_LessThan_7_o)
+     LUT3:I1->O           16   0.203   1.005  phy_mem1/vga_component/con/Mmux_prev_line21_1 (phy_mem1/vga_component/con/Mmux_prev_line21)
+     LUT6:I5->O            1   0.205   0.808  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_10 (phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_10)
+     LUT6:I3->O            1   0.205   0.000  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_2_f7_F (N907)
+     MUXF7:I0->O          41   0.131   1.420  phy_mem1/vga_component/con/Mmux_prev_line[4]_X_2167_o_wide_mux_55_OUT_2_f7 (phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<0>)
+     LUT4:I3->O            9   0.205   0.830  phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<3>11 (phy_mem1/vga_component/con/Msub_GND_2171_o_GND_2171_o_sub_57_OUT_cy<3>)
      LUT6:I5->O           16   0.205   1.005  phy_mem1/vga_component/con/Mmux_GND_2171_o_GND_2171_o_mux_414_OUT<0>2621 (phy_mem1/vga_component/con/Mmux_GND_2171_o_GND_2171_o_mux_414_OUT<0>262)
-     LUT4:I3->O            2   0.205   0.617  phy_mem1/vga_component/con/Mmux_GND_2171_o_GND_2171_o_mux_443_OUT<0>263 (phy_mem1/vga_component/con/GND_2171_o_GND_2171_o_mux_443_OUT<6>)
-     LUT3:I2->O            1   0.205   0.000  phy_mem1/vga_component/con/eol_0_6_C_6_dpot (phy_mem1/vga_component/con/eol_0_6_C_6_dpot)
+     LUT4:I3->O            2   0.205   0.000  phy_mem1/vga_component/con/Mmux_GND_2171_o_GND_2171_o_mux_443_OUT<0>263 (phy_mem1/vga_component/con/GND_2171_o_GND_2171_o_mux_443_OUT<6>)
      FDCE:D                    0.102          phy_mem1/vga_component/con/eol_0_6_C_6
     ----------------------------------------
-    Total                     11.379ns (2.662ns logic, 8.717ns route)
-                                       (23.4% logic, 76.6% route)
+    Total                     10.541ns (2.450ns logic, 8.091ns route)
+                                       (23.2% logic, 76.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'phy_mem1/vga_component/div/clk1'
@@ -6020,75 +6022,132 @@ Delay:               4.725ns (Levels of Logic = 8)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 1383 / 1175
+  Total number of paths / destination ports: 1456 / 1170
 -------------------------------------------------------------------------
-Offset:              7.364ns (Levels of Logic = 6)
+Offset:              7.819ns (Levels of Logic = 5)
   Source:            RST (PAD)
-  Destination:       phy_mem1/FlashData_4 (FF)
+  Destination:       EntryLo1_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to phy_mem1/FlashData_4
+  Data Path: RST to EntryLo1_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.654  RST_IBUF (RST_IBUF)
-     LUT6:I5->O            3   0.205   1.015  phy_mem1/RST_MemRead_AND_3787_o31 (phy_mem1/RST_MemRead_AND_3787_o3)
-     LUT6:I0->O           21   0.203   1.114  phy_mem1/RST_MemRead_AND_3787_o6 (phy_mem1/RST_MemRead_AND_3787_o)
-     LUT4:I3->O            2   0.205   0.617  phy_mem1/Mmux_n2409333211 (phy_mem1/Mmux_n240933321)
-     LUT6:I5->O            2   0.205   0.617  phy_mem1/Mmux_n240933322 (phy_mem1/Mmux_n24093332)
-     LUT5:I4->O            1   0.205   0.000  phy_mem1/Mmux_n2409336 (phy_mem1/n2409<4>)
-     FD:D                      0.102          phy_mem1/FlashData_4
+     IBUF:I->O            85   1.222   1.779  RST_IBUF (RST_IBUF)
+     LUT3:I2->O            1   0.205   0.808  _n4228_inv2_SW0 (N288)
+     LUT6:I3->O            2   0.205   0.617  _n4228_inv2 (_n4228_inv2)
+     LUT5:I4->O            5   0.205   0.962  _n4257_inv21 (_n4257_inv2)
+     LUT6:I2->O           32   0.203   1.291  _n4286_inv1 (_n4286_inv)
+     FDE:CE                    0.322          EntryLo1_0
     ----------------------------------------
-    Total                      7.364ns (2.347ns logic, 5.017ns route)
-                                       (31.9% logic, 68.1% route)
+    Total                      7.819ns (2.362ns logic, 5.457ns route)
+                                       (30.2% logic, 69.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'tlb_write'
   Total number of paths / destination ports: 1008 / 1008
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
-  Destination:       phy_mem1/mmu1/tlb<0>_2 (LATCH)
+  Destination:       phy_mem1/mmu1/tlb<0>_0 (LATCH)
   Destination Clock: tlb_write falling
 
-  Data Path: RST to phy_mem1/mmu1/tlb<0>_2
+  Data Path: RST to phy_mem1/mmu1/tlb<0>_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      LDCE:CLR                  0.430          phy_mem1/mmu1/tlb<15>_49
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/net/w_r_AND_3293_o'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.443ns (Levels of Logic = 2)
+  Source:            enet_data<15> (PAD)
+  Destination:       phy_mem1/net/data_out_15 (LATCH)
+  Destination Clock: phy_mem1/net/w_r_AND_3293_o falling
+
+  Data Path: enet_data<15> to phy_mem1/net/data_out_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.222   0.981  enet_data_15_IOBUF (N528)
+     LUT6:I0->O            1   0.203   0.000  phy_mem1/net/Mmux_data_out[15]_GND_2085_o_MUX_12210_o11 (phy_mem1/net/data_out[15]_GND_2085_o_MUX_12210_o)
+     LD:D                      0.037          phy_mem1/net/data_out_15
+    ----------------------------------------
+    Total                      2.443ns (1.462ns logic, 0.981ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/net/r_addr[2]_MUX_12024_o'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.081ns (Levels of Logic = 2)
+  Source:            enet_data<0> (PAD)
+  Destination:       phy_mem1/net/data_enet[15]_r_DLATCH_2121_q (LATCH)
+  Destination Clock: phy_mem1/net/r_addr[2]_MUX_12024_o falling
+
+  Data Path: enet_data<0> to phy_mem1/net/data_enet[15]_r_DLATCH_2121_q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.222   0.617  enet_data_0_IOBUF (N543)
+     LUT5:I4->O            1   0.205   0.000  phy_mem1/net/Mmux_data_enet[15]_data_enet[15]_MUX_12027_o1151 (phy_mem1/net/data_enet[15]_data_enet[15]_MUX_12207_o)
+     LD:D                      0.037          phy_mem1/net/data_enet[15]_r_DLATCH_2121_q
+    ----------------------------------------
+    Total                      2.081ns (1.464ns logic, 0.617ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/net/clk25_1'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              6.017ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       phy_mem1/net/status_31 (FF)
+  Destination Clock: phy_mem1/net/clk25_1 rising
+
+  Data Path: RST to phy_mem1/net/status_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
+     FDC:CLR                   0.430          phy_mem1/net/status_0
+    ----------------------------------------
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/kbd/kb/div/clk'
-  Total number of paths / destination ports: 245 / 201
+  Total number of paths / destination ports: 279 / 201
 -------------------------------------------------------------------------
-Offset:              5.900ns (Levels of Logic = 4)
-  Source:            clk_kb (PAD)
-  Destination:       phy_mem1/kbd/kb/lis/prev_clk_kb_clk_1M_DFF_1154 (FF)
+Offset:              6.017ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       phy_mem1/kbd/kb/lis/state_FSM_FFd1 (FF)
   Destination Clock: phy_mem1/kbd/kb/div/clk rising
 
-  Data Path: clk_kb to phy_mem1/kbd/kb/lis/prev_clk_kb_clk_1M_DFF_1154
+  Data Path: RST to phy_mem1/kbd/kb/lis/state_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O          42   1.222   1.538  clk_kb_IOBUF (N259)
-     LUT3:I1->O            4   0.203   1.048  phy_mem1/kbd/kb/lis/state_FSM_FFd2-In11 (phy_mem1/kbd/kb/lis/state_FSM_FFd2-In1)
-     LUT6:I0->O            1   0.203   0.580  phy_mem1/kbd/kb/lis/clk_GND_2232_o_AND_3378_o1 (phy_mem1/kbd/kb/lis/clk_GND_2232_o_AND_3378_o2)
-     LUT6:I5->O            1   0.205   0.579  phy_mem1/kbd/kb/lis/clk_GND_2232_o_AND_3378_o2 (phy_mem1/kbd/kb/lis/clk_GND_2232_o_AND_3378_o)
-     FDCE:CE                   0.322          phy_mem1/kbd/kb/lis/prev_clk_kb_clk_1M_DFF_1154
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
+     FDCE:CLR                  0.430          phy_mem1/kbd/kb/lis/prev_clk_kb_clk_1M_DFF_1154
     ----------------------------------------
-    Total                      5.900ns (2.155ns logic, 3.745ns route)
-                                       (36.5% logic, 63.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/wrn'
   Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              4.546ns (Levels of Logic = 2)
+Offset:              4.671ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/uart1/u1/tbr_7 (FF)
   Destination Clock: phy_mem1/wrn falling
@@ -6097,18 +6156,18 @@ Offset:              4.546ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.998  RST_IBUF (RST_IBUF)
+     IBUF:I->O            85   1.222   2.123  RST_IBUF (RST_IBUF)
      LUT5:I0->O            8   0.203   0.802  phy_mem1/uart1/u1/rst_PWR_15_o_OR_134_o_inv1 (phy_mem1/uart1/u1/rst_PWR_15_o_OR_134_o_inv)
      FDE_1:CE                  0.322          phy_mem1/uart1/u1/tbr_0
     ----------------------------------------
-    Total                      4.546ns (1.747ns logic, 2.799ns route)
-                                       (38.4% logic, 61.6% route)
+    Total                      4.671ns (1.747ns logic, 2.924ns route)
+                                       (37.4% logic, 62.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK11'
   Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/uart1/u3/cnt72_30 (FF)
   Destination Clock: CLK11 rising
@@ -6117,18 +6176,18 @@ Offset:              5.891ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      FDC:CLR                   0.430          phy_mem1/uart1/u3/cnt72_0
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/uart1/u2/clkdiv_3'
   Total number of paths / destination ports: 27 / 27
 -------------------------------------------------------------------------
-Offset:              5.482ns (Levels of Logic = 3)
+Offset:              5.627ns (Levels of Logic = 3)
   Source:            RST (PAD)
   Destination:       phy_mem1/uart1/u2/parity (FF)
   Destination Clock: phy_mem1/uart1/u2/clkdiv_3 rising
@@ -6137,19 +6196,19 @@ Offset:              5.482ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.882  RST_IBUF (RST_IBUF)
-     LUT3:I0->O            2   0.205   0.961  phy_mem1/rcvrrst1 (phy_mem1/rcvrrst)
-     LUT6:I1->O            1   0.203   0.579  phy_mem1/uart1/u2/_n00951 (phy_mem1/uart1/u2/_n0095)
+     IBUF:I->O            85   1.222   2.007  RST_IBUF (RST_IBUF)
+     LUT3:I0->O            2   0.205   0.981  phy_mem1/rcvrrst1 (phy_mem1/rcvrrst)
+     LUT6:I0->O            1   0.203   0.579  phy_mem1/uart1/u2/_n00951 (phy_mem1/uart1/u2/_n0095)
      FDSE:S                    0.430          phy_mem1/uart1/u2/parity
     ----------------------------------------
-    Total                      5.482ns (2.060ns logic, 3.422ns route)
-                                       (37.6% logic, 62.4% route)
+    Total                      5.627ns (2.060ns logic, 3.567ns route)
+                                       (36.6% logic, 63.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/uart1/u2/readover'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              4.334ns (Levels of Logic = 2)
+Offset:              4.460ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/uart1/u2/data_ready (FF)
   Destination Clock: phy_mem1/uart1/u2/readover rising
@@ -6158,18 +6217,18 @@ Offset:              4.334ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.901  RST_IBUF (RST_IBUF)
+     IBUF:I->O            85   1.222   2.026  RST_IBUF (RST_IBUF)
      LUT4:I0->O            1   0.203   0.579  phy_mem1/uart1/u2/rst_rdn_OR_136_o1 (phy_mem1/uart1/u2/rst_rdn_OR_136_o)
      FDC:CLR                   0.430          phy_mem1/uart1/u2/data_ready
     ----------------------------------------
-    Total                      4.334ns (1.855ns logic, 2.479ns route)
-                                       (42.8% logic, 57.2% route)
+    Total                      4.460ns (1.855ns logic, 2.605ns route)
+                                       (41.6% logic, 58.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/vga_ctl'
   Total number of paths / destination ports: 309 / 309
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/vga_component/con/column_30 (FF)
   Destination Clock: phy_mem1/vga_ctl rising
@@ -6178,18 +6237,18 @@ Offset:              5.891ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      FDCE:CLR                  0.430          phy_mem1/vga_component/con/wea
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/vga_component/div/clk1'
   Total number of paths / destination ports: 33 / 33
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/vga_component/ren/hCounter_30 (FF)
   Destination Clock: phy_mem1/vga_component/div/clk1 rising
@@ -6198,18 +6257,18 @@ Offset:              5.891ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      FDP:PRE                   0.430          phy_mem1/vga_component/ren/hSync
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'phy_mem1/vga_component/ren/hSync'
   Total number of paths / destination ports: 33 / 33
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/vga_component/ren/vCounter_30 (FF)
   Destination Clock: phy_mem1/vga_component/ren/hSync rising
@@ -6218,18 +6277,18 @@ Offset:              5.891ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      FDC:CLR                   0.430          phy_mem1/vga_component/ren/vCounter_0
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
   Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              5.891ns (Levels of Logic = 2)
+Offset:              6.017ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/kbd/kb/dec/char_6 (FF)
   Destination Clock: CLK50 rising
@@ -6238,18 +6297,18 @@ Offset:              5.891ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.653  RST_IBUF (RST_IBUF)
-     INV:I->O           1724   0.206   2.380  RST_inv10221_INV_0 (RST_inv)
+     IBUF:I->O            85   1.222   1.778  RST_IBUF (RST_IBUF)
+     INV:I->O           1728   0.206   2.381  RST_inv10221_INV_0 (RST_inv)
      FDCE:CLR                  0.430          phy_mem1/kbd/kb/dec/prev_data_0
     ----------------------------------------
-    Total                      5.891ns (1.858ns logic, 4.033ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      6.017ns (1.858ns logic, 4.159ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'u_txd'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.603ns (Levels of Logic = 2)
+Offset:              4.728ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       phy_mem1/uart1/u2/isRead_LDC (LATCH)
   Destination Clock: u_txd rising
@@ -6258,12 +6317,12 @@ Offset:              4.603ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   1.222   1.654  RST_IBUF (RST_IBUF)
+     IBUF:I->O            85   1.222   1.779  RST_IBUF (RST_IBUF)
      LUT3:I2->O           20   0.205   1.092  phy_mem1/uart1/u2/rst_inv1 (phy_mem1/uart1/u2/rst_inv)
      LDC:CLR                   0.430          phy_mem1/uart1/u2/isRead_LDC
     ----------------------------------------
-    Total                      4.603ns (1.857ns logic, 2.746ns route)
-                                       (40.3% logic, 59.7% route)
+    Total                      4.728ns (1.857ns logic, 2.871ns route)
+                                       (39.3% logic, 60.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'registers1/RegWrite_instruction[31]_AND_1408_o'
@@ -7005,23 +7064,23 @@ Offset:              6.588ns (Levels of Logic = 5)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 420 / 176
 -------------------------------------------------------------------------
-Offset:              7.773ns (Levels of Logic = 4)
-  Source:            IR_27 (FF)
-  Destination:       led<11> (PAD)
+Offset:              7.719ns (Levels of Logic = 4)
+  Source:            IR_30 (FF)
+  Destination:       led<14> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: IR_27 to led<11>
+  Data Path: IR_30 to led<14>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q            184   0.447   2.403  IR_27 (IR_27)
-     LUT6:I0->O            1   0.203   0.580  registers1/Mmux_led92 (registers1/Mmux_led91)
-     LUT6:I5->O            1   0.205   0.580  registers1/Mmux_led95 (registers1/Mmux_led94)
-     LUT6:I5->O            1   0.205   0.579  registers1/Mmux_led97 (led_11_OBUF)
-     OBUF:I->O                 2.571          led_11_OBUF (led<11>)
+     FDE:C->Q            141   0.447   2.349  IR_30 (IR_30)
+     LUT6:I0->O            1   0.203   0.580  registers1/Mmux_led182 (registers1/Mmux_led181)
+     LUT6:I5->O            1   0.205   0.580  registers1/Mmux_led185 (registers1/Mmux_led184)
+     LUT6:I5->O            1   0.205   0.579  registers1/Mmux_led187 (led_14_OBUF)
+     OBUF:I->O                 2.571          led_14_OBUF (led<14>)
     ----------------------------------------
-    Total                      7.773ns (3.631ns logic, 4.142ns route)
-                                       (46.7% logic, 53.3% route)
+    Total                      7.719ns (3.631ns logic, 4.088ns route)
+                                       (47.0% logic, 53.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o'
@@ -7101,10 +7160,30 @@ Offset:              3.634ns (Levels of Logic = 1)
                                        (83.0% logic, 17.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/vga_component/ren/hSync'
-  Total number of paths / destination ports: 178280 / 27
+Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/net/r_addr[2]_MUX_12024_o'
+  Total number of paths / destination ports: 32 / 16
 -------------------------------------------------------------------------
-Offset:              16.924ns (Levels of Logic = 22)
+Offset:              4.858ns (Levels of Logic = 2)
+  Source:            phy_mem1/net/w_r_DLATCH_2092_q (LATCH)
+  Destination:       enet_data<15> (PAD)
+  Source Clock:      phy_mem1/net/r_addr[2]_MUX_12024_o falling
+
+  Data Path: phy_mem1/net/w_r_DLATCH_2092_q to enet_data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  phy_mem1/net/w_r_DLATCH_2092_q (phy_mem1/net/w_r_DLATCH_2092_q)
+     INV:I->O             16   0.206   1.004  phy_mem1/net/w_r_DLATCH_2092_q_inv1_INV_0 (phy_mem1/net/w_r_DLATCH_2092_q_inv)
+     IOBUF:T->IO               2.571          enet_data_15_IOBUF (enet_data<15>)
+    ----------------------------------------
+    Total                      4.858ns (3.275ns logic, 1.583ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/vga_component/ren/hSync'
+  Total number of paths / destination ports: 94249 / 10
+-------------------------------------------------------------------------
+Offset:              16.950ns (Levels of Logic = 22)
   Source:            phy_mem1/vga_component/ren/vCounter_4 (FF)
   Destination:       video<8> (PAD)
   Source Clock:      phy_mem1/vga_component/ren/hSync rising
@@ -7125,26 +7204,26 @@ Offset:              16.924ns (Levels of Logic = 22)
      MUXCY:CI->O           1   0.019   0.000  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<4> (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<5> (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<5>)
      MUXCY:CI->O          14   0.213   1.186  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6> (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6>)
-     LUT3:I0->O           50   0.205   1.912  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
+     LUT3:I0->O           54   0.205   1.938  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
      LUT6:I0->O            1   0.203   0.827  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87)
      LUT6:I2->O            1   0.203   0.000  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32)
      MUXF7:I1->O           1   0.140   0.924  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_2_f7_1 (phy_mem1/vga_component/con/phys_line[4]_X_2167_o_wide_mux_506_OUT<2>)
      LUT6:I1->O            2   0.203   0.961  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o3 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1)
-     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N785)
+     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N1073)
      MUXF7:I0->O           9   0.131   0.830  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o2)
      LUT3:I2->O            3   0.205   0.995  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o21 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o)
      LUT6:I1->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
      LUT2:I1->O            3   0.205   0.650  phy_mem1/vga_component/ren/Mmux_video<8:0>11 (video_0_OBUF)
      OBUF:I->O                 2.571          video_0_OBUF (video<0>)
     ----------------------------------------
-    Total                     16.924ns (6.157ns logic, 10.767ns route)
-                                       (36.4% logic, 63.6% route)
+    Total                     16.950ns (6.157ns logic, 10.793ns route)
+                                       (36.3% logic, 63.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/vga_component/div/clk1'
-  Total number of paths / destination ports: 430 / 25
+  Total number of paths / destination ports: 271 / 10
 -------------------------------------------------------------------------
-Offset:              9.351ns (Levels of Logic = 7)
+Offset:              9.457ns (Levels of Logic = 7)
   Source:            phy_mem1/vga_component/ren/hCounter_5 (FF)
   Destination:       video<8> (PAD)
   Source Clock:      phy_mem1/vga_component/div/clk1 rising
@@ -7153,23 +7232,23 @@ Offset:              9.351ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              8   0.447   1.167  phy_mem1/vga_component/ren/hCounter_5 (phy_mem1/vga_component/ren/hCounter_5)
+     FDC:C->Q             12   0.447   1.273  phy_mem1/vga_component/ren/hCounter_5 (phy_mem1/vga_component/ren/hCounter_5)
      LUT6:I0->O            2   0.203   0.961  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o3 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1)
-     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N785)
+     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N1073)
      MUXF7:I0->O           9   0.131   0.830  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o2)
      LUT3:I2->O            3   0.205   0.995  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o21 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o)
      LUT6:I1->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
      LUT2:I1->O            3   0.205   0.650  phy_mem1/vga_component/ren/Mmux_video<8:0>11 (video_0_OBUF)
      OBUF:I->O                 2.571          video_0_OBUF (video<0>)
     ----------------------------------------
-    Total                      9.351ns (4.168ns logic, 5.183ns route)
-                                       (44.6% logic, 55.4% route)
+    Total                      9.457ns (4.168ns logic, 5.289ns route)
+                                       (44.1% logic, 55.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/vga_ctl'
-  Total number of paths / destination ports: 115234 / 51
+  Total number of paths / destination ports: 60912 / 9
 -------------------------------------------------------------------------
-Offset:              17.129ns (Levels of Logic = 16)
+Offset:              17.155ns (Levels of Logic = 16)
   Source:            phy_mem1/vga_component/con/start_31_C_31 (FF)
   Destination:       video<8> (PAD)
   Source Clock:      phy_mem1/vga_ctl rising
@@ -7184,26 +7263,26 @@ Offset:              17.129ns (Levels of Logic = 16)
      XORCY:LI->O           3   0.136   0.650  phy_mem1/vga_component/con/Madd_virt_line[31]_start[31]_add_498_OUT_xor<31> (phy_mem1/vga_component/con/virt_line[31]_start[31]_add_498_OUT<31>)
      INV:I->O              1   0.206   0.000  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_lut<6>_INV_0 (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_lut<6>)
      MUXCY:S->O           14   0.366   1.186  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6> (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6>)
-     LUT3:I0->O           50   0.205   1.912  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
+     LUT3:I0->O           54   0.205   1.938  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
      LUT6:I0->O            1   0.203   0.827  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87)
      LUT6:I2->O            1   0.203   0.000  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32)
      MUXF7:I1->O           1   0.140   0.924  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_2_f7_1 (phy_mem1/vga_component/con/phys_line[4]_X_2167_o_wide_mux_506_OUT<2>)
      LUT6:I1->O            2   0.203   0.961  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o3 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1)
-     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N785)
+     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N1073)
      MUXF7:I0->O           9   0.131   0.830  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o2)
      LUT3:I2->O            3   0.205   0.995  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o21 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o)
      LUT6:I1->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
      LUT2:I1->O            3   0.205   0.650  phy_mem1/vga_component/ren/Mmux_video<8:0>11 (video_0_OBUF)
      OBUF:I->O                 2.571          video_0_OBUF (video<0>)
     ----------------------------------------
-    Total                     17.129ns (6.035ns logic, 11.094ns route)
+    Total                     17.155ns (6.035ns logic, 11.120ns route)
                                        (35.2% logic, 64.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'RST'
-  Total number of paths / destination ports: 4492 / 21
+  Total number of paths / destination ports: 2376 / 9
 -------------------------------------------------------------------------
-Offset:              18.395ns (Levels of Logic = 16)
+Offset:              18.421ns (Levels of Logic = 16)
   Source:            phy_mem1/kbd/kb/lis/pos_31_LD (LATCH)
   Destination:       video<8> (PAD)
   Source Clock:      RST rising
@@ -7218,41 +7297,102 @@ Offset:              18.395ns (Levels of Logic = 16)
      XORCY:LI->O           3   0.136   0.650  phy_mem1/vga_component/con/Madd_virt_line[31]_start[31]_add_498_OUT_xor<31> (phy_mem1/vga_component/con/virt_line[31]_start[31]_add_498_OUT<31>)
      INV:I->O              1   0.206   0.000  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_lut<6>_INV_0 (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_lut<6>)
      MUXCY:S->O           14   0.366   1.186  phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6> (phy_mem1/vga_component/con/Mcompar_GND_2171_o_virt_line[31]_LessThan_498_o_cy<6>)
-     LUT3:I0->O           50   0.205   1.912  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
+     LUT3:I0->O           54   0.205   1.938  phy_mem1/vga_component/con/Mmux_phys_line121 (phy_mem1/vga_component/con/phys_line<1>)
      LUT6:I0->O            1   0.203   0.827  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_87)
      LUT6:I2->O            1   0.203   0.000  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32 (phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_32)
      MUXF7:I1->O           1   0.140   0.924  phy_mem1/vga_component/con/Mmux_phys_line[4]_X_2167_o_wide_mux_506_OUT_2_f7_1 (phy_mem1/vga_component/con/phys_line[4]_X_2167_o_wide_mux_506_OUT<2>)
      LUT6:I1->O            2   0.203   0.961  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o3 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1)
-     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N785)
+     LUT6:I1->O            1   0.203   0.000  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1_F (N1073)
      MUXF7:I0->O           9   0.131   0.830  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o1 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o2)
      LUT3:I2->O            3   0.205   0.995  phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o21 (phy_mem1/vga_component/con/GND_2171_o_phys_column[31]_LessThan_508_o)
      LUT6:I1->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
      LUT2:I1->O            3   0.205   0.650  phy_mem1/vga_component/ren/Mmux_video<8:0>11 (video_0_OBUF)
      OBUF:I->O                 2.571          video_0_OBUF (video<0>)
     ----------------------------------------
-    Total                     18.395ns (6.088ns logic, 12.307ns route)
-                                       (33.1% logic, 66.9% route)
+    Total                     18.421ns (6.088ns logic, 12.333ns route)
+                                       (33.0% logic, 67.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 181 / 10
 -------------------------------------------------------------------------
-Offset:              5.444ns (Levels of Logic = 3)
-  Source:            phy_mem1/vga_component/div/clk2 (FF)
+Offset:              9.234ns (Levels of Logic = 7)
+  Source:            phy_mem1/vga_component/dec/rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAM)
   Destination:       video<8> (PAD)
   Source Clock:      CLK50 rising
 
-  Data Path: phy_mem1/vga_component/div/clk2 to video<8>
+  Data Path: phy_mem1/vga_component/dec/rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram to video<8>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              4   0.447   0.788  phy_mem1/vga_component/div/clk2 (phy_mem1/vga_component/div/clk2)
-     LUT6:I4->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
+     RAMB16BWER:CLKA->DOA1    1   1.850   0.827  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (douta<1>)
+     end scope: 'phy_mem1/vga_component/dec/rom:douta<1>'
+     LUT6:I2->O            1   0.203   0.000  phy_mem1/vga_component/dec/Mmux_fg_3 (phy_mem1/vga_component/dec/Mmux_fg_3)
+     MUXF7:I1->O           6   0.140   0.973  phy_mem1/vga_component/dec/Mmux_fg_2_f7 (phy_mem1/vga_component/dec/fg)
+     LUT3:I0->O            1   0.205   0.827  phy_mem1/vga_component/dec/color<1>_SW0 (N410)
+     LUT6:I2->O            1   0.203   0.580  phy_mem1/vga_component/dec/color<1> (phy_mem1/vga_component/color<0>)
      LUT2:I1->O            3   0.205   0.650  phy_mem1/vga_component/ren/Mmux_video<8:0>11 (video_0_OBUF)
      OBUF:I->O                 2.571          video_0_OBUF (video<0>)
     ----------------------------------------
-    Total                      5.444ns (3.426ns logic, 2.018ns route)
-                                       (62.9% logic, 37.1% route)
+    Total                      9.234ns (5.377ns logic, 3.857ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/net/r_addr[2]_MUX_11772_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            phy_mem1/net/cmd (LATCH)
+  Destination:       enet_cmd (PAD)
+  Source Clock:      phy_mem1/net/r_addr[2]_MUX_11772_o falling
+
+  Data Path: phy_mem1/net/cmd to enet_cmd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  phy_mem1/net/cmd (phy_mem1/net/cmd)
+     OBUF:I->O                 2.571          enet_cmd_OBUF (enet_cmd)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/net/r_addr[2]_MUX_11791_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            phy_mem1/net/ior (LATCH)
+  Destination:       enet_ior (PAD)
+  Source Clock:      phy_mem1/net/r_addr[2]_MUX_11791_o falling
+
+  Data Path: phy_mem1/net/ior to enet_ior
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  phy_mem1/net/ior (phy_mem1/net/ior)
+     OBUF:I->O                 2.571          enet_ior_OBUF (enet_ior)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/net/r_addr[2]_MUX_11783_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            phy_mem1/net/iow (LATCH)
+  Destination:       enet_iow (PAD)
+  Source Clock:      phy_mem1/net/r_addr[2]_MUX_11783_o falling
+
+  Data Path: phy_mem1/net/iow to enet_iow
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  phy_mem1/net/iow (phy_mem1/net/iow)
+     OBUF:I->O                 2.571          enet_iow_OBUF (enet_iow)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'phy_mem1/kbd/kb/div/clk'
@@ -7276,26 +7416,26 @@ Offset:              4.382ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1853 / 37
+  Total number of paths / destination ports: 1671 / 17
 -------------------------------------------------------------------------
-Delay:               11.500ns (Levels of Logic = 7)
+Delay:               11.141ns (Levels of Logic = 7)
   Source:            SW<1> (PAD)
-  Destination:       led<15> (PAD)
+  Destination:       led<5> (PAD)
 
-  Data Path: SW<1> to led<15>
+  Data Path: SW<1> to led<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           266   1.222   2.412  SW_1_IBUF (SW_1_IBUF)
      LUT5:I0->O           16   0.203   1.369  registers1/_n3589<5>1 (registers1/_n3589)
-     LUT6:I0->O            1   0.203   0.924  registers1/Mmux_led63 (registers1/Mmux_led62)
-     LUT5:I0->O            1   0.203   0.827  registers1/Mmux_led64 (registers1/Mmux_led63)
-     LUT6:I2->O            1   0.203   0.580  registers1/Mmux_led65 (registers1/Mmux_led64)
-     LUT6:I5->O            1   0.205   0.579  registers1/Mmux_led67 (led_10_OBUF)
-     OBUF:I->O                 2.571          led_10_OBUF (led<10>)
+     LUT6:I0->O            1   0.203   0.580  registers1/Mmux_led363 (registers1/Mmux_led362)
+     LUT5:I4->O            1   0.205   0.808  registers1/Mmux_led364 (registers1/Mmux_led363)
+     LUT6:I3->O            1   0.205   0.580  registers1/Mmux_led365 (registers1/Mmux_led364)
+     LUT6:I5->O            1   0.205   0.579  registers1/Mmux_led367 (led_5_OBUF)
+     OBUF:I->O                 2.571          led_5_OBUF (led<5>)
     ----------------------------------------
-    Total                     11.500ns (4.810ns logic, 6.690ns route)
-                                       (41.8% logic, 58.2% route)
+    Total                     11.141ns (4.814ns logic, 6.327ns route)
+                                       (43.2% logic, 56.8% route)
 
 =========================================================================
 
@@ -7307,47 +7447,49 @@ Clock to Setup on destination clock CLK
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |   10.587|         |         |         |
-RegWrite                                      |         |   10.383|         |         |
-phy_mem1/keyboard_r                           |         |    3.125|         |         |
-phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o  |         |   11.447|         |         |
-phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o    |         |   11.564|         |         |
-phy_mem1/uart1/u1/clkdiv_3                    |         |    2.326|         |         |
-phy_mem1/uart1/u2/clkdiv_3                    |    2.539|         |         |         |
+CLK                                           |   10.099|         |         |         |
+RegWrite                                      |         |    9.156|         |         |
+phy_mem1/keyboard_r                           |         |    4.329|         |         |
+phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o  |         |   10.614|         |         |
+phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o    |         |   11.257|         |         |
+phy_mem1/net/clk25_1                          |    5.387|         |         |         |
+phy_mem1/net/w_r_AND_3293_o                   |         |    4.352|         |         |
+phy_mem1/uart1/u1/clkdiv_3                    |         |    4.158|         |         |
+phy_mem1/uart1/u2/clkdiv_3                    |    3.622|         |         |         |
 phy_mem1/uart1/u2/readover                    |    2.272|         |         |         |
-phy_mem1/wrn                                  |         |    2.266|         |         |
-registers1/RegWrite_instruction[31]_AND_1024_o|         |   10.383|         |         |
-registers1/RegWrite_instruction[31]_AND_1088_o|         |   10.237|         |         |
-registers1/RegWrite_instruction[31]_AND_1152_o|         |   10.220|         |         |
-registers1/RegWrite_instruction[31]_AND_1216_o|         |   10.334|         |         |
-registers1/RegWrite_instruction[31]_AND_1280_o|         |   10.354|         |         |
-registers1/RegWrite_instruction[31]_AND_128_o |         |   10.366|         |         |
-registers1/RegWrite_instruction[31]_AND_1344_o|         |   10.274|         |         |
-registers1/RegWrite_instruction[31]_AND_1408_o|         |   10.257|         |         |
-registers1/RegWrite_instruction[31]_AND_1472_o|         |   10.371|         |         |
-registers1/RegWrite_instruction[31]_AND_1536_o|         |   10.391|         |         |
-registers1/RegWrite_instruction[31]_AND_1600_o|         |   10.131|         |         |
-registers1/RegWrite_instruction[31]_AND_1664_o|         |   10.114|         |         |
-registers1/RegWrite_instruction[31]_AND_1728_o|         |   10.228|         |         |
-registers1/RegWrite_instruction[31]_AND_1792_o|         |   10.248|         |         |
-registers1/RegWrite_instruction[31]_AND_1856_o|         |   10.257|         |         |
-registers1/RegWrite_instruction[31]_AND_1920_o|         |   10.240|         |         |
-registers1/RegWrite_instruction[31]_AND_192_o |         |   10.480|         |         |
-registers1/RegWrite_instruction[31]_AND_1984_o|         |   10.354|         |         |
-registers1/RegWrite_instruction[31]_AND_2048_o|         |   10.374|         |         |
-registers1/RegWrite_instruction[31]_AND_256_o |         |   10.500|         |         |
-registers1/RegWrite_instruction[31]_AND_320_o |         |   10.400|         |         |
-registers1/RegWrite_instruction[31]_AND_384_o |         |   10.383|         |         |
-registers1/RegWrite_instruction[31]_AND_448_o |         |   10.497|         |         |
-registers1/RegWrite_instruction[31]_AND_512_o |         |   10.517|         |         |
-registers1/RegWrite_instruction[31]_AND_576_o |         |   10.257|         |         |
-registers1/RegWrite_instruction[31]_AND_640_o |         |   10.240|         |         |
-registers1/RegWrite_instruction[31]_AND_704_o |         |   10.354|         |         |
-registers1/RegWrite_instruction[31]_AND_768_o |         |   10.374|         |         |
-registers1/RegWrite_instruction[31]_AND_832_o |         |   10.266|         |         |
-registers1/RegWrite_instruction[31]_AND_896_o |         |   10.249|         |         |
-registers1/RegWrite_instruction[31]_AND_960_o |         |   10.363|         |         |
-tlb_write                                     |         |    9.856|         |         |
+phy_mem1/wrn                                  |         |    4.350|         |         |
+registers1/RegWrite_instruction[31]_AND_1024_o|         |    9.076|         |         |
+registers1/RegWrite_instruction[31]_AND_1088_o|         |    8.933|         |         |
+registers1/RegWrite_instruction[31]_AND_1152_o|         |    8.916|         |         |
+registers1/RegWrite_instruction[31]_AND_1216_o|         |    9.030|         |         |
+registers1/RegWrite_instruction[31]_AND_1280_o|         |    9.050|         |         |
+registers1/RegWrite_instruction[31]_AND_128_o |         |    9.139|         |         |
+registers1/RegWrite_instruction[31]_AND_1344_o|         |    8.950|         |         |
+registers1/RegWrite_instruction[31]_AND_1408_o|         |    8.933|         |         |
+registers1/RegWrite_instruction[31]_AND_1472_o|         |    9.047|         |         |
+registers1/RegWrite_instruction[31]_AND_1536_o|         |    9.067|         |         |
+registers1/RegWrite_instruction[31]_AND_1600_o|         |    8.807|         |         |
+registers1/RegWrite_instruction[31]_AND_1664_o|         |    8.790|         |         |
+registers1/RegWrite_instruction[31]_AND_1728_o|         |    8.904|         |         |
+registers1/RegWrite_instruction[31]_AND_1792_o|         |    8.924|         |         |
+registers1/RegWrite_instruction[31]_AND_1856_o|         |    8.705|         |         |
+registers1/RegWrite_instruction[31]_AND_1920_o|         |    8.688|         |         |
+registers1/RegWrite_instruction[31]_AND_192_o |         |    9.253|         |         |
+registers1/RegWrite_instruction[31]_AND_1984_o|         |    8.802|         |         |
+registers1/RegWrite_instruction[31]_AND_2048_o|         |    8.822|         |         |
+registers1/RegWrite_instruction[31]_AND_256_o |         |    9.273|         |         |
+registers1/RegWrite_instruction[31]_AND_320_o |         |    9.173|         |         |
+registers1/RegWrite_instruction[31]_AND_384_o |         |    9.156|         |         |
+registers1/RegWrite_instruction[31]_AND_448_o |         |    9.270|         |         |
+registers1/RegWrite_instruction[31]_AND_512_o |         |    9.290|         |         |
+registers1/RegWrite_instruction[31]_AND_576_o |         |    9.030|         |         |
+registers1/RegWrite_instruction[31]_AND_640_o |         |    9.013|         |         |
+registers1/RegWrite_instruction[31]_AND_704_o |         |    9.127|         |         |
+registers1/RegWrite_instruction[31]_AND_768_o |         |    9.147|         |         |
+registers1/RegWrite_instruction[31]_AND_832_o |         |    8.959|         |         |
+registers1/RegWrite_instruction[31]_AND_896_o |         |    8.942|         |         |
+registers1/RegWrite_instruction[31]_AND_960_o |         |    9.056|         |         |
+tlb_write                                     |         |    9.115|         |         |
 ----------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK11
@@ -7355,18 +7497,22 @@ Clock to Setup on destination clock CLK11
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK11          |    6.521|         |         |         |
-RST            |    8.064|         |         |         |
+CLK11          |    6.501|         |         |         |
+RST            |    8.044|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK50
------------------------+---------+---------+---------+---------+
-                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------+---------+---------+---------+---------+
-CLK50                  |    5.779|         |         |         |
-phy_mem1/kbd/kb/div/clk|    5.322|         |         |         |
------------------------+---------+---------+---------+---------+
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+CLK50                           |    5.551|         |         |         |
+RST                             |   14.525|         |         |         |
+phy_mem1/kbd/kb/div/clk         |    5.322|         |         |         |
+phy_mem1/vga_component/div/clk1 |    5.561|         |         |         |
+phy_mem1/vga_component/ren/hSync|   13.054|         |         |         |
+phy_mem1/vga_ctl                |   13.259|         |         |         |
+--------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock RegWrite
 ---------------+---------+---------+---------+---------+
@@ -7390,8 +7536,8 @@ Clock to Setup on destination clock phy_mem1/kbd/kb/div/clk
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-RST                    |    7.946|         |         |         |
-phy_mem1/kbd/kb/div/clk|    6.403|         |         |         |
+RST                    |    7.518|         |         |         |
+phy_mem1/kbd/kb/div/clk|    5.975|         |         |         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/keyboard_r
@@ -7407,8 +7553,8 @@ Clock to Setup on destination clock phy_mem1/mmu1/DYP2_1_G
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    6.594|         |
-tlb_write      |         |         |    6.074|         |
+CLK            |         |         |    8.327|         |
+tlb_write      |         |         |    8.042|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o
@@ -7416,8 +7562,8 @@ Clock to Setup on destination clock phy_mem1/mmu1/GND_1051_o_GND_1051_o_OR_204_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |   21.825|         |
-tlb_write      |         |         |   21.305|         |
+CLK            |         |         |   17.752|         |
+tlb_write      |         |         |   17.467|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o
@@ -7425,9 +7571,72 @@ Clock to Setup on destination clock phy_mem1/mmu1/PWR_18_o_GND_1051_o_OR_205_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |   23.115|         |
-tlb_write      |         |         |   22.595|         |
+CLK            |         |         |   18.782|         |
+tlb_write      |         |         |   18.497|         |
 ---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/clk25_1
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+phy_mem1/net/r_addr[2]_MUX_11798_o|         |    1.216|         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/r_addr[2]_MUX_11772_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    2.623|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/r_addr[2]_MUX_11783_o
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+CLK                 |         |         |    3.725|         |
+phy_mem1/net/clk25_1|         |         |    2.081|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/r_addr[2]_MUX_11791_o
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+CLK                 |         |         |    3.510|         |
+phy_mem1/net/clk25_1|         |         |    2.946|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/r_addr[2]_MUX_11798_o
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+CLK                               |         |         |    5.474|         |
+phy_mem1/net/clk25_1              |         |         |    4.775|         |
+phy_mem1/net/r_addr[2]_MUX_11798_o|         |         |    1.602|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/r_addr[2]_MUX_12024_o
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+CLK                 |         |         |    4.069|         |
+phy_mem1/net/clk25_1|         |         |    4.805|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock phy_mem1/net/w_r_AND_3293_o
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+CLK                        |         |         |    2.640|         |
+phy_mem1/net/clk25_1       |         |         |    3.607|         |
+phy_mem1/net/w_r_AND_3293_o|         |         |    1.357|         |
+---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/uart1/u1/clkdiv_3
 --------------------------+---------+---------+---------+---------+
@@ -7443,10 +7652,10 @@ Clock to Setup on destination clock phy_mem1/uart1/u2/clkdiv_3
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-CLK                       |    4.233|         |         |         |
-phy_mem1/uart1/u2/clkdiv_3|    3.854|         |         |         |
-phy_mem1/uart1/u2/readover|    3.765|         |         |         |
-u_txd                     |    3.913|         |         |         |
+CLK                       |    4.253|         |         |         |
+phy_mem1/uart1/u2/clkdiv_3|    3.845|         |         |         |
+phy_mem1/uart1/u2/readover|    3.651|         |         |         |
+u_txd                     |    3.836|         |         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/uart1/u2/readover
@@ -7492,9 +7701,9 @@ Clock to Setup on destination clock phy_mem1/vga_ctl
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-CLK             |   10.572|         |         |         |
-RST             |   12.593|         |         |         |
-phy_mem1/vga_ctl|   11.379|         |         |         |
+CLK             |   10.300|         |         |         |
+RST             |   11.755|         |         |         |
+phy_mem1/vga_ctl|   10.541|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock phy_mem1/wrn
@@ -7511,7 +7720,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1024
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1024_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7520,7 +7729,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1088
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1088_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7529,7 +7738,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1152
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1152_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7538,7 +7747,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1216
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1216_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7547,7 +7756,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1280
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1280_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7556,7 +7765,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_128_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_128_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7565,7 +7774,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1344
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1344_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7574,7 +7783,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1408
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1408_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7583,7 +7792,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1472
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1472_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7592,7 +7801,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1536
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1536_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7601,7 +7810,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1600
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1600_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7610,7 +7819,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1664
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1664_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7619,7 +7828,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1728
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1728_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7628,7 +7837,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1792
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1792_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7637,7 +7846,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1856
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1856_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7646,7 +7855,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1920
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1920_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7655,7 +7864,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_192_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_192_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7664,7 +7873,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_1984
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_1984_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7673,7 +7882,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_2048
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-CLK                                           |         |         |    5.592|         |
+CLK                                           |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_2048_o|         |         |    1.424|         |
 ----------------------------------------------+---------+---------+---------+---------+
 
@@ -7682,7 +7891,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_256_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_256_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7691,7 +7900,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_320_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_320_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7700,7 +7909,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_384_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_384_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7709,7 +7918,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_448_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_448_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7718,7 +7927,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_512_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_512_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7727,7 +7936,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_576_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_576_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7736,7 +7945,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_640_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_640_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7745,7 +7954,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_704_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_704_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7754,7 +7963,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_768_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_768_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7763,7 +7972,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_832_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_832_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7772,7 +7981,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_896_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_896_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7781,7 +7990,7 @@ Clock to Setup on destination clock registers1/RegWrite_instruction[31]_AND_960_
                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------+---------+---------+---------+---------+
-CLK                                          |         |         |    5.592|         |
+CLK                                          |         |         |    5.286|         |
 registers1/RegWrite_instruction[31]_AND_960_o|         |         |    1.424|         |
 ---------------------------------------------+---------+---------+---------+---------+
 
@@ -7804,14 +8013,14 @@ CLK            |    3.583|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 106.00 secs
-Total CPU time to Xst completion: 106.45 secs
+Total REAL time to Xst completion: 115.00 secs
+Total CPU time to Xst completion: 115.76 secs
  
 --> 
 
-Total memory usage is 261384 kilobytes
+Total memory usage is 261192 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 3312 (   0 filtered)
+Number of warnings : 3263 (   0 filtered)
 Number of infos    :   16 (   0 filtered)
 
