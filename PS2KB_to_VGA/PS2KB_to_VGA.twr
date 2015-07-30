@@ -32,56 +32,39 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock clk_50M to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-video<0>    |        19.963(R)|      SLOW  |         7.288(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<1>    |        22.150(R)|      SLOW  |         8.597(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<2>    |        20.339(R)|      SLOW  |         7.524(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<3>    |        19.847(R)|      SLOW  |         8.120(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<4>    |        18.270(R)|      SLOW  |         7.185(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<5>    |        18.100(R)|      SLOW  |         7.079(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<6>    |        18.045(R)|      SLOW  |         6.887(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<7>    |        17.637(R)|      SLOW  |         6.650(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-video<8>    |        16.623(R)|      SLOW  |         6.048(R)|      FAST  |clk_50M_BUFGP     |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-
-Clock rst to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-video<0>    |        32.863(R)|      SLOW  |         9.632(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<1>    |        35.050(R)|      SLOW  |        10.941(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<2>    |        33.239(R)|      SLOW  |         9.868(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<3>    |        34.401(R)|      SLOW  |        10.907(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<4>    |        32.824(R)|      SLOW  |         9.972(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<5>    |        32.654(R)|      SLOW  |         9.866(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<6>    |        32.392(R)|      SLOW  |         9.816(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<7>    |        31.984(R)|      SLOW  |         9.579(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-video<8>    |        30.970(R)|      SLOW  |         8.977(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
+Setup/Hold to clock clk_50M
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+mask<8>     |    2.621(R)|      SLOW  |   -1.730(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+mask<9>     |    1.547(R)|      SLOW  |   -0.890(R)|      SLOW  |clk_50M_BUFGP     |   0.000|
+mask<10>    |    1.231(R)|      SLOW  |   -0.591(R)|      SLOW  |clk_50M_BUFGP     |   0.000|
+mask<11>    |    1.569(R)|      SLOW  |   -0.914(R)|      SLOW  |clk_50M_BUFGP     |   0.000|
+mask<12>    |    1.488(R)|      SLOW  |   -0.836(R)|      SLOW  |clk_50M_BUFGP     |   0.000|
+mask<13>    |    1.657(R)|      SLOW  |   -0.995(R)|      SLOW  |clk_50M_BUFGP     |   0.000|
+mask<14>    |    5.874(R)|      SLOW  |   -3.599(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+mask<15>    |    3.297(R)|      SLOW  |   -2.048(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+rst         |    9.955(R)|      SLOW  |   -2.262(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk_50M
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_50M        |    4.952|         |         |         |
-rst            |   23.173|    7.319|         |         |
+clk_50M        |   13.865|    4.867|    6.088|         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Jul 30 19:32:02 2015 
+Analysis completed Fri Jul 31 05:16:36 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 379 MB
+Peak Memory Usage: 373 MB
 
 
 

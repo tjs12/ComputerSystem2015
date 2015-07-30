@@ -54,6 +54,7 @@ architecture Behavioral of VGA_Controller is
 	end component;
 	type IntegerArray is array (LINE_NUM-1 downto 0) of Integer range LINE_CHR downto 0;
 	signal eol							: IntegerArray;
+	signal prev_clk_chr				: std_logic;
 	signal wea							: std_logic;
 	signal new_line					: std_logic_vector(LINE_NUM-1 downto 0);
 	signal addra, addrb				: std_logic_vector(11 downto 0);
@@ -71,12 +72,12 @@ begin
 		wea(0)	=> wea,
 		addra		=> addra,
 		dina		=> dina,
-		clkb		=> clk_50M,
+		clkb		=> not clk_50M,
 		addrb		=> addrb,
 		doutb		=> doutb
 	);
 	
-	dina <= char when rising_edge(clk_chr);
+	prev_clk_chr <= clk_chr when rising_edge(clk_50M);
 	next_start	<= start+1 when (0 <= start and start < LINE_NUM-1) else
 						0;
 	prev_line	<= line-1 when (0 < line and line <= LINE_NUM-1) else
@@ -84,7 +85,7 @@ begin
 	next_line	<= line+1 when (0 <= line and line < LINE_NUM-1) else
 						0;
 	
-	process (rst, clk_chr) begin
+	process (rst, clk_50M) begin
 		if (rst = '0') then
 			for i in eol'left downto eol'right loop
 				eol(i) <= 0;
@@ -94,48 +95,55 @@ begin
 			start <= 0;
 			line <= 0;
 			column <= 0;
-		elsif (rising_edge(clk_chr)) then
-			if (char(7 downto 0) = "00001000") then
-				if (eol(line) /= 0) then
-					eol(line) <= eol(line)-1;
-					column <= eol(line)-1;
-				elsif (line /= start) then
-					line <= prev_line;
-					if (new_line(prev_line) = '1') then
-						new_line(prev_line) <= '0';
-						column <= eol(prev_line);
-					else
-						eol(prev_line) <= eol(prev_line) - 1;
-						column <= eol(prev_line) - 1;
+		elsif (rising_edge(clk_50M)) then
+			if (prev_clk_chr = '0' and clk_chr = '1') then
+				if (char(7 downto 0) = "00001000") then
+					wea <= '0';
+					if (eol(line) /= 0) then
+						eol(line) <= eol(line)-1;
+						column <= eol(line)-1;
+					elsif (line /= start) then
+						line <= prev_line;
+						if (new_line(prev_line) = '1') then
+							new_line(prev_line) <= '0';
+							column <= eol(prev_line);
+						else
+							eol(prev_line) <= eol(prev_line) - 1;
+							column <= eol(prev_line) - 1;
+						end if;
 					end if;
+				elsif (char(7 downto 0) = "00001010") then
+					wea <= '0';
+					new_line(line) <= '1';
+					eol(line) <= column;
+					new_line(next_line) <= '0';
+					eol(next_line) <= 0;
+					line <= next_line;
+					if (start = next_line) then
+						start <= next_start;
+					end if;
+					column <= 0;
+				elsif (column = LINE_CHR) then
+					wea <= '1';
+					dina <= char;
+					addra <= conv_std_logic_vector(next_line, 5)&conv_std_logic_vector(0, 7);
+					eol(line) <= column;
+					line <= next_line;
+					new_line(next_line) <= '0';
+					eol(next_line) <= 1;
+					column <= 1;
+					if (start = next_line) then
+						start <= next_start;
+					end if;
+				else
+					wea <= '1';
+					dina <= char;
+					addra <= conv_std_logic_vector(line, 5)&conv_std_logic_vector(column, 7);
+					eol(line) <= column+1;
+					column <= column+1;
 				end if;
-			elsif (char(7 downto 0) = "00001010") then
-				wea <= '0';
-				new_line(line) <= '1';
-				eol(line) <= column;
-				new_line(next_line) <= '0';
-				eol(next_line) <= 0;
-				line <= next_line;
-				if (start = next_line) then
-					start <= next_start;
-				end if;
-				column <= 0;
-			elsif (column = LINE_CHR) then
-				wea <= '1';
-				addra <= conv_std_logic_vector(next_line, 5)&conv_std_logic_vector(0, 7);
-				eol(line) <= column;
-				new_line(next_line) <= '0';
-				eol(next_line) <= 1;
-				line <= next_line;
-				if (start = next_line) then
-					start <= next_start;
-				end if;
-				column <= 0;
 			else
-				wea <= '1';
-				addra <= conv_std_logic_vector(line, 5)&conv_std_logic_vector(column, 7);
-				eol(line) <= column+1;
-				column <= column+1;
+				wea <= '0';
 			end if;
 		end if;
 	end process;

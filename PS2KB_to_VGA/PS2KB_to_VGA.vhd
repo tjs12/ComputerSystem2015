@@ -34,6 +34,7 @@ entity PS2KB_to_VGA is
            clk_50M	: in  STD_LOGIC;
            clk_kb		: inout  STD_LOGIC;
            data_kb	: in  STD_LOGIC;
+			  mask		: in  STD_LOGIC_VECTOR (15 downto 8);
            video		: out  STD_LOGIC_VECTOR (10 downto 0));
 end PS2KB_to_VGA;
 
@@ -69,7 +70,7 @@ begin
 		rst		=> rst,
 		clk_50M	=> clk_50M,
 		clk_chr	=> clk_chr,
-		char		=> "00000000"&char,
+		char		=> mask&char,
 		video		=> video
 	);
 

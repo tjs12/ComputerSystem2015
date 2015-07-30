@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 30 19:31:52 2015
+Fri Jul 31 05:16:25 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -406,7 +406,7 @@ Pinout by Pin Number:
 |J20       |           |IOBS     |IO_L27N_5                    |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |J21       |           |         |VCCO_5                       |         |           |5             |          |         |           |         |2.50     |          |           |                |
 |J22       |           |IOBS     |IO_L14N_M5CASN_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
-|J23       |video<10>  |IOB      |IO_L15P_M5UDM_5              |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|J23       |video<10>  |IOB      |IO_L15P_M5UDM_5              |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |J24       |           |IOBS     |IO_L15N_M5LDM_5              |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |J25       |           |IOBM     |IO_L22P_M5DQ10_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |J26       |           |IOBS     |IO_L22N_M5DQ11_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
@@ -436,8 +436,8 @@ Pinout by Pin Number:
 |K24       |           |IOBM     |IO_L21P_M5DQ8_5              |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |K25       |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |K26       |           |IOBS     |IO_L21N_M5DQ9_5              |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
-|L1        |           |IOBS     |IO_L61N_M4UDQSN_4            |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
-|L2        |           |IOBM     |IO_L61P_M4UDQS_4             |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
+|L1        |mask<12>   |IOB      |IO_L61N_M4UDQSN_4            |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|L2        |mask<13>   |IOB      |IO_L61P_M4UDQS_4             |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |L3        |           |IOBS     |IO_L54N_M3A11_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L4        |           |IOBM     |IO_L54P_M3RESET_3            |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L5        |           |         |VCCAUX                       |         |           |              |          |         |           |         |2.5      |          |           |                |
@@ -462,7 +462,7 @@ Pinout by Pin Number:
 |L24       |           |IOBS     |IO_L29N_A22_M1A14_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L25       |           |IOBM     |IO_L24P_M5DQ12_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
 |L26       |           |IOBS     |IO_L24N_M5DQ13_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
-|M1        |           |IOBS     |IO_L60N_M4DQ13_4             |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
+|M1        |mask<11>   |IOB      |IO_L60N_M4DQ13_4             |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |M2        |           |         |VCCO_4                       |         |           |4             |          |         |           |         |any******|          |           |                |
 |M3        |           |IOBM     |IO_L60P_M4DQ12_4             |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
 |M4        |           |IOBS     |IO_L55N_M3A14_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
@@ -488,8 +488,8 @@ Pinout by Pin Number:
 |M24       |video<6>   |IOB      |IO_L23P_M5UDQS_5             |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |M25       |           |         |VCCO_5                       |         |           |5             |          |         |           |         |2.50     |          |           |                |
 |M26       |           |IOBS     |IO_L23N_M5UDQSN_5            |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
-|N1        |           |IOBS     |IO_L59N_M4DQ15_4             |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
-|N2        |           |IOBM     |IO_L59P_M4DQ14_4             |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
+|N1        |mask<9>    |IOB      |IO_L59N_M4DQ15_4             |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|N2        |mask<10>   |IOB      |IO_L59P_M4DQ14_4             |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |N3        |           |IOBS     |IO_L52N_M3A9_3               |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |N4        |           |IOBM     |IO_L52P_M3A8_3               |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |N5        |           |IOBS     |IO_L50N_M3BA2_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
@@ -514,7 +514,7 @@ Pinout by Pin Number:
 |N24       |video<8>   |IOB      |IO_L31N_A18_M1A12_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N25       |video<7>   |IOB      |IO_L25P_M5DQ14_5             |OUTPUT   |LVCMOS25*  |5             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N26       |           |IOBS     |IO_L25N_M5DQ15_5             |UNUSED   |           |5             |          |         |           |         |         |          |           |                |
-|P1        |           |IOBS     |IO_L48N_M3BA1_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|P1        |mask<8>    |IOB      |IO_L48N_M3BA1_3              |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P2        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |P3        |           |IOBM     |IO_L48P_M3BA0_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |P4        |           |         |VCCO_3                       |         |           |3             |          |         |           |         |any******|          |           |                |
@@ -646,9 +646,9 @@ Pinout by Pin Number:
 |V26       |           |IOBS     |IO_L45N_A0_M1LDQSN_1         |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |W1        |           |IOBS     |IO_L38N_M3DQ3_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |W2        |           |IOBM     |IO_L38P_M3DQ2_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|W3        |           |IOBS     |IO_L42N_GCLK24_M3LDM_3       |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|W3        |mask<15>   |IOB      |IO_L42N_GCLK24_M3LDM_3       |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |W4        |           |         |VCCO_3                       |         |           |3             |          |         |           |         |any******|          |           |                |
-|W5        |           |IOBM     |IO_L22P_3                    |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|W5        |mask<14>   |IOB      |IO_L22P_3                    |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |W6        |           |         |VCCO_3                       |         |           |3             |          |         |           |         |any******|          |           |                |
 |W7        |           |IOBS     |IO_L15N_3                    |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |W8        |           |IOBM     |IO_L15P_3                    |UNUSED   |           |3             |          |         |           |         |         |          |           |                |

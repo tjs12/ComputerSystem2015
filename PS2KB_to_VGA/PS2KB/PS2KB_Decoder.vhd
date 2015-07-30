@@ -39,15 +39,21 @@ entity PS2KB_Decoder is
 end PS2KB_Decoder;
 
 architecture Behavioral of PS2KB_Decoder is
-	signal prev_clk		: STD_LOGIC;
-	signal prev_data		: STD_LOGIC_VECTOR(23 downto 0);
-	signal caps, shift	: STD_LOGIC;
-	signal lowercase		: STD_LOGIC;
+	signal prev_clk				: STD_LOGIC;
+	signal prev_data				: STD_LOGIC_VECTOR(15 downto 0);
+	signal caps, num,
+			 shift,
+			 l_shift, r_shift,
+			 ctrl,
+			 l_ctrl, r_ctrl,
+			 alt						: STD_LOGIC;
+	signal lowercase				: STD_LOGIC;
 begin
 
-	prev_clk	<= '0' when rst = '0' else
-					clk when rising_edge(clk_50M);
-	lowercase <= caps xor shift;
+	prev_clk	<= clk when rising_edge(clk_50M);
+	shift <= l_shift or r_shift;
+	ctrl <= l_ctrl xor r_ctrl;
+	lowercase <= not (caps xor shift);
 
 	process (rst, clk_50M) begin
 		if (rst = '0') then
@@ -55,22 +61,35 @@ begin
 			char <= (others => '0');
 			prev_data <= (others => '0');
 			caps <= '0';
-			shift <= '0';
+			num <= '0';
+			l_shift <= '0';
+			r_shift <= '0';
+			l_ctrl <= '0';
+			r_ctrl <= '0';
+			alt <= '0';
 		elsif (rising_edge(clk_50M)) then
 			if (clk = '0' and clk_chr = '1') then
 				clk_chr <= '0';
 			elsif (prev_clk = '0' and clk = '1') then
-    			prev_data <= prev_data(15 downto 0)&data;
+    			prev_data <= prev_data(7 downto 0)&data;
     			if (prev_data(7 downto 0) = X"F0") then
-					if (data = X"12") then
-						shift <= '0';
-					end if;
+					case data is
+						when X"12" =>
+							l_shift <= '0';
+						when X"14" =>
+							if (prev_data(15 downto 8) = X"E0") then
+								r_ctrl <= '0';
+							else
+								l_ctrl <= '0';
+							end if;
+						when X"11" =>
+							alt <= '0';
+						when X"59" =>
+							r_shift <= '0';
+						when others =>
+					end case;
     			else
     				case data is
-						when X"12" =>
-							shift <= '1';
-                  when X"0D" =>
-                     caps <= not caps;
     					when X"1C" =>
     						char <= "01"&lowercase&"00001";
                      clk_chr <= '1';
@@ -217,6 +236,183 @@ begin
 								char <= "00111001";
 							else
 								char <= "00101000";
+							end if;
+							clk_chr <= '1';
+                  when X"0E" =>
+							if (shift = '0') then
+								char <= "01100000";
+							else
+								char <= "01111110";
+							end if;
+							clk_chr <= '1';
+                  when X"4E" =>
+							if (shift = '0') then
+								char <= "00101101";
+							else
+								char <= "01011111";
+							end if;
+							clk_chr <= '1';
+                  when X"55" =>
+							if (shift = '0') then
+								char <= "01011100";
+							else
+								char <= "01111100";
+							end if;
+							clk_chr <= '1';
+                  when X"5D" =>
+							if (shift = '0') then
+								char <= "01100000";
+							else
+								char <= "01111110";
+							end if;
+							clk_chr <= '1';
+						when X"66" =>
+							char <= "00001000";
+							clk_chr <= '1';
+						when X"29" =>
+							char <= "00100000";
+							clk_chr <= '1';
+						when X"0D" =>
+							char <= "00001001";
+							clk_chr <= '1';
+                  when X"58" =>
+                     caps <= not caps;
+						when X"12" =>
+							l_shift <= '1';
+						when X"14" =>
+							l_ctrl <= '1';
+						when X"11" =>
+							alt <= '1';
+						when X"59" =>
+							r_shift <= '1';
+						when X"5A" =>
+							if (prev_data(7 downto 0) /= X"E0" or num = '1') then
+								char <= "00001010";
+								clk_chr <= '1';
+							end if;
+						when X"76" =>
+							char <= "00011011";
+							clk_chr <= '1';
+						when X"54" =>
+							if (shift = '0') then
+								char <= "01011011";
+							else
+								char <= "01111011";
+							end if;
+							clk_chr <= '1';
+						when X"77" =>
+							num <= not num;
+						when X"4A" =>
+							if (prev_data(7 downto 0) /= X"E0") then
+								char <= "001"&shift&"1111";
+								clk_chr <= '1';
+							elsif (num = '1') then
+								char <= "00101111";
+								clk_chr <= '1';
+							end if;
+						when X"7C" =>
+							if (num = '1') then
+								char <= "00101010";
+								clk_chr <= '1';
+							end if;
+						when X"7B" =>
+							if (num = '1') then
+								char <= "00101101";
+								clk_chr <= '1';
+							end if;
+						when X"79" =>
+							if (num = '1') then
+								char <= "00101011";
+								clk_chr <= '1';
+							end if;
+						when X"71" =>
+							if (num = '1') then
+								char <= "00101110";
+								clk_chr <= '1';
+							end if;
+						when X"70" =>
+							if (num = '1') then
+								char <= "00110000";
+								clk_chr <= '1';
+							end if;
+						when X"69" =>
+							if (num = '1') then
+								char <= "00110001";
+								clk_chr <= '1';
+							end if;
+						when X"72" =>
+							if (num = '1') then
+								char <= "00110010";
+								clk_chr <= '1';
+							end if;
+						when X"7A" =>
+							if (num = '1') then
+								char <= "00110011";
+								clk_chr <= '1';
+							end if;
+						when X"6B" =>
+							if (num = '1') then
+								char <= "00110100";
+								clk_chr <= '1';
+							end if;
+						when X"73" =>
+							if (num = '1') then
+								char <= "00110101";
+								clk_chr <= '1';
+							end if;
+						when X"74" =>
+							if (num = '1') then
+								char <= "00110110";
+								clk_chr <= '1';
+							end if;
+						when X"6C" =>
+							if (num = '1') then
+								char <= "00110111";
+								clk_chr <= '1';
+							end if;
+						when X"75" =>
+							if (num = '1') then
+								char <= "00111000";
+								clk_chr <= '1';
+							end if;
+						when X"7D" =>
+							if (num = '1') then
+								char <= "00111001";
+								clk_chr <= '1';
+							end if;
+						when X"5B" =>
+							if (shift = '0') then
+								char <= "01011101";
+							else
+								char <= "01111101";
+							end if;
+							clk_chr <= '1';
+						when X"4C" =>
+							if (shift = '0') then
+								char <= "00111011";
+							else
+								char <= "00111010";
+							end if;
+							clk_chr <= '1';
+						when X"52" =>
+							if (shift = '0') then
+								char <= "00100111";
+							else
+								char <= "00100010";
+							end if;
+							clk_chr <= '1';
+						when X"41" =>
+							if (shift = '0') then
+								char <= "00101100";
+							else
+								char <= "00111100";
+							end if;
+							clk_chr <= '1';
+						when X"49" =>
+							if (shift = '0') then
+								char <= "00101110";
+							else
+								char <= "00111110";
 							end if;
 							clk_chr <= '1';
                   when others =>
