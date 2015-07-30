@@ -70,6 +70,11 @@ entity cpu is
 			  enet_iow : out STD_LOGIC;
 			  enet_reset : out STD_LOGIC;
 			  clk_25 : out STD_LOGIC;
+			  
+			  video : out  STD_LOGIC_VECTOR (10 downto 0);
+			 
+			  clk_kb	 : inout  STD_LOGIC;
+           data_kb : in  STD_LOGIC;
 			 
 			  CLK11 : in STD_LOGIC;
 			  u_txd : in std_logic;
@@ -209,6 +214,11 @@ architecture Behavioral of cpu is
 			 clk_25 : out STD_LOGIC;
 			 clk_50 : in STD_LOGIC;
 			 
+			 video : out  STD_LOGIC_VECTOR (10 downto 0);
+			 
+			 clk_kb		: inout  STD_LOGIC;
+          data_kb	: in  STD_LOGIC;
+			 
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 u_txd : in std_logic;
@@ -323,6 +333,11 @@ begin
 		enet_reset => enet_reset,
 		clk_25 => clk_25,
 		clk_50 => CLK50,
+		
+		video => video,
+			 
+	   clk_kb => clk_kb,
+      data_kb => data_kb,
 			
 		CLK11 => CLK11,
 		com_int => com_int,

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jul 30 12:01:41 2015
+// Written by: Map P.20131013 on Thu Jul 30 22:13:51 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -30,6 +30,7 @@ COMP "FlashAddr<10>" LOCATE = SITE "B6" LEVEL 1;
 COMP "FlashAddr<11>" LOCATE = SITE "C5" LEVEL 1;
 COMP "FlashAddr<12>" LOCATE = SITE "E5" LEVEL 1;
 COMP "FlashAddr<20>" LOCATE = SITE "F5" LEVEL 1;
+COMP "data_kb" LOCATE = SITE "R25" LEVEL 1;
 COMP "FlashAddr<13>" LOCATE = SITE "B4" LEVEL 1;
 COMP "FlashAddr<21>" LOCATE = SITE "D3" LEVEL 1;
 COMP "FlashAddr<14>" LOCATE = SITE "A4" LEVEL 1;
@@ -82,6 +83,7 @@ COMP "Ram1OE" LOCATE = SITE "AD17" LEVEL 1;
 COMP "Ram2OE" LOCATE = SITE "AB9" LEVEL 1;
 COMP "Ram1WE" LOCATE = SITE "AA25" LEVEL 1;
 COMP "Ram2WE" LOCATE = SITE "AC4" LEVEL 1;
+COMP "video<10>" LOCATE = SITE "J23" LEVEL 1;
 COMP "Ram1Addr<10>" LOCATE = SITE "AD20" LEVEL 1;
 COMP "Ram1Addr<11>" LOCATE = SITE "AC20" LEVEL 1;
 COMP "Ram1Addr<12>" LOCATE = SITE "AD21" LEVEL 1;
@@ -145,6 +147,7 @@ COMP "FlashAddr<6>" LOCATE = SITE "C7" LEVEL 1;
 COMP "FlashAddr<7>" LOCATE = SITE "C6" LEVEL 1;
 COMP "FlashAddr<8>" LOCATE = SITE "D6" LEVEL 1;
 COMP "FlashAddr<9>" LOCATE = SITE "A6" LEVEL 1;
+COMP "clk_kb" LOCATE = SITE "R24" LEVEL 1;
 COMP "enet_cmd" LOCATE = SITE "B12" LEVEL 1;
 COMP "enet_int" LOCATE = SITE "D13" LEVEL 1;
 COMP "enet_ior" LOCATE = SITE "C13" LEVEL 1;
@@ -182,6 +185,16 @@ COMP "Ram2Data<19>" LOCATE = SITE "AC1" LEVEL 1;
 COMP "Ram2Data<27>" LOCATE = SITE "AF9" LEVEL 1;
 COMP "Ram2Data<28>" LOCATE = SITE "AF10" LEVEL 1;
 COMP "Ram2Data<29>" LOCATE = SITE "AE11" LEVEL 1;
+COMP "video<0>" LOCATE = SITE "H24" LEVEL 1;
+COMP "video<1>" LOCATE = SITE "G24" LEVEL 1;
+COMP "video<2>" LOCATE = SITE "F24" LEVEL 1;
+COMP "video<3>" LOCATE = SITE "E24" LEVEL 1;
+COMP "video<4>" LOCATE = SITE "E25" LEVEL 1;
+COMP "video<5>" LOCATE = SITE "E26" LEVEL 1;
+COMP "video<6>" LOCATE = SITE "M24" LEVEL 1;
+COMP "video<7>" LOCATE = SITE "N25" LEVEL 1;
+COMP "video<8>" LOCATE = SITE "N24" LEVEL 1;
+COMP "video<9>" LOCATE = SITE "L23" LEVEL 1;
 COMP "Ram1Addr<0>" LOCATE = SITE "Y26" LEVEL 1;
 COMP "Ram1Addr<1>" LOCATE = SITE "W25" LEVEL 1;
 COMP "Ram1Addr<2>" LOCATE = SITE "W26" LEVEL 1;

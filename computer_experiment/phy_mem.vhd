@@ -83,6 +83,11 @@ entity phy_mem is
 			 clk_25 : out STD_LOGIC;
 			 clk_50 : in STD_LOGIC;
 			 
+			 video : out  STD_LOGIC_VECTOR (10 downto 0);
+			 
+			 clk_kb		: inout  STD_LOGIC;
+          data_kb	: in  STD_LOGIC;
+			 
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 u_txd : in std_logic;
@@ -164,8 +169,28 @@ architecture Behavioral of phy_mem is
 	signal nd_in, nd_out : STD_LOGIC_VECTOR(15 downto 0);
 	signal n_st : STD_LOGIC_VECTOR(2 downto 0);
 	
+	component VGA is
+   Port ( rst				: in  STD_LOGIC;
+           clk_50M		: in  STD_LOGIC;
+           clk_chr		: in  STD_LOGIC;
+           char			: in  STD_LOGIC_VECTOR (15 downto 0);
+           video			: out  STD_LOGIC_VECTOR (10 downto 0));
+	end component;
 	
+	signal vga_data : STD_LOGIC_VECTOR(15 downto 0);
+	signal vga_ctl : STD_LOGIC;
 
+	component keyboard_enclosed is
+    Port ( r : in  STD_LOGIC;
+           data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  clk_kb		: inout  STD_LOGIC;
+           data_kb	: in  STD_LOGIC;
+			  rst : in STD_LOGIC;
+           clk50 : in  STD_LOGIC);
+	end component;
+	
+	signal keyboard_r : STD_LOGIC;
+	signal keyboard_data : STD_LOGIC_VECTOR (7 downto 0);
 	
 	signal Paddr : STD_LOGIC_VECTOR (31 downto 0);
 	signal flag_missing : STD_LOGIC;
@@ -241,6 +266,28 @@ begin
 			  data_out => nd_out,
 			  status_out => n_st
 	);
+	
+	
+	vga_component : VGA 
+    Port map ( 
+			  rst => RST,
+           clk_50M => clk_50,
+           clk_chr => vga_ctl,
+           char => vga_data(15 downto 0),
+           video => video
+	 );
+	 
+	 kbd : keyboard_enclosed 
+    Port map(
+			  r  => keyboard_r,
+           data => keyboard_data,
+			  clk_kb	 => clk_kb,
+           data_kb => data_kb,
+			  rst => RST,
+           clk50 => clk_50
+			  );
+	
+	
 			  
 --RomAddr <= addr(11 downto 0);
 --RomData <= addr;
@@ -736,6 +783,31 @@ process(RST, CLK, MemRead, MemWrite)
 						ready <= '1';
 					else
 						ready <= '0';
+					end if;
+				end if;
+			elsif addr = x"1FC03000" then --VGA
+				if MemRead = '1' then
+					data_read(0) <= '1';
+					data_read(15 downto 1) <= "000000000000000";
+				elsif MemWrite = '1' then
+					vga_data <= data_write(15 downto 0);
+					if vga_ctl = '0' then
+						vga_ctl <= '1';
+						ready <= '0';
+					else 
+						vga_ctl <= '0';
+						ready <= '1';
+					end if;
+				end if;
+			elsif addr = x"0F000000" then --keyboard
+				if MemRead = '1' then
+					data_read(7 downto 0) <= keyboard_data;
+					if keyboard_r = '0' then
+						keyboard_r <= '1';
+						ready <= '0';
+					elsif keyboard_r = '1' then
+						keyboard_r <= '0';
+						ready <= '1';
 					end if;
 				end if;
 			else

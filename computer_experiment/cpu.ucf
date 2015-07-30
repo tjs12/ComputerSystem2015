@@ -262,3 +262,17 @@ NET "enet_int" LOC = D13;
 NET "enet_ior" LOC = C13;
 NET "enet_iow" LOC = A13;
 NET "enet_reset" LOC = A14;
+
+NET "clk_kb" LOC = R24;
+NET "data_kb" LOC = R25;
+NET "video[0]" LOC = H24;
+NET "video[1]" LOC = G24;
+NET "video[2]" LOC = F24;
+NET "video[3]" LOC = E24;
+NET "video[4]" LOC = E25;
+NET "video[5]" LOC = E26;
+NET "video[6]" LOC = M24;
+NET "video[7]" LOC = N25;
+NET "video[8]" LOC = N24;
+NET "video[9]" LOC = L23;
+NET "video[10]" LOC = J23;
