@@ -1,0 +1,37 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jul 30 19:14:10 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rst" LOCATE = SITE "T1" LEVEL 1;
+COMP "char<0>" LOCATE = SITE "Y5" LEVEL 1;
+COMP "char<1>" LOCATE = SITE "W1" LEVEL 1;
+COMP "char<2>" LOCATE = SITE "W2" LEVEL 1;
+COMP "char<3>" LOCATE = SITE "V1" LEVEL 1;
+COMP "char<4>" LOCATE = SITE "U1" LEVEL 1;
+COMP "char<5>" LOCATE = SITE "U2" LEVEL 1;
+COMP "char<6>" LOCATE = SITE "R1" LEVEL 1;
+COMP "char<7>" LOCATE = SITE "R2" LEVEL 1;
+COMP "char<8>" LOCATE = SITE "P1" LEVEL 1;
+COMP "char<9>" LOCATE = SITE "N1" LEVEL 1;
+COMP "clk_50M" LOCATE = SITE "U26" LEVEL 1;
+COMP "clk_chr" LOCATE = SITE "T3" LEVEL 1;
+COMP "char<10>" LOCATE = SITE "N2" LEVEL 1;
+COMP "char<11>" LOCATE = SITE "M1" LEVEL 1;
+COMP "char<12>" LOCATE = SITE "L1" LEVEL 1;
+COMP "char<13>" LOCATE = SITE "L2" LEVEL 1;
+COMP "char<14>" LOCATE = SITE "W5" LEVEL 1;
+COMP "char<15>" LOCATE = SITE "W3" LEVEL 1;
+COMP "video<10>" LOCATE = SITE "J23" LEVEL 1;
+COMP "video<0>" LOCATE = SITE "H24" LEVEL 1;
+COMP "video<1>" LOCATE = SITE "G24" LEVEL 1;
+COMP "video<2>" LOCATE = SITE "F24" LEVEL 1;
+COMP "video<3>" LOCATE = SITE "E24" LEVEL 1;
+COMP "video<4>" LOCATE = SITE "E25" LEVEL 1;
+COMP "video<5>" LOCATE = SITE "E26" LEVEL 1;
+COMP "video<6>" LOCATE = SITE "M24" LEVEL 1;
+COMP "video<7>" LOCATE = SITE "N25" LEVEL 1;
+COMP "video<8>" LOCATE = SITE "N24" LEVEL 1;
+COMP "video<9>" LOCATE = SITE "L23" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jul 30 18:40:21 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "data_kb" LOCATE = SITE "R25" LEVEL 1;
+COMP "char<0>" LOCATE = SITE "N26" LEVEL 1;
+COMP "char<1>" LOCATE = SITE "M26" LEVEL 1;
+COMP "char<2>" LOCATE = SITE "L25" LEVEL 1;
+COMP "char<3>" LOCATE = SITE "L26" LEVEL 1;
+COMP "char<4>" LOCATE = SITE "K26" LEVEL 1;
+COMP "char<5>" LOCATE = SITE "M23" LEVEL 1;
+COMP "char<6>" LOCATE = SITE "K24" LEVEL 1;
+COMP "char<7>" LOCATE = SITE "L24" LEVEL 1;
+COMP "clk_50M" LOCATE = SITE "U26" LEVEL 1;
+COMP "clk_chr" LOCATE = SITE "F26" LEVEL 1;
+COMP "clk_kb" LOCATE = SITE "R24" LEVEL 1;
+COMP "rst" LOCATE = SITE "T1" LEVEL 1;
+SCHEMATIC END;
+

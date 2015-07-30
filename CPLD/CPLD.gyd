@@ -1,0 +1,28 @@
+Pin Freeze File:  version P.20131013
+
+95144XL100 XC95144XL-10-TQ100
+ps2kb_clock S:PIN71
+ps2kb_data S:PIN70
+rxd S:PIN58
+pass_txd S:PIN7
+pass_ps2kb_clock S:PIN8
+pass_ps2kb_data S:PIN9
+pass_rxd S:PIN6
+txd S:PIN54
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+
+PARTITION FB2_11 pass_rxd_OBUF$BUF0
+PARTITION FB2_14 pass_ps2kb_clock_OBUF$BUF0 pass_ps2kb_data_OBUF$BUF0
+
+
+
+
+
+PARTITION FB7_8 txd_OBUF$BUF0
+
+
+

@@ -1,0 +1,87 @@
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+xst -intstyle ise -ifn "D:/PS2KB/PS2KB.xst" -ofn "D:/PS2KB/PS2KB.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PS2KB.ucf -p xc6slx100-fgg676-3 PS2KB.ngc PS2KB.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_map.ncd PS2KB.ngd PS2KB.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_map.ncd PS2KB.ncd PS2KB.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf PS2KB.ucf 
+bitgen -intstyle ise -f PS2KB.ut PS2KB.ncd 

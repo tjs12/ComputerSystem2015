@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Jul 30 17:08:00 2015
+# Process ID: 460
+# Log file: D:/PS2KB/planAhead_run_2/planAhead.log
+# Journal file: D:/PS2KB/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/PS2KB/pa.fromHdl.tcl
+# create_project -name PS2KB -dir "D:/PS2KB/planAhead_run_2" -part xc6slx100fgg676-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "PS2KB.ucf" [current_fileset -constrset]
+Adding file 'D:/PS2KB/PS2KB.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Listener.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Divider.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Decoder.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {PS2KB.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top PS2KB $srcset
+# add_files [list {PS2KB.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx100fgg676-3
+Using Verific elaboration
+Parsing VHDL file "D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/PS2KB/Listener.vhd" into library work
+Parsing VHDL file "D:/PS2KB/Divider.vhd" into library work
+Parsing VHDL file "D:/PS2KB/Decoder.vhd" into library work
+Parsing VHDL file "D:/PS2KB/PS2KB.vhd" into library work
+Loading clock regions from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockRegion.xml
+Loading clock buffers from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/ClockBuffers.xml
+Loading package pin functions from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx100/fgg676/Package.xml
+Loading io standards from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Software/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/PS2KB/PS2KB.ucf]
+Finished Parsing UCF File [D:/PS2KB/PS2KB.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: cab4fa60
+open_rtl_design: Time (s): elapsed = 00:00:16 . Memory (MB): peak = 676.762 ; gain = 196.215
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin R24 [get_ports clk_kb]
+endgroup
+startgroup
+set_property package_pin R25 [get_ports data_kb]
+endgroup
+startgroup
+set_property package_pin F26 [get_ports {char[0]}]
+endgroup
+startgroup
+set_property package_pin G26 [get_ports {char[1]}]
+endgroup
+startgroup
+set_property package_pin G25 [get_ports {char[2]}]
+endgroup
+startgroup
+set_property package_pin H26 [get_ports {char[3]}]
+endgroup
+startgroup
+set_property package_pin J26 [get_ports {char[4]}]
+endgroup
+startgroup
+set_property package_pin J25 [get_ports {char[5]}]
+endgroup
+startgroup
+set_property package_pin G23 [get_ports {char[6]}]
+endgroup
+startgroup
+set_property package_pin J24 [get_ports {char[7]}]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports clk_chr]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See D:/PS2KB\planAhead_pid460.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Jul 30 17:19:02 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,87 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
+3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o
+PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf
+
+Design file:              PS2KB_to_VGA.ncd
+Physical constraint file: PS2KB_to_VGA.pcf
+Device,package,speed:     xc6slx100,fgg676,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk_50M to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+video<0>    |        19.963(R)|      SLOW  |         7.288(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<1>    |        22.150(R)|      SLOW  |         8.597(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<2>    |        20.339(R)|      SLOW  |         7.524(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<3>    |        19.847(R)|      SLOW  |         8.120(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<4>    |        18.270(R)|      SLOW  |         7.185(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<5>    |        18.100(R)|      SLOW  |         7.079(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<6>    |        18.045(R)|      SLOW  |         6.887(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<7>    |        17.637(R)|      SLOW  |         6.650(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+video<8>    |        16.623(R)|      SLOW  |         6.048(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock rst to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+video<0>    |        32.863(R)|      SLOW  |         9.632(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<1>    |        35.050(R)|      SLOW  |        10.941(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<2>    |        33.239(R)|      SLOW  |         9.868(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<3>    |        34.401(R)|      SLOW  |        10.907(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<4>    |        32.824(R)|      SLOW  |         9.972(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<5>    |        32.654(R)|      SLOW  |         9.866(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<6>    |        32.392(R)|      SLOW  |         9.816(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<7>    |        31.984(R)|      SLOW  |         9.579(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+video<8>    |        30.970(R)|      SLOW  |         8.977(R)|      FAST  |rst_IBUF_BUFG     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_50M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50M        |    4.952|         |         |         |
+rst            |   23.173|    7.319|         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Jul 30 19:32:02 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 379 MB
+
+
+

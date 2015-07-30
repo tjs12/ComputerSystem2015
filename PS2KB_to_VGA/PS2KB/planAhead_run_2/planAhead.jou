@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Jul 30 17:08:00 2015
+# Process ID: 460
+# Log file: D:/PS2KB/planAhead_run_2/planAhead.log
+# Journal file: D:/PS2KB/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/PS2KB/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin R24 [get_ports clk_kb]
+endgroup
+startgroup
+set_property package_pin R25 [get_ports data_kb]
+endgroup
+startgroup
+set_property package_pin F26 [get_ports {char[0]}]
+endgroup
+startgroup
+set_property package_pin G26 [get_ports {char[1]}]
+endgroup
+startgroup
+set_property package_pin G25 [get_ports {char[2]}]
+endgroup
+startgroup
+set_property package_pin H26 [get_ports {char[3]}]
+endgroup
+startgroup
+set_property package_pin J26 [get_ports {char[4]}]
+endgroup
+startgroup
+set_property package_pin J25 [get_ports {char[5]}]
+endgroup
+startgroup
+set_property package_pin G23 [get_ports {char[6]}]
+endgroup
+startgroup
+set_property package_pin J24 [get_ports {char[7]}]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports clk_chr]
+endgroup
+save_constraints

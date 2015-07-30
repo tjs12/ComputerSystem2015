@@ -1,0 +1,35 @@
+
+
+NET "rst" LOC = T1;
+NET "clk_chr" LOC = T3;
+NET "clk_50M" LOC = U26;
+NET "char[0]" LOC = Y5;
+NET "char[1]" LOC = W1;
+NET "char[2]" LOC = W2;
+NET "char[3]" LOC = V1;
+NET "char[4]" LOC = U1;
+NET "char[5]" LOC = U2;
+NET "char[6]" LOC = R1;
+NET "char[7]" LOC = R2;
+NET "char[8]" LOC = P1;
+NET "char[9]" LOC = N1;
+NET "char[10]" LOC = N2;
+NET "char[11]" LOC = M1;
+NET "char[12]" LOC = L1;
+NET "char[13]" LOC = L2;
+NET "char[14]" LOC = W5;
+NET "char[15]" LOC = W3;
+
+# PlanAhead Generated physical constraints 
+
+NET "video[0]" LOC = H24;
+NET "video[1]" LOC = G24;
+NET "video[2]" LOC = F24;
+NET "video[3]" LOC = E24;
+NET "video[4]" LOC = E25;
+NET "video[5]" LOC = E26;
+NET "video[6]" LOC = M24;
+NET "video[7]" LOC = N25;
+NET "video[8]" LOC = N24;
+NET "video[9]" LOC = L23;
+NET "video[10]" LOC = J23;

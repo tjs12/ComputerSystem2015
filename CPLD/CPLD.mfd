@@ -1,0 +1,38 @@
+MDF Database:  version 1.0
+MDF_INFO | CPLD | XC95144XL-10-TQ100
+MACROCELL | 1 | 13 | pass_ps2kb_clock_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | ps2kb_clock
+INPUTP | 1 | 114
+EQ | 1 | 
+   pass_ps2kb_clock = ps2kb_clock;
+
+MACROCELL | 1 | 14 | pass_ps2kb_data_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | ps2kb_data
+INPUTP | 1 | 112
+EQ | 1 | 
+   pass_ps2kb_data = ps2kb_data;
+
+MACROCELL | 1 | 10 | pass_rxd_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | rxd
+INPUTP | 1 | 95
+EQ | 1 | 
+   pass_rxd = rxd;
+
+MACROCELL | 6 | 7 | txd_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | pass_txd
+INPUTP | 1 | 12
+EQ | 1 | 
+   txd = pass_txd;
+
+PIN | ps2kb_clock | 64 | 0 | N/A | 114 | 1 | 1 | 13
+PIN | ps2kb_data | 64 | 0 | N/A | 112 | 1 | 1 | 14
+PIN | rxd | 64 | 0 | N/A | 95 | 1 | 1 | 10
+PIN | pass_txd | 64 | 0 | N/A | 12 | 1 | 6 | 7
+PIN | pass_ps2kb_clock | 536871040 | 0 | N/A | 13
+PIN | pass_ps2kb_data | 536871040 | 0 | N/A | 15
+PIN | pass_rxd | 536871040 | 0 | N/A | 11
+PIN | txd | 536871040 | 0 | N/A | 88

@@ -1,0 +1,77 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Software\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
+3 -s 3 -n 3 -fastpaths -xml PS2KB.twx PS2KB.ncd -o PS2KB.twr PS2KB.pcf -ucf
+PS2KB.ucf
+
+Design file:              PS2KB.ncd
+Physical constraint file: PS2KB.pcf
+Device,package,speed:     xc6slx100,fgg676,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_50M
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+rst         |    7.487(R)|      SLOW  |   -4.336(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk_50M to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+char<0>     |         7.800(R)|      SLOW  |         4.109(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<1>     |         8.359(R)|      SLOW  |         4.480(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<2>     |         8.051(R)|      SLOW  |         4.271(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<3>     |         8.029(R)|      SLOW  |         4.242(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<4>     |         8.727(R)|      SLOW  |         4.646(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<5>     |         7.781(R)|      SLOW  |         4.092(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+char<6>     |         8.467(R)|      SLOW  |         4.496(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+clk_chr     |         9.370(R)|      SLOW  |         5.043(R)|      FAST  |clk_50M_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_50M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50M        |    3.181|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Jul 30 18:40:49 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 342 MB
+
+
+

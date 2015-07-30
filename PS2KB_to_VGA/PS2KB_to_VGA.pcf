@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jul 30 19:31:16 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rst" LOCATE = SITE "T1" LEVEL 1;
+COMP "clk_50M" LOCATE = SITE "U26" LEVEL 1;
+COMP "data_kb" LOCATE = SITE "R25" LEVEL 1;
+COMP "video<10>" LOCATE = SITE "J23" LEVEL 1;
+COMP "clk_kb" LOCATE = SITE "R24" LEVEL 1;
+COMP "video<0>" LOCATE = SITE "H24" LEVEL 1;
+COMP "video<1>" LOCATE = SITE "G24" LEVEL 1;
+COMP "video<2>" LOCATE = SITE "F24" LEVEL 1;
+COMP "video<3>" LOCATE = SITE "E24" LEVEL 1;
+COMP "video<4>" LOCATE = SITE "E25" LEVEL 1;
+COMP "video<5>" LOCATE = SITE "E26" LEVEL 1;
+COMP "video<6>" LOCATE = SITE "M24" LEVEL 1;
+COMP "video<7>" LOCATE = SITE "N25" LEVEL 1;
+COMP "video<8>" LOCATE = SITE "N24" LEVEL 1;
+COMP "video<9>" LOCATE = SITE "L23" LEVEL 1;
+SCHEMATIC END;
+

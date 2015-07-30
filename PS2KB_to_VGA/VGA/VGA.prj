@@ -1,0 +1,7 @@
+vhdl work "VGA_ROM_Font.vhd"
+vhdl work "VGA_RAM_Text.vhd"
+vhdl work "VGA_Render.vhd"
+vhdl work "VGA_Divider.vhd"
+vhdl work "VGA_Decoder.vhd"
+vhdl work "VGA_Controller.vhd"
+vhdl work "VGA.vhd"

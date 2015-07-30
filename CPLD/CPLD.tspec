@@ -1,0 +1,4 @@
+AUTO_TS_P2P:FROM:ps2kb_clock:TO:pass_ps2kb_clock:1
+AUTO_TS_P2P:FROM:ps2kb_data:TO:pass_ps2kb_data:1
+AUTO_TS_P2P:FROM:rxd:TO:pass_rxd:1
+AUTO_TS_P2P:FROM:pass_txd:TO:txd:1

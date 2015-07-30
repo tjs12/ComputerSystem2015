@@ -1,0 +1,18 @@
+
+
+NET "clk_50M" LOC = U26;
+NET "rst" LOC = T1;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk_kb" LOC = R24;
+NET "data_kb" LOC = R25;
+NET "char[0]" LOC = N26;
+NET "char[1]" LOC = M26;
+NET "char[2]" LOC = L25;
+NET "char[3]" LOC = L26;
+NET "char[4]" LOC = K26;
+NET "char[5]" LOC = M23;
+NET "char[6]" LOC = K24;
+NET "char[7]" LOC = L24;
+NET "clk_chr" LOC = F26;
