@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THINKPAD-T430U::  Fri Jul 31 05:15:56 2015
+THINKPAD-T430U::  Fri Jul 31 22:22:45 2015
 
 par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd
 PS2KB_to_VGA.pcf 
@@ -27,30 +27,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   609 out of 126,576    1%
-    Number used as Flip Flops:                 607
+  Number of Slice Registers:                   626 out of 126,576    1%
+    Number used as Flip Flops:                 624
     Number used as Latches:                      1
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      1,790 out of  63,288    2%
-    Number used as logic:                    1,783 out of  63,288    2%
-      Number using O6 output only:           1,377
+  Number of Slice LUTs:                      1,776 out of  63,288    2%
+    Number used as logic:                    1,764 out of  63,288    2%
+      Number using O6 output only:           1,316
       Number using O5 output only:             189
-      Number using O5 and O6:                  217
+      Number using O5 and O6:                  259
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  15,616    0%
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         7
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         8
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   747 out of  15,822    4%
+  Number of occupied Slices:                   726 out of  15,822    4%
   Number of MUXCYs used:                       468 out of  31,644    1%
-  Number of LUT Flip Flop pairs used:        1,880
-    Number with an unused Flip Flop:         1,302 out of   1,880   69%
-    Number with an unused LUT:                  90 out of   1,880    4%
-    Number of fully used LUT-FF pairs:         488 out of   1,880   25%
+  Number of LUT Flip Flop pairs used:        1,879
+    Number with an unused Flip Flop:         1,329 out of   1,879   70%
+    Number with an unused LUT:                 103 out of   1,879    5%
+    Number of fully used LUT-FF pairs:         447 out of   1,879   23%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,576    0%
 
@@ -102,29 +102,29 @@ Finished initial Timing Analysis.  REAL time: 7 secs
 Starting Router
 
 
-Phase  1  : 10064 unrouted;      REAL time: 8 secs 
+Phase  1  : 10389 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 8746 unrouted;      REAL time: 12 secs 
+Phase  2  : 9018 unrouted;      REAL time: 13 secs 
 
-Phase  3  : 3966 unrouted;      REAL time: 15 secs 
+Phase  3  : 4172 unrouted;      REAL time: 18 secs 
 
-Phase  4  : 3981 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  4  : 4180 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
 Updating file: PS2KB_to_VGA.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
-Total REAL time to Router completion: 26 secs 
-Total CPU time to Router completion: 27 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+Total REAL time to Router completion: 28 secs 
+Total CPU time to Router completion: 29 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -144,17 +144,17 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net ps2 | SETUP       |         N/A|     5.236ns|     N/A|           0
-  kb_m/div/clk_BUFG                         | HOLD        |     0.444ns|            |       0|           0
+  Autotimespec constraint for clock net ps2 | SETUP       |         N/A|     4.863ns|     N/A|           0
+  kb_m/div/clk_BUFG                         | HOLD        |     0.430ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.865ns|     N/A|           0
-  _50M_BUFGP                                | HOLD        |     0.266ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.368ns|     N/A|           0
+  _50M_BUFGP                                | HOLD        |     0.301ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net vga | SETUP       |         N/A|     4.106ns|     N/A|           0
-  _m/ren/hSync_BUFG                         | HOLD        |     0.568ns|            |       0|           0
+  Autotimespec constraint for clock net vga | SETUP       |         N/A|     3.793ns|     N/A|           0
+  _m/ren/hSync_BUFG                         | HOLD        |     0.625ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net vga | SETUP       |         N/A|    11.152ns|     N/A|           0
-  _m/div/clk1_BUFG                          | HOLD        |     0.430ns|            |       0|           0
+  Autotimespec constraint for clock net vga | SETUP       |         N/A|    10.111ns|     N/A|           0
+  _m/div/clk1_BUFG                          | HOLD        |     0.480ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -170,10 +170,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 29 secs 
-Total CPU time to PAR completion: 30 secs 
+Total REAL time to PAR completion: 31 secs 
+Total CPU time to PAR completion: 31 secs 
 
-Peak Memory Usage:  557 MB
+Peak Memory Usage:  547 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

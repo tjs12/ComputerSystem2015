@@ -8,7 +8,7 @@
 <msg type="warning" file="HDLCompiler" num="946" delta="old" >"D:\ComputerSystem2015\PS2KB_to_VGA\VGA\VGA_Decoder.vhd" Line 55: Actual for formal port <arg fmt="%s" index="1">addra</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="new" >"D:\ComputerSystem2015\PS2KB_to_VGA\VGA\VGA_Controller.vhd" Line 75: Actual for formal port <arg fmt="%s" index="1">clkb</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"D:\ComputerSystem2015\PS2KB_to_VGA\VGA\VGA_Controller.vhd" Line 75: Actual for formal port <arg fmt="%s" index="1">clkb</arg> is neither a static name nor a globally static expression
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="439" delta="old" >"D:\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB.vhd" Line 85: Formal port <arg fmt="%s" index="1">clk_chr</arg> of mode <arg fmt="%s" index="2">buffer</arg> cannot be associated with actual port <arg fmt="%s" index="3">clk_chr</arg> of mode <arg fmt="%s" index="4">out</arg>
@@ -38,52 +38,196 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr&lt;18:14&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_40</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_43</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_44</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_45</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_46</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_47</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_48</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_49</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_50</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_52</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_53</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_54</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_40</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_43</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_44</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_45</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_46</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_47</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_48</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_49</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_50</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_52</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_53</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_54</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prev_data_55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">char_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">PS2KB_Decoder</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

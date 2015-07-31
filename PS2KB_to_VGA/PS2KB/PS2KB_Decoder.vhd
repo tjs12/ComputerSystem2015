@@ -40,7 +40,7 @@ end PS2KB_Decoder;
 
 architecture Behavioral of PS2KB_Decoder is
 	signal prev_clk				: STD_LOGIC;
-	signal prev_data				: STD_LOGIC_VECTOR(15 downto 0);
+	signal prev_data				: STD_LOGIC_VECTOR(55 downto 0);
 	signal caps, num,
 			 shift,
 			 l_shift, r_shift,
@@ -71,16 +71,20 @@ begin
 			if (clk = '0' and clk_chr = '1') then
 				clk_chr <= '0';
 			elsif (prev_clk = '0' and clk = '1') then
-    			prev_data <= prev_data(7 downto 0)&data;
+    			prev_data <= prev_data(47 downto 0)&data;
     			if (prev_data(7 downto 0) = X"F0") then
 					case data is
 						when X"12" =>
-							l_shift <= '0';
+							if (prev_data(31 downto 8) /= X"E0F07CE0") then
+								l_shift <= '0';
+							end if;
 						when X"14" =>
-							if (prev_data(15 downto 8) = X"E0") then
-								r_ctrl <= '0';
-							else
-								l_ctrl <= '0';
+							if (prev_data(15 downto 8) /= X"E1") then
+								if (prev_data(15 downto 8) = X"E0") then
+									r_ctrl <= '0';
+								else
+									l_ctrl <= '0';
+								end if;
 							end if;
 						when X"11" =>
 							alt <= '0';
@@ -254,17 +258,13 @@ begin
 							clk_chr <= '1';
                   when X"55" =>
 							if (shift = '0') then
-								char <= "01011100";
+								char <= "00111101";
 							else
-								char <= "01111100";
+								char <= "00101011";
 							end if;
 							clk_chr <= '1';
                   when X"5D" =>
-							if (shift = '0') then
-								char <= "01100000";
-							else
-								char <= "01111110";
-							end if;
+							char <= "01"&shift&"11100";
 							clk_chr <= '1';
 						when X"66" =>
 							char <= "00001000";
@@ -278,9 +278,13 @@ begin
                   when X"58" =>
                      caps <= not caps;
 						when X"12" =>
-							l_shift <= '1';
+							if (prev_data(7 downto 0) /= X"E0") then
+								l_shift <= '1';
+							end if;
 						when X"14" =>
-							l_ctrl <= '1';
+							if (prev_data(7 downto 0) /= X"E1") then
+								l_ctrl <= '1';
+							end if;
 						when X"11" =>
 							alt <= '1';
 						when X"59" =>
@@ -301,7 +305,9 @@ begin
 							end if;
 							clk_chr <= '1';
 						when X"77" =>
-							num <= not num;
+							if (prev_data(15 downto 0) /= X"E114") then
+								num <= not num;
+							end if;
 						when X"4A" =>
 							if (prev_data(7 downto 0) /= X"E0") then
 								char <= "001"&shift&"1111";
@@ -311,7 +317,7 @@ begin
 								clk_chr <= '1';
 							end if;
 						when X"7C" =>
-							if (num = '1') then
+							if (prev_data(23 downto 0) /= X"E012E0" and num = '1') then
 								char <= "00101010";
 								clk_chr <= '1';
 							end if;
@@ -326,32 +332,32 @@ begin
 								clk_chr <= '1';
 							end if;
 						when X"71" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00101110";
 								clk_chr <= '1';
 							end if;
 						when X"70" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110000";
 								clk_chr <= '1';
 							end if;
 						when X"69" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110001";
 								clk_chr <= '1';
 							end if;
 						when X"72" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110010";
 								clk_chr <= '1';
 							end if;
 						when X"7A" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110011";
 								clk_chr <= '1';
 							end if;
 						when X"6B" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110100";
 								clk_chr <= '1';
 							end if;
@@ -361,22 +367,22 @@ begin
 								clk_chr <= '1';
 							end if;
 						when X"74" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110110";
 								clk_chr <= '1';
 							end if;
 						when X"6C" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00110111";
 								clk_chr <= '1';
 							end if;
 						when X"75" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00111000";
 								clk_chr <= '1';
 							end if;
 						when X"7D" =>
-							if (num = '1') then
+							if (prev_data(7 downto 0) /= X"E0" and num = '1') then
 								char <= "00111001";
 								clk_chr <= '1';
 							end if;
