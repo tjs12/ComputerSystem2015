@@ -22,6 +22,7 @@
 /* Hardware IRQ numbers. */
 #define IRQ_TIMER                7
 #define IRQ_COM1                 2
+#define IRQ_ETH					 1 //NB
 
 struct pushregs {
     uint32_t zero;
