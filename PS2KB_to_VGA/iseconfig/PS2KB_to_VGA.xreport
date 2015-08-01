@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2015-07-30T22:08:20</DateModified>
   <ModuleName>PS2KB_to_VGA</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/PS2KB_to_VGA/iseconfig/PS2KB_to_VGA.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/PS2KB_to_VGA\</ImplementationReportsDirectory>
+=======
+  <DateModified>2015-07-31T18:39:14</DateModified>
+  <ModuleName>PS2KB_to_VGA</ModuleName>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>D:/ComputerSystem2015/PS2KB_to_VGA/iseconfig/PS2KB_to_VGA.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/ComputerSystem2015/PS2KB_to_VGA\</ImplementationReportsDirectory>
+>>>>>>> origin/master
   <DateInitialized>2015-07-30T19:15:39</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

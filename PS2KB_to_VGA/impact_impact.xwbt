@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\ComputerSystem2015\PS2KB_to_VGA\impact.xsl
+OUTFILE=D:\ComputerSystem2015\PS2KB_to_VGA\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=D:\ComputerSystem2015\PS2KB_to_VGA
+LICENSE=iMPACT
+USER_INFO=iMPACT

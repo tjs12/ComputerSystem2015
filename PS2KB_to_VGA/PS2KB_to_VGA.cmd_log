@@ -15,3 +15,198 @@ map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -r
 par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
 bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 
+xst -intstyle ise -ifn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.xst" -ofn "D:/ComputerSystem2015/PS2KB_to_VGA/PS2KB_to_VGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd VGA -nt timestamp -uc PS2KB_to_VGA.ucf -p xc6slx100-fgg676-3 PS2KB_to_VGA.ngc PS2KB_to_VGA.ngd  
+map -intstyle ise -p xc6slx100-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ngd PS2KB_to_VGA.pcf 
+par -w -intstyle ise -ol high -mt off PS2KB_to_VGA_map.ncd PS2KB_to_VGA.ncd PS2KB_to_VGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PS2KB_to_VGA.twx PS2KB_to_VGA.ncd -o PS2KB_to_VGA.twr PS2KB_to_VGA.pcf -ucf PS2KB_to_VGA.ucf 
+bitgen -intstyle ise -f PS2KB_to_VGA.ut PS2KB_to_VGA.ncd 

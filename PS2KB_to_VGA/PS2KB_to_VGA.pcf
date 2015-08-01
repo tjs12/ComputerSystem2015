@@ -1,12 +1,20 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jul 30 19:31:16 2015
+// Written by: Map P.20131013 on Fri Jul 31 22:22:42 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "rst" LOCATE = SITE "T1" LEVEL 1;
 COMP "clk_50M" LOCATE = SITE "U26" LEVEL 1;
 COMP "data_kb" LOCATE = SITE "R25" LEVEL 1;
+COMP "mask<8>" LOCATE = SITE "P1" LEVEL 1;
+COMP "mask<9>" LOCATE = SITE "N1" LEVEL 1;
 COMP "video<10>" LOCATE = SITE "J23" LEVEL 1;
+COMP "mask<10>" LOCATE = SITE "N2" LEVEL 1;
+COMP "mask<11>" LOCATE = SITE "M1" LEVEL 1;
+COMP "mask<12>" LOCATE = SITE "L1" LEVEL 1;
+COMP "mask<13>" LOCATE = SITE "L2" LEVEL 1;
+COMP "mask<14>" LOCATE = SITE "W5" LEVEL 1;
+COMP "mask<15>" LOCATE = SITE "W3" LEVEL 1;
 COMP "clk_kb" LOCATE = SITE "R24" LEVEL 1;
 COMP "video<0>" LOCATE = SITE "H24" LEVEL 1;
 COMP "video<1>" LOCATE = SITE "G24" LEVEL 1;
