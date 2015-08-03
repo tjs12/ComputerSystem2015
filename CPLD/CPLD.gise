@@ -38,6 +38,8 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="CPLD.rpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="CPLD.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="CPLD.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="CPLD.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="CPLD.tspec"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="CPLD.vm6"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="CPLD.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="CPLD.xst"/>
@@ -85,7 +87,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1438246838" xil_pn:in_ck="245173798303373016" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1438246830">
+    <transform xil_pn:end_ts="1438519516" xil_pn:in_ck="245173798303373016" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1438519492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPLD.bld"/>
@@ -94,8 +96,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1438246855" xil_pn:in_ck="2961809825866" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-1281115650417621300" xil_pn:start_ts="1438246838">
+    <transform xil_pn:end_ts="1438519534" xil_pn:in_ck="2961809825866" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-1281115650417621300" xil_pn:start_ts="1438519516">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPLD.gyd"/>
       <outfile xil_pn:name="CPLD.mfd"/>
@@ -103,13 +106,15 @@
       <outfile xil_pn:name="CPLD.pad"/>
       <outfile xil_pn:name="CPLD.pnx"/>
       <outfile xil_pn:name="CPLD.rpt"/>
+      <outfile xil_pn:name="CPLD.tim"/>
+      <outfile xil_pn:name="CPLD.tspec"/>
       <outfile xil_pn:name="CPLD.vm6"/>
       <outfile xil_pn:name="CPLD.xml"/>
       <outfile xil_pn:name="CPLD_build.xml"/>
       <outfile xil_pn:name="CPLD_html"/>
       <outfile xil_pn:name="CPLD_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1438246858" xil_pn:in_ck="2961809834730" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1438246855">
+    <transform xil_pn:end_ts="1438519538" xil_pn:in_ck="2961809834730" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1438519534">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPLD.jed"/>
@@ -117,11 +122,15 @@
     <transform xil_pn:end_ts="1438246952" xil_pn:in_ck="2961809821444" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1438246951">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1438246855" xil_pn:in_ck="2961809834730" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1438246852">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

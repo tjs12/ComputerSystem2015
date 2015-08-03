@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 7-30-2015  5:00PM
+ 8- 2-2015  8:45PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -23,8 +23,8 @@ P2,TIE,,I/O/GTS4,,,,,,,,,,
 P3,TIE,,I/O/GTS1,,,,,,,,,,
 P4,TIE,,I/O/GTS2,,,,,,,,,,
 P5,VCC,,VCCINT,,,,,,,,,,
-P6,pass_rxd,O,I/O,OUTPUT,,,,,,,,,
-P7,pass_txd,I,I/O,INPUT,,,,,,,,,
+P6,pass_txd,I,I/O,INPUT,,,,,,,,,
+P7,pass_rxd,O,I/O,OUTPUT,,,,,,,,,
 P8,pass_ps2kb_clock,O,I/O,OUTPUT,,,,,,,,,
 P9,pass_ps2kb_data,O,I/O,OUTPUT,,,,,,,,,
 P10,TIE,,I/O,,,,,,,,,,

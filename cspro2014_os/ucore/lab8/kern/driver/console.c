@@ -29,6 +29,16 @@ serial_init(void) {
 }
 
 static void
+kbd_init(void) {
+    serial_exists = 1;
+
+    if (serial_exists) {
+        // Do NOT response to keyboard int now. TODO
+        pic_enable(IRQ_KBD);
+    }
+}
+
+static void
 serial_putc_sub(int c) {
     while ((*(uint32_t *)COM1_STATE & 1) == 0);
     *(uint32_t *)COM1 = (uint32_t)c;
@@ -99,12 +109,37 @@ serial_proc_data(void) {
     return c;
 }
 
+int
+cons_getc(void);
+/* kbd_proc_data - get data from keyboard */
+static int
+kbd_proc_data(void) {
+    int c = -1;
+
+    c = *(uint32_t *)KBD;
+
+    if (c == 127) {
+        c = '\b';
+    }
+	
+	//cons_putc((int)c);//NB
+    return c;
+}
+
 /* serial_intr - try to feed input characters from serial port */
 void
 serial_intr(void) {
     if (serial_exists) {
         cons_intr(serial_proc_data);
     }
+}
+
+/* kbd_intr - try to feed input characters from keyboard */
+void
+kbd_intr(void) {
+    //if (serial_exists) {
+        cons_intr(kbd_proc_data);
+    //}
 }
 
 /* cons_init - initializes the console devices */
@@ -114,6 +149,7 @@ cons_init(void) {
     if (!serial_exists) {
         cprintf("serial port does not exist!!\n");
     }
+	kbd_init();
 }
 
 /* cons_putc - print a single character @c to console devices */
@@ -142,6 +178,7 @@ cons_getc(void) {
         // so that this function works even when interrupts are disabled
         // (e.g., when called from the kernel monitor).
         serial_intr();
+		kbd_intr();
 
         // grab the next character from the input buffer.
         if (cons.rpos != cons.wpos) {

@@ -90,6 +90,7 @@ entity phy_mem is
 			 
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
+			 kbd_int : out STD_LOGIC;
 			 u_txd : in std_logic;
 			 u_rxd : out std_logic
 	);
@@ -109,6 +110,8 @@ architecture Behavioral of phy_mem is
 	signal cond : STD_LOGIC_VECTOR (1 downto 0);
 	signal rcvrrst : STD_LOGIC;
 	signal txmtrst : STD_LOGIC;
+	
+	signal DYP_2 : STD_LOGIC_VECTOR(6 downto 0);
 	
 	component uart is
 	PORT (
@@ -183,6 +186,7 @@ architecture Behavioral of phy_mem is
 	component keyboard_enclosed is
     Port ( r : in  STD_LOGIC;
            data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  new_data : out STD_LOGIC;
 			  clk_kb		: inout  STD_LOGIC;
            data_kb	: in  STD_LOGIC;
 			  rst : in STD_LOGIC;
@@ -191,6 +195,7 @@ architecture Behavioral of phy_mem is
 	
 	signal keyboard_r : STD_LOGIC;
 	signal keyboard_data : STD_LOGIC_VECTOR (7 downto 0);
+	signal kbd_int1 : STD_LOGIC;
 	
 	signal Paddr : STD_LOGIC_VECTOR (31 downto 0);
 	signal flag_missing : STD_LOGIC;
@@ -236,7 +241,7 @@ begin
 		Paddr => addr,
 		flag_missing => flag_missing,
 		flag_writable => flag_writable,
-		DYP2 => DYP2(6 downto 4),
+		DYP2 => DYP_2(6 downto 4),
 		--led => led,
 		tlb_write => tlb_write
 	);
@@ -281,21 +286,22 @@ begin
     Port map(
 			  r  => keyboard_r,
            data => keyboard_data,
+			  new_data => kbd_int1,
 			  clk_kb	 => clk_kb,
            data_kb => data_kb,
 			  rst => RST,
            clk50 => clk_50
 			  );
 	
-	
+	kbd_int <= kbd_int1;
 			  
 --RomAddr <= addr(11 downto 0);
 --RomData <= addr;
 --led <= condi;
 --DYP2(1 downto 0) <= tail(1 downto 0);
-DYP2(3 downto 2) <= head(1 downto 0);
-DYP2(0) <= tsre;
-DYP2(1) <= tbre;
+--DYP2(3 downto 2) <= head(1 downto 0);NB
+--DYP2(0) <= tsre;
+--DYP2(1) <= tbre;NB
 --DYP2(6) <= '0';
 
 FlashCE <= "000";
@@ -311,6 +317,7 @@ process(RST, CLK, MemRead, MemWrite)
 			ready <= '0';
 			mem_error <= "00";
 			--wrn <= '1';
+			keyboard_r <= '0';
 		elsif MemRead = '0' and MemWrite = '0' then
 			Ram1EN <= '1';
 			Ram2EN <= '1';
@@ -809,6 +816,9 @@ process(RST, CLK, MemRead, MemWrite)
 						keyboard_r <= '0';
 						ready <= '1';
 					end if;
+				else
+					keyboard_r <= '0';
+					ready <= '1';
 				end if;
 			else
 				BadVAddr <= Vaddr;
@@ -831,6 +841,8 @@ rcvrrst <= '0' when cond = 3 or RST = '0' else '1';
 --txmtrst <= '1' when ((MemWrite = '1' or tsre = '0') and RST = '1') else '0';
 --rcvrrst <= RST;
 txmtrst <= RST;
+
+--kbd_int <= '1' when keyboard_data /= "00000000"  else '0';
 
 process(CLK, RST)
 	begin
@@ -863,6 +875,38 @@ process(CLK, RST)
 			end if;
 		end if;
 end process;
+
+
+
+--process(condi)
+--	begin
+--	
+--	case keyboard_data(3 downto 0) is --以下是0~F的编码规则
+--           when"0000"=> DYP2<="1111110";--0
+--           when"0001"=> DYP2<="0110000";--1
+--           when"0010"=> DYP2<="1101101";--2
+--           when"0011"=> DYP2<="1111001";--3
+--           when"0100"=> DYP2<="0110011";--4
+--           when"0101"=> DYP2<="1011011";--5
+--           when"0110"=> DYP2<="1011111";--6
+--           when"0111"=> DYP2<="1110000";--7
+--           when"1000"=> DYP2<="1111111";--8
+--           when"1001"=> DYP2<="1110011";--9
+--           when"1010"=> DYP2<="1110111";--A
+--           when"1011"=> DYP2<="0011111";--B
+--           when"1100"=> DYP2<="1001110";--C
+--           when"1101"=> DYP2<="0111101";--D
+--           when"1110"=> DYP2<="1001111";--E
+--           when"1111"=> DYP2<="1000111";--F
+--           when others=>DYP2<="0000000";--其他情况 全灭
+--        end case;
+--	
+--end process;
+
+DYP2(0) <= kbd_int1;
+DYP2(1) <= MemRead;
+DYP2(2) <= keyboard_r;
+DYP2(6 downto 3) <= keyboard_data(3 downto 0);
 
 end Behavioral;
 

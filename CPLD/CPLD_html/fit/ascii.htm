@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: CPLD                                Date:  7-30-2015,  5:00PM
+Design Name: CPLD                                Date:  8- 2-2015,  8:45PM
 Device Used: XC95144XL-10-TQ100
 Fitting Status: Successful
 
@@ -64,7 +64,7 @@ WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
 
 Signal              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
 Name                Pts   Inps          No.  Type    Use     Mode Rate State
-pass_rxd            1     1     FB2_11  6    I/O     O       STD  FAST 
+pass_rxd            1     1     FB2_12  7    I/O     O       STD  FAST 
 pass_ps2kb_clock    1     1     FB2_14  8    I/O     O       STD  FAST 
 pass_ps2kb_data     1     1     FB2_15  9    I/O     O       STD  FAST 
 txd                 1     1     FB7_8   54   I/O     O       STD  FAST 
@@ -73,7 +73,7 @@ txd                 1     1     FB7_8   54   I/O     O       STD  FAST
 
 Signal              Loc     Pin  Pin     Pin     
 Name                        No.  Type    Use     
-pass_txd            FB2_12  7    I/O     I
+pass_txd            FB2_11  6    I/O     I
 rxd                 FB7_12  58   I/O     I
 ps2kb_data          FB8_12  70   I/O     I
 ps2kb_clock         FB8_14  71   I/O     I
@@ -131,8 +131,8 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_8   3     GTS/I/O 
 (unused)              0       0     0   5     FB2_9   4     GTS/I/O 
 (unused)              0       0     0   5     FB2_10        (b)     
-pass_rxd              1       0     0   4     FB2_11  6     I/O     O
-(unused)              0       0     0   5     FB2_12  7     I/O     I
+(unused)              0       0     0   5     FB2_11  6     I/O     I
+pass_rxd              1       0     0   4     FB2_12  7     I/O     O
 (unused)              0       0     0   5     FB2_13        (b)     
 pass_ps2kb_clock      1       0     0   4     FB2_14  8     I/O     O
 pass_ps2kb_data       1       0     0   4     FB2_15  9     I/O     O
@@ -363,8 +363,8 @@ No. Name                           No. Name
   3 KPR                              53 KPR                           
   4 KPR                              54 txd                           
   5 VCC                              55 KPR                           
-  6 pass_rxd                         56 KPR                           
-  7 pass_txd                         57 VCC                           
+  6 pass_txd                         56 KPR                           
+  7 pass_rxd                         57 VCC                           
   8 pass_ps2kb_clock                 58 rxd                           
   9 pass_ps2kb_data                  59 KPR                           
  10 KPR                              60 KPR                           

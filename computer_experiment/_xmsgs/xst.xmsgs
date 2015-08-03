@@ -8,6 +8,9 @@
 <msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\VGA\VGA_Decoder.vhd" Line 55: Actual for formal port <arg fmt="%s" index="1">addra</arg> is neither a static name nor a globally static expression
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\VGA\VGA_Controller.vhd" Line 75: Actual for formal port <arg fmt="%s" index="1">clkb</arg> is neither a static name nor a globally static expression
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="439" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB.vhd" Line 85: Formal port <arg fmt="%s" index="1">clk_chr</arg> of mode <arg fmt="%s" index="2">buffer</arg> cannot be associated with actual port <arg fmt="%s" index="3">clk_chr</arg> of mode <arg fmt="%s" index="4">out</arg>
 </msg>
 
@@ -26,7 +29,13 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 108: Assignment to <arg fmt="%s" index="1">last_reg</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\cpu.vhd" Line 108: Net &lt;<arg fmt="%s" index="1">Cause[31]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB_Decoder.vhd" Line 55: Assignment to <arg fmt="%s" index="1">ctrl</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB_Decoder.vhd" Line 58: Assignment to <arg fmt="%s" index="1">alt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\cpu.vhd" Line 109: Net &lt;<arg fmt="%s" index="1">Cause[31]</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">KEY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -35,7 +44,7 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;31:16&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;14:11&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;14:12&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;9:7&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -3122,7 +3131,10 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">reg&lt;31&gt;&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">209</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">uart1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">214</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">uart1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">233</arg>: Output port &lt;<arg fmt="%s" index="3">DYP2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mmu1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="3015" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">ComBuffer</arg>&gt; may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
@@ -9320,88 +9332,112 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr&lt;18:14&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1258</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1261&gt; &lt;MemRead_CLK_DFF_1259&gt; &lt;MemRead_CLK_DFF_1260&gt; &lt;MemRead_CLK_DFF_1262&gt; &lt;MemRead_CLK_DFF_1263&gt; &lt;MemRead_CLK_DFF_1264&gt; &lt;MemRead_CLK_DFF_1265&gt; &lt;MemRead_CLK_DFF_1266&gt; &lt;MemRead_CLK_DFF_1267&gt; &lt;MemRead_CLK_DFF_1270&gt; &lt;MemRead_CLK_DFF_1268&gt; &lt;MemRead_CLK_DFF_1269&gt; &lt;MemRead_CLK_DFF_1271&gt; &lt;MemRead_CLK_DFF_1272&gt; &lt;MemRead_CLK_DFF_1273&gt; &lt;MemRead_CLK_DFF_1274&gt; &lt;MemRead_CLK_DFF_1275&gt; &lt;MemRead_CLK_DFF_1276&gt; &lt;MemRead_CLK_DFF_1279&gt; &lt;MemRead_CLK_DFF_1277&gt; &lt;MemRead_CLK_DFF_1278&gt; &lt;MemRead_CLK_DFF_1280&gt; &lt;MemRead_CLK_DFF_1281&gt; &lt;MemRead_CLK_DFF_1282&gt; &lt;MemRead_CLK_DFF_1283&gt; &lt;MemRead_CLK_DFF_1284&gt; &lt;MemRead_CLK_DFF_1285&gt; &lt;MemRead_CLK_DFF_1288&gt; &lt;MemRead_CLK_DFF_1286&gt; &lt;MemRead_CLK_DFF_1287&gt; &lt;MemRead_CLK_DFF_1289&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1328</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1326&gt; &lt;MemRead_CLK_DFF_1327&gt; &lt;MemRead_CLK_DFF_1329&gt; &lt;MemRead_CLK_DFF_1330&gt; &lt;MemRead_CLK_DFF_1331&gt; &lt;MemRead_CLK_DFF_1332&gt; &lt;MemRead_CLK_DFF_1333&gt; &lt;MemRead_CLK_DFF_1334&gt; &lt;MemRead_CLK_DFF_1337&gt; &lt;MemRead_CLK_DFF_1335&gt; &lt;MemRead_CLK_DFF_1336&gt; &lt;MemRead_CLK_DFF_1338&gt; &lt;MemRead_CLK_DFF_1339&gt; &lt;MemRead_CLK_DFF_1340&gt; &lt;MemRead_CLK_DFF_1341&gt; &lt;MemRead_CLK_DFF_1342&gt; &lt;MemRead_CLK_DFF_1343&gt; &lt;MemRead_CLK_DFF_1346&gt; &lt;MemRead_CLK_DFF_1344&gt; &lt;MemRead_CLK_DFF_1345&gt; &lt;MemRead_CLK_DFF_1347&gt; &lt;MemRead_CLK_DFF_1348&gt; &lt;MemRead_CLK_DFF_1349&gt; &lt;MemRead_CLK_DFF_1350&gt; &lt;MemRead_CLK_DFF_1351&gt; &lt;MemRead_CLK_DFF_1352&gt; &lt;MemRead_CLK_DFF_1355&gt; &lt;MemRead_CLK_DFF_1353&gt; &lt;MemRead_CLK_DFF_1354&gt; &lt;MemRead_CLK_DFF_1356&gt; &lt;MemRead_CLK_DFF_1357&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_CLK_DFF_1323</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;GND_1037_o_CLK_DFF_1322&gt; &lt;GND_1037_o_CLK_DFF_1324&gt; &lt;GND_1037_o_CLK_DFF_1325&gt; &lt;GND_1037_o_CLK_DFF_1326&gt; &lt;GND_1037_o_CLK_DFF_1327&gt; &lt;GND_1037_o_CLK_DFF_1328&gt; &lt;GND_1037_o_CLK_DFF_1329&gt; &lt;GND_1037_o_CLK_DFF_1330&gt; &lt;GND_1037_o_CLK_DFF_1331&gt; &lt;GND_1037_o_CLK_DFF_1332&gt; &lt;GND_1037_o_CLK_DFF_1333&gt; &lt;GND_1037_o_CLK_DFF_1334&gt; &lt;GND_1037_o_CLK_DFF_1335&gt; &lt;GND_1037_o_CLK_DFF_1336&gt; &lt;GND_1037_o_CLK_DFF_1337&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1358</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1359&gt; &lt;MemRead_CLK_DFF_1360&gt; &lt;MemRead_CLK_DFF_1361&gt; &lt;MemRead_CLK_DFF_1362&gt; &lt;MemRead_CLK_DFF_1363&gt; &lt;MemRead_CLK_DFF_1364&gt; &lt;MemRead_CLK_DFF_1365&gt; &lt;MemRead_CLK_DFF_1366&gt; &lt;MemRead_CLK_DFF_1367&gt; &lt;MemRead_CLK_DFF_1368&gt; &lt;MemRead_CLK_DFF_1369&gt; &lt;MemRead_CLK_DFF_1372&gt; &lt;MemRead_CLK_DFF_1370&gt; &lt;MemRead_CLK_DFF_1371&gt; &lt;MemRead_CLK_DFF_1373&gt; &lt;MemRead_CLK_DFF_1374&gt; &lt;MemRead_CLK_DFF_1375&gt; &lt;MemRead_CLK_DFF_1376&gt; &lt;MemRead_CLK_DFF_1377&gt; &lt;MemRead_CLK_DFF_1378&gt; &lt;MemRead_CLK_DFF_1381&gt; &lt;MemRead_CLK_DFF_1379&gt; &lt;MemRead_CLK_DFF_1380&gt; &lt;MemRead_CLK_DFF_1382&gt; &lt;MemRead_CLK_DFF_1383&gt; &lt;MemRead_CLK_DFF_1384&gt; &lt;MemRead_CLK_DFF_1385&gt; &lt;MemRead_CLK_DFF_1386&gt; &lt;MemRead_CLK_DFF_1387&gt; &lt;MemRead_CLK_DFF_1388&gt; &lt;MemRead_CLK_DFF_1389&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1290</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1291&gt; &lt;MemRead_CLK_DFF_1292&gt; &lt;MemRead_CLK_DFF_1293&gt; &lt;MemRead_CLK_DFF_1294&gt; &lt;MemRead_CLK_DFF_1295&gt; &lt;MemRead_CLK_DFF_1296&gt; &lt;MemRead_CLK_DFF_1297&gt; &lt;MemRead_CLK_DFF_1298&gt; &lt;MemRead_CLK_DFF_1299&gt; &lt;MemRead_CLK_DFF_1300&gt; &lt;MemRead_CLK_DFF_1301&gt; &lt;MemRead_CLK_DFF_1302&gt; &lt;MemRead_CLK_DFF_1305&gt; &lt;MemRead_CLK_DFF_1303&gt; &lt;MemRead_CLK_DFF_1304&gt; &lt;MemRead_CLK_DFF_1306&gt; &lt;MemRead_CLK_DFF_1307&gt; &lt;MemRead_CLK_DFF_1308&gt; &lt;MemRead_CLK_DFF_1309&gt; &lt;MemRead_CLK_DFF_1310&gt; &lt;MemRead_CLK_DFF_1311&gt; &lt;MemRead_CLK_DFF_1314&gt; &lt;MemRead_CLK_DFF_1312&gt; &lt;MemRead_CLK_DFF_1313&gt; &lt;MemRead_CLK_DFF_1315&gt; &lt;MemRead_CLK_DFF_1316&gt; &lt;MemRead_CLK_DFF_1317&gt; &lt;MemRead_CLK_DFF_1318&gt; &lt;MemRead_CLK_DFF_1319&gt; &lt;MemRead_CLK_DFF_1320&gt; &lt;MemRead_CLK_DFF_1321&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_CLK_DFF_1390</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;GND_1037_o_CLK_DFF_1391&gt; &lt;GND_1037_o_CLK_DFF_1392&gt; &lt;GND_1037_o_CLK_DFF_1393&gt; &lt;GND_1037_o_CLK_DFF_1394&gt; &lt;GND_1037_o_CLK_DFF_1395&gt; &lt;GND_1037_o_CLK_DFF_1396&gt; &lt;GND_1037_o_CLK_DFF_1397&gt; &lt;GND_1037_o_CLK_DFF_1398&gt; &lt;GND_1037_o_CLK_DFF_1399&gt; &lt;GND_1037_o_CLK_DFF_1400&gt; &lt;GND_1037_o_CLK_DFF_1401&gt; &lt;GND_1037_o_CLK_DFF_1402&gt; &lt;GND_1037_o_CLK_DFF_1403&gt; &lt;GND_1037_o_CLK_DFF_1404&gt; &lt;GND_1037_o_CLK_DFF_1405&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_40</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_43</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_44</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_45</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_46</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_47</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_48</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_49</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_50</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_52</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_53</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_54</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">phy_mem1/rom1/Mram_data</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
@@ -9412,67 +9448,115 @@
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">phy_mem1/Mram_ComBuffer</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0475</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0472</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0487</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1289</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1288&gt; &lt;phy_mem1/MemRead_CLK_DFF_1287&gt; &lt;phy_mem1/MemRead_CLK_DFF_1284&gt; &lt;phy_mem1/MemRead_CLK_DFF_1286&gt; &lt;phy_mem1/MemRead_CLK_DFF_1285&gt; &lt;phy_mem1/MemRead_CLK_DFF_1283&gt; &lt;phy_mem1/MemRead_CLK_DFF_1282&gt; &lt;phy_mem1/MemRead_CLK_DFF_1279&gt; &lt;phy_mem1/MemRead_CLK_DFF_1281&gt; &lt;phy_mem1/MemRead_CLK_DFF_1280&gt; &lt;phy_mem1/MemRead_CLK_DFF_1278&gt; &lt;phy_mem1/MemRead_CLK_DFF_1277&gt; &lt;phy_mem1/MemRead_CLK_DFF_1274&gt; &lt;phy_mem1/MemRead_CLK_DFF_1276&gt; &lt;phy_mem1/MemRead_CLK_DFF_1275&gt; &lt;phy_mem1/MemRead_CLK_DFF_1273&gt; &lt;phy_mem1/MemRead_CLK_DFF_1272&gt; &lt;phy_mem1/MemRead_CLK_DFF_1269&gt; &lt;phy_mem1/MemRead_CLK_DFF_1271&gt; &lt;phy_mem1/MemRead_CLK_DFF_1270&gt; &lt;phy_mem1/MemRead_CLK_DFF_1266&gt; &lt;phy_mem1/MemRead_CLK_DFF_1268&gt; &lt;phy_mem1/MemRead_CLK_DFF_1267&gt; &lt;phy_mem1/MemRead_CLK_DFF_1263&gt; &lt;phy_mem1/MemRead_CLK_DFF_1265&gt; &lt;phy_mem1/MemRead_CLK_DFF_1264&gt; &lt;phy_mem1/MemRead_CLK_DFF_1262&gt; &lt;phy_mem1/MemRead_CLK_DFF_1261&gt; &lt;phy_mem1/MemRead_CLK_DFF_1258&gt; &lt;phy_mem1/MemRead_CLK_DFF_1260&gt; &lt;phy_mem1/MemRead_CLK_DFF_1259&gt; </arg>
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_40</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/GND_1037_o_CLK_DFF_1335</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/GND_1037_o_CLK_DFF_1337&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1336&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1334&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1333&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1330&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1332&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1331&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1329&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1328&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1325&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1327&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1326&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1324&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1323&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1322&gt; </arg>
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1320</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1321&gt; &lt;phy_mem1/MemRead_CLK_DFF_1319&gt; &lt;phy_mem1/MemRead_CLK_DFF_1318&gt; &lt;phy_mem1/MemRead_CLK_DFF_1315&gt; &lt;phy_mem1/MemRead_CLK_DFF_1317&gt; &lt;phy_mem1/MemRead_CLK_DFF_1316&gt; &lt;phy_mem1/MemRead_CLK_DFF_1314&gt; &lt;phy_mem1/MemRead_CLK_DFF_1313&gt; &lt;phy_mem1/MemRead_CLK_DFF_1310&gt; &lt;phy_mem1/MemRead_CLK_DFF_1312&gt; &lt;phy_mem1/MemRead_CLK_DFF_1311&gt; &lt;phy_mem1/MemRead_CLK_DFF_1307&gt; &lt;phy_mem1/MemRead_CLK_DFF_1309&gt; &lt;phy_mem1/MemRead_CLK_DFF_1308&gt; &lt;phy_mem1/MemRead_CLK_DFF_1304&gt; &lt;phy_mem1/MemRead_CLK_DFF_1306&gt; &lt;phy_mem1/MemRead_CLK_DFF_1305&gt; &lt;phy_mem1/MemRead_CLK_DFF_1303&gt; &lt;phy_mem1/MemRead_CLK_DFF_1302&gt; &lt;phy_mem1/MemRead_CLK_DFF_1299&gt; &lt;phy_mem1/MemRead_CLK_DFF_1301&gt; &lt;phy_mem1/MemRead_CLK_DFF_1300&gt; &lt;phy_mem1/MemRead_CLK_DFF_1298&gt; &lt;phy_mem1/MemRead_CLK_DFF_1297&gt; &lt;phy_mem1/MemRead_CLK_DFF_1294&gt; &lt;phy_mem1/MemRead_CLK_DFF_1296&gt; &lt;phy_mem1/MemRead_CLK_DFF_1295&gt; &lt;phy_mem1/MemRead_CLK_DFF_1293&gt; &lt;phy_mem1/MemRead_CLK_DFF_1292&gt; &lt;phy_mem1/MemRead_CLK_DFF_1291&gt; &lt;phy_mem1/MemRead_CLK_DFF_1290&gt; </arg>
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_43</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_44</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_45</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_46</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_47</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_48</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_49</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_50</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_52</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_53</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_54</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1357</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1356&gt; &lt;phy_mem1/MemRead_CLK_DFF_1353&gt; &lt;phy_mem1/MemRead_CLK_DFF_1355&gt; &lt;phy_mem1/MemRead_CLK_DFF_1354&gt; &lt;phy_mem1/MemRead_CLK_DFF_1352&gt; &lt;phy_mem1/MemRead_CLK_DFF_1351&gt; &lt;phy_mem1/MemRead_CLK_DFF_1348&gt; &lt;phy_mem1/MemRead_CLK_DFF_1350&gt; &lt;phy_mem1/MemRead_CLK_DFF_1349&gt; &lt;phy_mem1/MemRead_CLK_DFF_1347&gt; &lt;phy_mem1/MemRead_CLK_DFF_1346&gt; &lt;phy_mem1/MemRead_CLK_DFF_1343&gt; &lt;phy_mem1/MemRead_CLK_DFF_1345&gt; &lt;phy_mem1/MemRead_CLK_DFF_1344&gt; &lt;phy_mem1/MemRead_CLK_DFF_1340&gt; &lt;phy_mem1/MemRead_CLK_DFF_1342&gt; &lt;phy_mem1/MemRead_CLK_DFF_1341&gt; &lt;phy_mem1/MemRead_CLK_DFF_1337&gt; &lt;phy_mem1/MemRead_CLK_DFF_1339&gt; &lt;phy_mem1/MemRead_CLK_DFF_1338&gt; &lt;phy_mem1/MemRead_CLK_DFF_1336&gt; &lt;phy_mem1/MemRead_CLK_DFF_1335&gt; &lt;phy_mem1/MemRead_CLK_DFF_1332&gt; &lt;phy_mem1/MemRead_CLK_DFF_1334&gt; &lt;phy_mem1/MemRead_CLK_DFF_1333&gt; &lt;phy_mem1/MemRead_CLK_DFF_1331&gt; &lt;phy_mem1/MemRead_CLK_DFF_1330&gt; &lt;phy_mem1/MemRead_CLK_DFF_1327&gt; &lt;phy_mem1/MemRead_CLK_DFF_1329&gt; &lt;phy_mem1/MemRead_CLK_DFF_1328&gt; &lt;phy_mem1/MemRead_CLK_DFF_1326&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/GND_1037_o_CLK_DFF_1403</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/GND_1037_o_CLK_DFF_1405&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1404&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1402&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1401&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1398&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1400&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1399&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1397&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1396&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1393&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1395&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1394&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1392&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1391&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1390&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1388</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1389&gt; &lt;phy_mem1/MemRead_CLK_DFF_1387&gt; &lt;phy_mem1/MemRead_CLK_DFF_1386&gt; &lt;phy_mem1/MemRead_CLK_DFF_1383&gt; &lt;phy_mem1/MemRead_CLK_DFF_1385&gt; &lt;phy_mem1/MemRead_CLK_DFF_1384&gt; &lt;phy_mem1/MemRead_CLK_DFF_1382&gt; &lt;phy_mem1/MemRead_CLK_DFF_1381&gt; &lt;phy_mem1/MemRead_CLK_DFF_1378&gt; &lt;phy_mem1/MemRead_CLK_DFF_1380&gt; &lt;phy_mem1/MemRead_CLK_DFF_1379&gt; &lt;phy_mem1/MemRead_CLK_DFF_1377&gt; &lt;phy_mem1/MemRead_CLK_DFF_1376&gt; &lt;phy_mem1/MemRead_CLK_DFF_1373&gt; &lt;phy_mem1/MemRead_CLK_DFF_1375&gt; &lt;phy_mem1/MemRead_CLK_DFF_1374&gt; &lt;phy_mem1/MemRead_CLK_DFF_1372&gt; &lt;phy_mem1/MemRead_CLK_DFF_1371&gt; &lt;phy_mem1/MemRead_CLK_DFF_1368&gt; &lt;phy_mem1/MemRead_CLK_DFF_1370&gt; &lt;phy_mem1/MemRead_CLK_DFF_1369&gt; &lt;phy_mem1/MemRead_CLK_DFF_1367&gt; &lt;phy_mem1/MemRead_CLK_DFF_1366&gt; &lt;phy_mem1/MemRead_CLK_DFF_1363&gt; &lt;phy_mem1/MemRead_CLK_DFF_1365&gt; &lt;phy_mem1/MemRead_CLK_DFF_1364&gt; &lt;phy_mem1/MemRead_CLK_DFF_1362&gt; &lt;phy_mem1/MemRead_CLK_DFF_1361&gt; &lt;phy_mem1/MemRead_CLK_DFF_1358&gt; &lt;phy_mem1/MemRead_CLK_DFF_1360&gt; &lt;phy_mem1/MemRead_CLK_DFF_1359&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9681,175 +9765,283 @@ Xilinx highly recommends one of the following:
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/buff_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/data_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">condi_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">condi_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram1OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1289&gt; </arg>
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram2OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1320&gt; </arg>
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/div/count_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/start_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/con/line_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/kb/div/count_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/vga_component/div/count_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CLKx</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/net/clk25_1&gt; &lt;phy_mem1/vga_component/div/clk1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram1OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1357&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram2OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1388&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/ren/video_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/vga_component/ren/video_1&gt; &lt;phy_mem1/vga_component/ren/video_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/ren/video_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/vga_component/ren/video_4&gt; &lt;phy_mem1/vga_component/ren/video_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/ren/video_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/vga_component/ren/video_7&gt; &lt;phy_mem1/vga_component/ren/video_6&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">phy_mem1/kbd/kb/lis/pos_31_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">cpu</arg>.

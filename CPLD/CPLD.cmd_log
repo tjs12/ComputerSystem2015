@@ -5,3 +5,8 @@ XSLTProcess CPLD_build.xml
 tsim -intstyle ise CPLD CPLD.nga 
 taengine -intstyle ise -f CPLD -w --format html1 -l CPLD_html/tim/timing_report.htm 
 hprep6 -s IEEE1149 -n CPLD -i CPLD 
+ngdbuild -intstyle ise -dd _ngo -uc CPLD.ucf -p xc95144xl-TQ100-10 CPLD.ngc CPLD.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper CPLD.ngd 
+XSLTProcess CPLD_build.xml 
+tsim -intstyle ise CPLD CPLD.nga 
+hprep6 -s IEEE1149 -n CPLD -i CPLD 

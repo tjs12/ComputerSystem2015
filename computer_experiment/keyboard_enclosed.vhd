@@ -32,6 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity keyboard_enclosed is
     Port ( r : in  STD_LOGIC;
            data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  new_data : out STD_LOGIC;
 			  clk_kb		: inout  STD_LOGIC;
            data_kb	: in  STD_LOGIC;
 			  rst : in STD_LOGIC;
@@ -52,6 +53,7 @@ end component;
 signal buff : STD_LOGIC_VECTOR(7 downto 0);
 signal clk_chr : STD_LOGIC;
 signal char : STD_LOGIC_VECTOR (7 downto 0);
+signal fetched : STD_LOGIC;
 
 begin
 	kb : PS2KB port map (
@@ -64,22 +66,41 @@ begin
 	);
 	
 	
-	process(clk_chr, r)
+	process(clk_chr, r, rst)
 	begin
-		if r'event and r = '0' then
+		if rst = '0' then
 			buff <= x"00";
-		end if;
-		if clk_chr'event and clk_chr = '1' then
+			fetched <= '1';
+		elsif r = '1' then
+			fetched <= '1';
+		elsif clk_chr'event and clk_chr = '1' then
 			buff <= char;
+			fetched <= '0';
 		end if;
+
 	end process;
 	
-	process(r, buff) 
+	
+	
+   process(r, buff, rst) 
 	begin 
-		if r = '1' then
+		
+		if rst = '0' then
+			data <= x"00";
+		else
 			data <= buff;
 		end if;
+		
+--		if fetched = '0' then
+--			data <= buff;
+--		elsif fetched = '1' and r = '0' then
+--			data <= x"00";
+--		end if;
+		--if r = '1' then
+			--data <= buff;
+		--end if;
 	end process;
 	
+	new_data <= (not fetched);
 end Behavioral;
 

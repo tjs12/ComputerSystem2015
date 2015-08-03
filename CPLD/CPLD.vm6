@@ -145,8 +145,8 @@ NODE | txd | 87 | PO | 0 | 0 | CPLD_COPY_0_COPY_0 | NULL | NULL | txd | 0 | 6 | 
 FB_INSTANCE | FOOBAR1_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
 
 FB_INSTANCE | FOOBAR2_ | CPLD_COPY_0_COPY_0 | 0 | 0 | 0
-FBPIN | 11 | pass_rxd_OBUF$BUF0 | 1 | NULL | 0 | pass_rxd | 1 | 6 | 49152
-FBPIN | 12 | NULL | 0 | txd_OBUF | 1 | NULL | 0 | 7 | 49152
+FBPIN | 11 | NULL | 0 | txd_OBUF | 1 | NULL | 0 | 6 | 49152
+FBPIN | 12 | pass_rxd_OBUF$BUF0 | 1 | NULL | 0 | pass_rxd | 1 | 7 | 49152
 FBPIN | 14 | pass_ps2kb_clock_OBUF$BUF0 | 1 | NULL | 0 | pass_ps2kb_clock | 1 | 8 | 49152
 FBPIN | 15 | pass_ps2kb_data_OBUF$BUF0 | 1 | NULL | 0 | pass_ps2kb_data | 1 | 9 | 49152
 
@@ -174,7 +174,7 @@ FB_ORDER_OF_INPUTS | FOOBAR2_ | 1 | ps2kb_data | 70 | 10 | rxd | 58 | 29 | ps2kb
 FB_IMUX_INDEX | FOOBAR2_ | -1 | 193 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 219 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 189 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
 
 
-FB_ORDER_OF_INPUTS | FOOBAR7_ | 53 | pass_txd | 7
+FB_ORDER_OF_INPUTS | FOOBAR7_ | 40 | pass_txd | 6
 
-FB_IMUX_INDEX | FOOBAR7_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 196
+FB_IMUX_INDEX | FOOBAR7_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 194 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
 

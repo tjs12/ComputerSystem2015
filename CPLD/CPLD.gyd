@@ -4,10 +4,10 @@ Pin Freeze File:  version P.20131013
 ps2kb_clock S:PIN71
 ps2kb_data S:PIN70
 rxd S:PIN58
-pass_txd S:PIN7
+pass_txd S:PIN6
 pass_ps2kb_clock S:PIN8
 pass_ps2kb_data S:PIN9
-pass_rxd S:PIN6
+pass_rxd S:PIN7
 txd S:PIN54
 
 
@@ -15,7 +15,7 @@ txd S:PIN54
 ;It shows where your internal equations were placed in the last successful fit.
 
 
-PARTITION FB2_11 pass_rxd_OBUF$BUF0
+PARTITION FB2_12 pass_rxd_OBUF$BUF0
 PARTITION FB2_14 pass_ps2kb_clock_OBUF$BUF0 pass_ps2kb_data_OBUF$BUF0
 
 

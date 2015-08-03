@@ -147,6 +147,7 @@ trap_dispatch(struct trapframe *tf) {
             run_timer_list();
             clock_intr();
             break;
+		case (1 << IRQ_KBD):
         case (1 << IRQ_COM1):
             // There are user level shell in LAB8, so we need change COM/KBD interrupt processing.
             {
