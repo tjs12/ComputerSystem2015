@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-08-03T09:26:11</DateModified>
+  <DateModified>2015-08-05T00:12:01</DateModified>
   <ModuleName>cpu</ModuleName>
-  <SummaryTimeStamp>2015-07-30T21:53:09</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-08-04T22:35:12</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment/iseconfig/cpu.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Francis/Documents/GitHub/ComputerSystem2015/computer_experiment\</ImplementationReportsDirectory>
   <DateInitialized>2014-07-02T14:47:43</DateInitialized>

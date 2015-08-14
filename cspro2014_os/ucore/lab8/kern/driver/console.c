@@ -121,6 +121,7 @@ kbd_proc_data(void) {
     if (c == 127) {
         c = '\b';
     }
+	if (c == 0) return -1;
 	
 	//cons_putc((int)c);//NB
     return c;

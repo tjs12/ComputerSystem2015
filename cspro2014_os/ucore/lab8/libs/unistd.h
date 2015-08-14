@@ -34,6 +34,13 @@
 /* OLNY FOR LAB6 */
 #define SYS_lab6_set_priority 255
 
+#define SYS_UDP_SEND 140
+#define SYS_UDP_GETSTATUS 141
+#define SYS_UDP_SETSTATUS 142
+#define SYS_UDP_DATA 143
+#define SYS_UDP_DATA_LEN 143
+
+
 /* SYS_fork flags */
 #define CLONE_VM            0x00000100  // set if VM shared between processes
 #define CLONE_THREAD        0x00000200  // thread group

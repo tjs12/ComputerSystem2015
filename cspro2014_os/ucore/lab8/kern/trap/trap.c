@@ -102,6 +102,8 @@ trap_dispatch(struct trapframe *tf) {
     char c;
 
     int ret;
+	
+	int int_num;
 
     switch ((tf->tf_Cause & 0x0000007c) >> 2) {
     case EXC_TLBL:
@@ -115,8 +117,10 @@ trap_dispatch(struct trapframe *tf) {
         syscall();
         break;
     case EXC_INT:
-        switch ((tf->tf_Cause & tf->tf_Status & 0x0000ff00) >> 8) {
-        case (1 << IRQ_TIMER):
+        //switch ((tf->tf_Cause & tf->tf_Status & 0x0000ff00) >> 8) {
+		int_num = (tf->tf_Cause & tf->tf_Status & 0x0000ff00) >> 8;
+        //case (1 << IRQ_TIMER):
+		if (int_num & (1 << IRQ_TIMER)) {
 #if 0
     LAB3 : If some page replacement algorithm(such as CLOCK PRA) need tick to change the priority of pages,
     then you can add code here.
@@ -146,9 +150,11 @@ trap_dispatch(struct trapframe *tf) {
              */
             run_timer_list();
             clock_intr();
-            break;
-		case (1 << IRQ_KBD):
-        case (1 << IRQ_COM1):
+            //break;
+		}
+		else if (int_num & ((1 << IRQ_KBD) | (1 << IRQ_COM1)))
+		//case (1 << IRQ_KBD):
+        //case (1 << IRQ_COM1):
             // There are user level shell in LAB8, so we need change COM/KBD interrupt processing.
             {
                 // cprintf("serial [%03d] %c\n", c, c);
@@ -156,8 +162,13 @@ trap_dispatch(struct trapframe *tf) {
                 while ((c = cons_getc()) != 0)
                     dev_stdin_write(c);
             }
-            break;
-        default:
+            //break;
+		else if (int_num & (1 << IRQ_ETH))
+		//case (1 << IRQ_ETH):
+			ethernet_intr();
+			//break;
+        //default:
+		else {
             print_trapframe(tf);
             panic("unknown int.\n");
         }

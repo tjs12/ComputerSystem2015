@@ -5,6 +5,7 @@
 #include "defs.h"
 
 void icmp_handle(int length) {
+	cprintf("icmp handle\n");
     int * data = ethernet_rx_data + ETHERNET_HDR_LEN + IP_HDR_LEN;
     if(data[ICMP_TYPE] != ICMP_TYPE_ECHO_REQUEST)
         return;
@@ -18,6 +19,7 @@ void icmp_handle(int length) {
     ip_make_reply(IP_PROTOCAL_ICMP, length);
     ethernet_tx_len = ETHERNET_HDR_LEN + IP_HDR_LEN + length;
     ethernet_send();
+	cprintf("icmp handle finish\n");
 }
 
 void icmp_checksum(int * data, int length) {

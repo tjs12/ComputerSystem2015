@@ -20,13 +20,19 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\rom.vhd" Line 43: Net &lt;<arg fmt="%s" index="1">rom[1023][31]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 91: <arg fmt="%s" index="1">clk125</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 92: <arg fmt="%s" index="1">clk125</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 103: <arg fmt="%s" index="1">clk25_1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 104: <arg fmt="%s" index="1">clk25_1</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 108: Assignment to <arg fmt="%s" index="1">last_reg</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 149: <arg fmt="%s" index="1">last_reg</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 209: <arg fmt="%s" index="1">last_reg</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\network.vhd" Line 62: Net &lt;<arg fmt="%s" index="1">last_reg[8]</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB_Decoder.vhd" Line 55: Assignment to <arg fmt="%s" index="1">ctrl</arg> ignored, since the identifier is never used
@@ -35,7 +41,22 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\PS2KB_to_VGA\PS2KB\PS2KB_Decoder.vhd" Line 58: Assignment to <arg fmt="%s" index="1">alt</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\cpu.vhd" Line 109: Net &lt;<arg fmt="%s" index="1">Cause[31]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\keyboard_enclosed.vhd" Line 93: <arg fmt="%s" index="1">r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\keyboard_enclosed.vhd" Line 80: Assignment to <arg fmt="%s" index="1">last_r</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\keyboard_enclosed.vhd" Line 120: <arg fmt="%s" index="1">r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\keyboard_enclosed.vhd" Line 130: <arg fmt="%s" index="1">r</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\keyboard_enclosed.vhd" Line 96: Assignment to <arg fmt="%s" index="1">buff</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\cpu.vhd" Line 110: Net &lt;<arg fmt="%s" index="1">Cause[31]</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">KEY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -44,7 +65,7 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;31:16&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;14:12&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;14:13&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">Cause&lt;9:7&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -3131,10 +3152,13 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">reg&lt;31&gt;&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">214</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">uart1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">217</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">uart1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">233</arg>: Output port &lt;<arg fmt="%s" index="3">DYP2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mmu1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">236</arg>: Output port &lt;<arg fmt="%s" index="3">DYP2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">mmu1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Francis\Documents\GitHub\ComputerSystem2015\computer_experiment\phy_mem.vhd</arg>&quot; line <arg fmt="%s" index="2">258</arg>: Output port &lt;<arg fmt="%s" index="3">ready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">net</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="3015" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">ComBuffer</arg>&gt; may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
@@ -9113,6 +9137,9 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">int</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">last_reg&lt;8&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">cmd</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
@@ -9269,6 +9296,30 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data_enet[15]_r_DLATCH_2121_q</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">last_reg&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">data_out&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
@@ -9332,16 +9383,22 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr&lt;18:14&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">new_data</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">status</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">2</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">keyboard_enclosed</arg>&gt;.
+</msg>
+
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1328</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1326&gt; &lt;MemRead_CLK_DFF_1327&gt; &lt;MemRead_CLK_DFF_1329&gt; &lt;MemRead_CLK_DFF_1330&gt; &lt;MemRead_CLK_DFF_1331&gt; &lt;MemRead_CLK_DFF_1332&gt; &lt;MemRead_CLK_DFF_1333&gt; &lt;MemRead_CLK_DFF_1334&gt; &lt;MemRead_CLK_DFF_1337&gt; &lt;MemRead_CLK_DFF_1335&gt; &lt;MemRead_CLK_DFF_1336&gt; &lt;MemRead_CLK_DFF_1338&gt; &lt;MemRead_CLK_DFF_1339&gt; &lt;MemRead_CLK_DFF_1340&gt; &lt;MemRead_CLK_DFF_1341&gt; &lt;MemRead_CLK_DFF_1342&gt; &lt;MemRead_CLK_DFF_1343&gt; &lt;MemRead_CLK_DFF_1346&gt; &lt;MemRead_CLK_DFF_1344&gt; &lt;MemRead_CLK_DFF_1345&gt; &lt;MemRead_CLK_DFF_1347&gt; &lt;MemRead_CLK_DFF_1348&gt; &lt;MemRead_CLK_DFF_1349&gt; &lt;MemRead_CLK_DFF_1350&gt; &lt;MemRead_CLK_DFF_1351&gt; &lt;MemRead_CLK_DFF_1352&gt; &lt;MemRead_CLK_DFF_1355&gt; &lt;MemRead_CLK_DFF_1353&gt; &lt;MemRead_CLK_DFF_1354&gt; &lt;MemRead_CLK_DFF_1356&gt; &lt;MemRead_CLK_DFF_1357&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_CLK_DFF_1389</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;GND_1037_o_CLK_DFF_1390&gt; &lt;GND_1037_o_CLK_DFF_1391&gt; &lt;GND_1037_o_CLK_DFF_1392&gt; &lt;GND_1037_o_CLK_DFF_1393&gt; &lt;GND_1037_o_CLK_DFF_1394&gt; &lt;GND_1037_o_CLK_DFF_1395&gt; &lt;GND_1037_o_CLK_DFF_1396&gt; &lt;GND_1037_o_CLK_DFF_1397&gt; &lt;GND_1037_o_CLK_DFF_1398&gt; &lt;GND_1037_o_CLK_DFF_1399&gt; &lt;GND_1037_o_CLK_DFF_1402&gt; &lt;GND_1037_o_CLK_DFF_1400&gt; &lt;GND_1037_o_CLK_DFF_1401&gt; &lt;GND_1037_o_CLK_DFF_1403&gt; &lt;GND_1037_o_CLK_DFF_1404&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1358</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1359&gt; &lt;MemRead_CLK_DFF_1360&gt; &lt;MemRead_CLK_DFF_1361&gt; &lt;MemRead_CLK_DFF_1362&gt; &lt;MemRead_CLK_DFF_1363&gt; &lt;MemRead_CLK_DFF_1364&gt; &lt;MemRead_CLK_DFF_1365&gt; &lt;MemRead_CLK_DFF_1366&gt; &lt;MemRead_CLK_DFF_1367&gt; &lt;MemRead_CLK_DFF_1368&gt; &lt;MemRead_CLK_DFF_1369&gt; &lt;MemRead_CLK_DFF_1372&gt; &lt;MemRead_CLK_DFF_1370&gt; &lt;MemRead_CLK_DFF_1371&gt; &lt;MemRead_CLK_DFF_1373&gt; &lt;MemRead_CLK_DFF_1374&gt; &lt;MemRead_CLK_DFF_1375&gt; &lt;MemRead_CLK_DFF_1376&gt; &lt;MemRead_CLK_DFF_1377&gt; &lt;MemRead_CLK_DFF_1378&gt; &lt;MemRead_CLK_DFF_1381&gt; &lt;MemRead_CLK_DFF_1379&gt; &lt;MemRead_CLK_DFF_1380&gt; &lt;MemRead_CLK_DFF_1382&gt; &lt;MemRead_CLK_DFF_1383&gt; &lt;MemRead_CLK_DFF_1384&gt; &lt;MemRead_CLK_DFF_1385&gt; &lt;MemRead_CLK_DFF_1386&gt; &lt;MemRead_CLK_DFF_1387&gt; &lt;MemRead_CLK_DFF_1388&gt; &lt;MemRead_CLK_DFF_1389&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1325</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1326&gt; &lt;MemRead_CLK_DFF_1327&gt; &lt;MemRead_CLK_DFF_1328&gt; &lt;MemRead_CLK_DFF_1329&gt; &lt;MemRead_CLK_DFF_1330&gt; &lt;MemRead_CLK_DFF_1331&gt; &lt;MemRead_CLK_DFF_1334&gt; &lt;MemRead_CLK_DFF_1332&gt; &lt;MemRead_CLK_DFF_1333&gt; &lt;MemRead_CLK_DFF_1335&gt; &lt;MemRead_CLK_DFF_1336&gt; &lt;MemRead_CLK_DFF_1337&gt; &lt;MemRead_CLK_DFF_1338&gt; &lt;MemRead_CLK_DFF_1339&gt; &lt;MemRead_CLK_DFF_1340&gt; &lt;MemRead_CLK_DFF_1341&gt; &lt;MemRead_CLK_DFF_1342&gt; &lt;MemRead_CLK_DFF_1343&gt; &lt;MemRead_CLK_DFF_1344&gt; &lt;MemRead_CLK_DFF_1345&gt; &lt;MemRead_CLK_DFF_1346&gt; &lt;MemRead_CLK_DFF_1347&gt; &lt;MemRead_CLK_DFF_1348&gt; &lt;MemRead_CLK_DFF_1351&gt; &lt;MemRead_CLK_DFF_1349&gt; &lt;MemRead_CLK_DFF_1350&gt; &lt;MemRead_CLK_DFF_1352&gt; &lt;MemRead_CLK_DFF_1353&gt; &lt;MemRead_CLK_DFF_1354&gt; &lt;MemRead_CLK_DFF_1355&gt; &lt;MemRead_CLK_DFF_1356&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_CLK_DFF_1390</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;GND_1037_o_CLK_DFF_1391&gt; &lt;GND_1037_o_CLK_DFF_1392&gt; &lt;GND_1037_o_CLK_DFF_1393&gt; &lt;GND_1037_o_CLK_DFF_1394&gt; &lt;GND_1037_o_CLK_DFF_1395&gt; &lt;GND_1037_o_CLK_DFF_1396&gt; &lt;GND_1037_o_CLK_DFF_1397&gt; &lt;GND_1037_o_CLK_DFF_1398&gt; &lt;GND_1037_o_CLK_DFF_1399&gt; &lt;GND_1037_o_CLK_DFF_1400&gt; &lt;GND_1037_o_CLK_DFF_1401&gt; &lt;GND_1037_o_CLK_DFF_1402&gt; &lt;GND_1037_o_CLK_DFF_1403&gt; &lt;GND_1037_o_CLK_DFF_1404&gt; &lt;GND_1037_o_CLK_DFF_1405&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">MemRead_CLK_DFF_1357</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">phy_mem1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemRead_CLK_DFF_1358&gt; &lt;MemRead_CLK_DFF_1359&gt; &lt;MemRead_CLK_DFF_1360&gt; &lt;MemRead_CLK_DFF_1361&gt; &lt;MemRead_CLK_DFF_1362&gt; &lt;MemRead_CLK_DFF_1363&gt; &lt;MemRead_CLK_DFF_1364&gt; &lt;MemRead_CLK_DFF_1365&gt; &lt;MemRead_CLK_DFF_1368&gt; &lt;MemRead_CLK_DFF_1366&gt; &lt;MemRead_CLK_DFF_1367&gt; &lt;MemRead_CLK_DFF_1369&gt; &lt;MemRead_CLK_DFF_1370&gt; &lt;MemRead_CLK_DFF_1371&gt; &lt;MemRead_CLK_DFF_1372&gt; &lt;MemRead_CLK_DFF_1373&gt; &lt;MemRead_CLK_DFF_1374&gt; &lt;MemRead_CLK_DFF_1375&gt; &lt;MemRead_CLK_DFF_1376&gt; &lt;MemRead_CLK_DFF_1377&gt; &lt;MemRead_CLK_DFF_1378&gt; &lt;MemRead_CLK_DFF_1379&gt; &lt;MemRead_CLK_DFF_1380&gt; &lt;MemRead_CLK_DFF_1381&gt; &lt;MemRead_CLK_DFF_1382&gt; &lt;MemRead_CLK_DFF_1385&gt; &lt;MemRead_CLK_DFF_1383&gt; &lt;MemRead_CLK_DFF_1384&gt; &lt;MemRead_CLK_DFF_1386&gt; &lt;MemRead_CLK_DFF_1387&gt; &lt;MemRead_CLK_DFF_1388&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">dec</arg>&gt;.
@@ -9445,13 +9502,13 @@
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_DYP1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">phy_mem1/Mram_DYP2</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">phy_mem1/Mram_ComBuffer</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0472</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0487</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0486</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
@@ -9550,19 +9607,19 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_data_55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PS2KB_Decoder</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1357</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1356&gt; &lt;phy_mem1/MemRead_CLK_DFF_1353&gt; &lt;phy_mem1/MemRead_CLK_DFF_1355&gt; &lt;phy_mem1/MemRead_CLK_DFF_1354&gt; &lt;phy_mem1/MemRead_CLK_DFF_1352&gt; &lt;phy_mem1/MemRead_CLK_DFF_1351&gt; &lt;phy_mem1/MemRead_CLK_DFF_1348&gt; &lt;phy_mem1/MemRead_CLK_DFF_1350&gt; &lt;phy_mem1/MemRead_CLK_DFF_1349&gt; &lt;phy_mem1/MemRead_CLK_DFF_1347&gt; &lt;phy_mem1/MemRead_CLK_DFF_1346&gt; &lt;phy_mem1/MemRead_CLK_DFF_1343&gt; &lt;phy_mem1/MemRead_CLK_DFF_1345&gt; &lt;phy_mem1/MemRead_CLK_DFF_1344&gt; &lt;phy_mem1/MemRead_CLK_DFF_1340&gt; &lt;phy_mem1/MemRead_CLK_DFF_1342&gt; &lt;phy_mem1/MemRead_CLK_DFF_1341&gt; &lt;phy_mem1/MemRead_CLK_DFF_1337&gt; &lt;phy_mem1/MemRead_CLK_DFF_1339&gt; &lt;phy_mem1/MemRead_CLK_DFF_1338&gt; &lt;phy_mem1/MemRead_CLK_DFF_1336&gt; &lt;phy_mem1/MemRead_CLK_DFF_1335&gt; &lt;phy_mem1/MemRead_CLK_DFF_1332&gt; &lt;phy_mem1/MemRead_CLK_DFF_1334&gt; &lt;phy_mem1/MemRead_CLK_DFF_1333&gt; &lt;phy_mem1/MemRead_CLK_DFF_1331&gt; &lt;phy_mem1/MemRead_CLK_DFF_1330&gt; &lt;phy_mem1/MemRead_CLK_DFF_1327&gt; &lt;phy_mem1/MemRead_CLK_DFF_1329&gt; &lt;phy_mem1/MemRead_CLK_DFF_1328&gt; &lt;phy_mem1/MemRead_CLK_DFF_1326&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1356</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1353&gt; &lt;phy_mem1/MemRead_CLK_DFF_1355&gt; &lt;phy_mem1/MemRead_CLK_DFF_1354&gt; &lt;phy_mem1/MemRead_CLK_DFF_1352&gt; &lt;phy_mem1/MemRead_CLK_DFF_1351&gt; &lt;phy_mem1/MemRead_CLK_DFF_1348&gt; &lt;phy_mem1/MemRead_CLK_DFF_1350&gt; &lt;phy_mem1/MemRead_CLK_DFF_1349&gt; &lt;phy_mem1/MemRead_CLK_DFF_1347&gt; &lt;phy_mem1/MemRead_CLK_DFF_1346&gt; &lt;phy_mem1/MemRead_CLK_DFF_1343&gt; &lt;phy_mem1/MemRead_CLK_DFF_1345&gt; &lt;phy_mem1/MemRead_CLK_DFF_1344&gt; &lt;phy_mem1/MemRead_CLK_DFF_1342&gt; &lt;phy_mem1/MemRead_CLK_DFF_1341&gt; &lt;phy_mem1/MemRead_CLK_DFF_1338&gt; &lt;phy_mem1/MemRead_CLK_DFF_1340&gt; &lt;phy_mem1/MemRead_CLK_DFF_1339&gt; &lt;phy_mem1/MemRead_CLK_DFF_1337&gt; &lt;phy_mem1/MemRead_CLK_DFF_1336&gt; &lt;phy_mem1/MemRead_CLK_DFF_1333&gt; &lt;phy_mem1/MemRead_CLK_DFF_1335&gt; &lt;phy_mem1/MemRead_CLK_DFF_1334&gt; &lt;phy_mem1/MemRead_CLK_DFF_1332&gt; &lt;phy_mem1/MemRead_CLK_DFF_1331&gt; &lt;phy_mem1/MemRead_CLK_DFF_1328&gt; &lt;phy_mem1/MemRead_CLK_DFF_1330&gt; &lt;phy_mem1/MemRead_CLK_DFF_1329&gt; &lt;phy_mem1/MemRead_CLK_DFF_1325&gt; &lt;phy_mem1/MemRead_CLK_DFF_1327&gt; &lt;phy_mem1/MemRead_CLK_DFF_1326&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/GND_1037_o_CLK_DFF_1403</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/GND_1037_o_CLK_DFF_1405&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1404&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1402&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1401&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1398&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1400&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1399&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1397&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1396&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1393&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1395&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1394&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1392&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1391&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1390&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1388</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1387&gt; &lt;phy_mem1/MemRead_CLK_DFF_1386&gt; &lt;phy_mem1/MemRead_CLK_DFF_1383&gt; &lt;phy_mem1/MemRead_CLK_DFF_1385&gt; &lt;phy_mem1/MemRead_CLK_DFF_1384&gt; &lt;phy_mem1/MemRead_CLK_DFF_1382&gt; &lt;phy_mem1/MemRead_CLK_DFF_1381&gt; &lt;phy_mem1/MemRead_CLK_DFF_1378&gt; &lt;phy_mem1/MemRead_CLK_DFF_1380&gt; &lt;phy_mem1/MemRead_CLK_DFF_1379&gt; &lt;phy_mem1/MemRead_CLK_DFF_1377&gt; &lt;phy_mem1/MemRead_CLK_DFF_1376&gt; &lt;phy_mem1/MemRead_CLK_DFF_1373&gt; &lt;phy_mem1/MemRead_CLK_DFF_1375&gt; &lt;phy_mem1/MemRead_CLK_DFF_1374&gt; &lt;phy_mem1/MemRead_CLK_DFF_1372&gt; &lt;phy_mem1/MemRead_CLK_DFF_1371&gt; &lt;phy_mem1/MemRead_CLK_DFF_1368&gt; &lt;phy_mem1/MemRead_CLK_DFF_1370&gt; &lt;phy_mem1/MemRead_CLK_DFF_1369&gt; &lt;phy_mem1/MemRead_CLK_DFF_1367&gt; &lt;phy_mem1/MemRead_CLK_DFF_1366&gt; &lt;phy_mem1/MemRead_CLK_DFF_1363&gt; &lt;phy_mem1/MemRead_CLK_DFF_1365&gt; &lt;phy_mem1/MemRead_CLK_DFF_1364&gt; &lt;phy_mem1/MemRead_CLK_DFF_1362&gt; &lt;phy_mem1/MemRead_CLK_DFF_1361&gt; &lt;phy_mem1/MemRead_CLK_DFF_1358&gt; &lt;phy_mem1/MemRead_CLK_DFF_1360&gt; &lt;phy_mem1/MemRead_CLK_DFF_1359&gt; &lt;phy_mem1/MemRead_CLK_DFF_1357&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/MemRead_CLK_DFF_1388</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1389&gt; &lt;phy_mem1/MemRead_CLK_DFF_1387&gt; &lt;phy_mem1/MemRead_CLK_DFF_1386&gt; &lt;phy_mem1/MemRead_CLK_DFF_1383&gt; &lt;phy_mem1/MemRead_CLK_DFF_1385&gt; &lt;phy_mem1/MemRead_CLK_DFF_1384&gt; &lt;phy_mem1/MemRead_CLK_DFF_1382&gt; &lt;phy_mem1/MemRead_CLK_DFF_1381&gt; &lt;phy_mem1/MemRead_CLK_DFF_1378&gt; &lt;phy_mem1/MemRead_CLK_DFF_1380&gt; &lt;phy_mem1/MemRead_CLK_DFF_1379&gt; &lt;phy_mem1/MemRead_CLK_DFF_1377&gt; &lt;phy_mem1/MemRead_CLK_DFF_1376&gt; &lt;phy_mem1/MemRead_CLK_DFF_1373&gt; &lt;phy_mem1/MemRead_CLK_DFF_1375&gt; &lt;phy_mem1/MemRead_CLK_DFF_1374&gt; &lt;phy_mem1/MemRead_CLK_DFF_1372&gt; &lt;phy_mem1/MemRead_CLK_DFF_1371&gt; &lt;phy_mem1/MemRead_CLK_DFF_1368&gt; &lt;phy_mem1/MemRead_CLK_DFF_1370&gt; &lt;phy_mem1/MemRead_CLK_DFF_1369&gt; &lt;phy_mem1/MemRead_CLK_DFF_1367&gt; &lt;phy_mem1/MemRead_CLK_DFF_1366&gt; &lt;phy_mem1/MemRead_CLK_DFF_1363&gt; &lt;phy_mem1/MemRead_CLK_DFF_1365&gt; &lt;phy_mem1/MemRead_CLK_DFF_1364&gt; &lt;phy_mem1/MemRead_CLK_DFF_1362&gt; &lt;phy_mem1/MemRead_CLK_DFF_1361&gt; &lt;phy_mem1/MemRead_CLK_DFF_1358&gt; &lt;phy_mem1/MemRead_CLK_DFF_1360&gt; &lt;phy_mem1/MemRead_CLK_DFF_1359&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/GND_1037_o_CLK_DFF_1403</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">15 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/GND_1037_o_CLK_DFF_1404&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1402&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1401&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1398&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1400&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1399&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1397&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1396&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1393&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1395&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1394&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1392&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1391&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1390&gt; &lt;phy_mem1/GND_1037_o_CLK_DFF_1389&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9571,22 +9628,19 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9601,13 +9655,13 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9619,13 +9673,16 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9634,16 +9691,10 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">next_status_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -9685,6 +9736,9 @@
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -9724,9 +9778,6 @@
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">status_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">network</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">char_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">PS2KB_Decoder</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -9762,7 +9813,7 @@ Xilinx highly recommends one of the following:
 
 <msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">rcvr</arg>: <arg fmt="%d" index="2">8</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/buff_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/kbd/buff0_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">condi_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -10029,10 +10080,10 @@ Xilinx highly recommends one of the following:
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CLKx</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/net/clk25_1&gt; &lt;phy_mem1/vga_component/div/clk1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram1OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1357&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram1OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1356&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram2OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1388&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/Ram2OE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/MemRead_CLK_DFF_1388&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">phy_mem1/vga_component/ren/video_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;phy_mem1/vga_component/ren/video_1&gt; &lt;phy_mem1/vga_component/ren/video_0&gt; </arg>

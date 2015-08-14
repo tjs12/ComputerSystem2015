@@ -11,7 +11,8 @@
 #include <assert.h>
 
 #define DISK0_BLKSIZE                   PGSIZE
-#define DISK0_BUFSIZE                   (4 * DISK0_BLKSIZE)
+#define DISK0_BUFSIZE                   0x20000
+//(4 * DISK0_BLKSIZE)
 #define DISK0_DEVSIZE                   0x400000
 
 static char *disk0_buffer;
@@ -49,6 +50,9 @@ static void
 disk0_write_blks_nolock(uint32_t blkno, uint32_t nblks) {
     warn("disk0: write blkno = %d, nblks = %d.\n",
                 blkno, nblks);
+    uintptr_t _binary_bin_sfs_img_start = 0xbe300000;
+    uintptr_t start = ((uintptr_t)_binary_bin_sfs_img_start) + blkno*DISK0_BLKSIZE;
+    memcpy((char*)start, disk0_buffer, nblks*DISK0_BLKSIZE);
 }
 
 static int
@@ -74,15 +78,23 @@ disk0_io(struct device *dev, struct iobuf *iob, bool write) {
     }
 
     lock_disk0();
-    while (resid != 0) {
+    if (write) {
+        uint32_t _blkno = offset / DISK0_BUFSIZE * DISK0_BUFSIZE / DISK0_BLKSIZE;
+        uint32_t _nblks = DISK0_BUFSIZE / DISK0_BLKSIZE;
         size_t copied, alen = DISK0_BUFSIZE;
-        if (write) {
-            iobuf_move(iob, disk0_buffer, alen, 0, &copied);
-            assert(copied != 0 && copied <= resid && copied % DISK0_BLKSIZE == 0);
-            nblks = copied / DISK0_BLKSIZE;
-            disk0_write_blks_nolock(blkno, nblks);
-        }
-        else {
+        disk0_read_blks_nolock(_blkno, _nblks);
+        iobuf_move(iob, disk0_buffer + (blkno - _blkno) * DISK0_BLKSIZE, alen, 0, &copied);
+        disk0_write_blks_nolock(_blkno, _nblks);
+        /*
+            if (write) {
+                iobuf_move(iob, disk0_buffer, alen, 0, &copied);
+                assert(copied != 0 && copied <= resid && copied % DISK0_BLKSIZE == 0);
+                nblks = copied / DISK0_BLKSIZE;
+                disk0_write_blks_nolock(blkno, nblks);
+            }*/
+    } else
+        while (resid != 0) {
+            size_t copied, alen = DISK0_BUFSIZE;
             if (alen > resid) {
                 alen = resid;
             }
@@ -90,9 +102,8 @@ disk0_io(struct device *dev, struct iobuf *iob, bool write) {
             disk0_read_blks_nolock(blkno, nblks);
             iobuf_move(iob, disk0_buffer, alen, 1, &copied);
             assert(copied == alen && copied % DISK0_BLKSIZE == 0);
+            resid -= copied, blkno += nblks;
         }
-        resid -= copied, blkno += nblks;
-    }
     unlock_disk0();
     return 0;
 }

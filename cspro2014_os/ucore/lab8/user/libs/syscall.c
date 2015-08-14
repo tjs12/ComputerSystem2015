@@ -4,6 +4,7 @@
 #include <syscall.h>
 #include <stat.h>
 #include <dirent.h>
+#include <stdio.h>
 
 
 #define MAX_ARGS            5
@@ -134,4 +135,30 @@ sys_getdirentry(int fd, struct dirent *dirent) {
 int
 sys_dup(int fd1, int fd2) {
     return syscall(SYS_dup, fd1, fd2);
+}
+
+void sys_udp_send_packet(int *data, int len)
+{
+	cprintf("sys_udp_send_packet");
+	syscall(SYS_UDP_SEND, data, len);
+}
+
+int sys_get_udp_status()
+{
+	return syscall(SYS_UDP_GETSTATUS);
+}
+
+int *sys_get_udp_data()
+{	
+	return syscall(SYS_UDP_DATA);
+}
+
+int sys_get_udp_data_len() 
+{
+	return syscall(SYS_UDP_DATA_LEN);
+}
+
+void sys_set_udp_status(unsigned int val)
+{	
+	syscall(SYS_UDP_SETSTATUS, val);
 }

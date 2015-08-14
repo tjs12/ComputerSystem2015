@@ -48,6 +48,7 @@ entity network is
 			  w : in STD_LOGIC;
 			  data_in : in STD_LOGIC_VECTOR(15 downto 0);
 			  data_out : out STD_LOGIC_VECTOR(15 downto 0);
+			  ready : out STD_LOGIC;
 			  status_out : out STD_LOGIC_VECTOR(2 downto 0)
 			  );
 end network;
@@ -107,6 +108,7 @@ begin
 	
 	process(status, r, w, addr, data_in, data_enet)
 	begin
+		ready <= '0';
 		if w = '1' then
 			if addr(2 downto 0) = "000" then --register
 				case status is
@@ -126,6 +128,7 @@ begin
 					iow <= '1';
 					ior <= '1';
 					next_status <= 3;
+					ready <= '1';
 				when others =>
 					next_status <= 0;
 				end case;
@@ -143,11 +146,18 @@ begin
 					--iow <= '1';
 					next_status <= 2;
 				when 2 =>
+					if last_reg(7 downto 4) = x"F" then
+						next_status <= 4;
+					else
+						next_status <= 0;
+					end if;
+				when 4 =>
 					next_status <= 0;
 				when 0 =>
 					iow <= '1';
 					--ior <= '1';
 					next_status <= 0;
+					ready <= '1';
 				when others =>
 					next_status <= 3;
 				end case;
@@ -171,6 +181,7 @@ begin
 					next_status <= 3;
 				when 3 => 
 					next_status	<= 3;
+					ready <= '1';
 				when others =>
 					next_status <= 0;
 				end case;
@@ -184,21 +195,32 @@ begin
 					next_status <= 1;
 					data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
 				when 1 =>
-					--data_out(15 downto 0) <= data_enet(15 downto 0);
-					data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
+					data_out(15 downto 0) <= data_enet(15 downto 0);
+					--data_enet(15 downto 0) <= "ZZZZZZZZZZZZZZZZ";
 					next_status <= 5;
 				when 5 =>
-					data_out(15 downto 0) <= data_enet(15 downto 0);
+					--data_out(15 downto 0) <= data_enet(15 downto 0);
 					next_status <= 2;
 				when 2 =>
 					ior <= '1';
 					next_status <= 4;
 				when 4 =>
 					ior <= '1';
-					next_status <= 0;--0
+					if last_reg = x"F0" then
+						next_status <= 6;
+					else
+						next_status <= 0;--0
+					end if;
+				when 6 =>
+					next_status <= 7;
+				when 7 => 
+					next_status <= 8;
+				when 8 =>
+					next_status <= 0;
 				when 0 =>
 					ior <= '1';
 					next_status <= 0;
+					ready <= '1';
 				when others =>
 					next_status <= 3;
 				end case;

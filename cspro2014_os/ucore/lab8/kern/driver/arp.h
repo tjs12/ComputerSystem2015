@@ -6,6 +6,8 @@
 
 extern int IP_ADDR[4];
 
+extern int remote_mac[6];
+
 #define ETHERNET_TYPE_ARP 0x0806
 
 #define ARP_TYPE 7

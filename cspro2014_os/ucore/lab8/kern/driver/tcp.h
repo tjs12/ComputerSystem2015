@@ -5,6 +5,7 @@
 #define TCP_SYNC_RECVED 2
 #define TCP_ESTABLISHED 3
 #define TCP_FIN_SENT 4
+#define TCP_SYNC_SEND 5
 
 extern int tcp_src_port, tcp_dst_port;
 extern int tcp_src_addr[4], tcp_dst_addr[4];
@@ -37,5 +38,6 @@ extern int tcp_ack, tcp_seq;
 
 void tcp_handle(int length);
 void tcp_send_packet(int flags, int * data, int length);
+void tcp_request();
 
 #endif

@@ -51,9 +51,12 @@ component PS2KB is
 end component;
 
 signal buff : STD_LOGIC_VECTOR(7 downto 0);
+signal buff0 : STD_LOGIC_VECTOR(7 downto 0);
 signal clk_chr : STD_LOGIC;
 signal char : STD_LOGIC_VECTOR (7 downto 0);
-signal fetched : STD_LOGIC;
+signal status : integer := 0;
+signal nextstatus : integer;
+signal last_r : std_logic;
 
 begin
 	kb : PS2KB port map (
@@ -65,42 +68,79 @@ begin
 		char => char
 	);
 	
+	--data <= buff0 when (status /= 0) else buff;
+	data <= buff0 when (status /= 0) else x"00";
+	process(clk_chr, char)
+	begin
+		if clk_chr'event and clk_chr = '1' then
+			buff0 <= char;
+		end if;
+	end process;
 	
-	process(clk_chr, r, rst)
+	process(clk50, rst)
+	variable nd : STD_LOGIC;
+	begin
+
+		
+		if clk50'event and clk50 = '1' then
+			status <= nextstatus;
+		end if;
+		
+		if rst = '0' then
+			status <= 0;
+		end if;
+		
+		last_r <= r;
+	end process;
+	
+	process(rst, status, buff0, clk_chr)
 	begin
 		if rst = '0' then
 			buff <= x"00";
-			fetched <= '1';
-		elsif r = '1' then
-			fetched <= '1';
-		elsif clk_chr'event and clk_chr = '1' then
-			buff <= char;
-			fetched <= '0';
+			--fetched <= '1';
+			--status <= 0;
+			new_data <= '0';
 		end if;
+		
+		case status is
+		when 0 =>
+			new_data <= '0';
+			buff <= x"00";
+			if clk_chr = '1' then
+				nextstatus <= 1;
+				buff <= buff0; --NB
+			else
+				nextstatus <= 0;
+			end if;
+		when 1 =>
+			new_data <= '1';
+			buff <= buff0;
+			nextstatus <= 2;
+		when 2 =>
+			if r = '1' then
+				nextstatus <= 3;
+				new_data <= '0';
+				buff <= buff0;
+			else 
+				buff <= buff0;
+				nextstatus <= 2;
+				new_data <= '1';
+			end if;
+		when 3 =>
+			if r = '0' then
+				nextstatus <= 0;
+			else 
+				nextstatus <= 3;
+			end if;
+		when others =>
+			nextstatus <= 0;
+		end case;
+			
+
 
 	end process;
 	
+
 	
-	
-   process(r, buff, rst) 
-	begin 
-		
-		if rst = '0' then
-			data <= x"00";
-		else
-			data <= buff;
-		end if;
-		
---		if fetched = '0' then
---			data <= buff;
---		elsif fetched = '1' and r = '0' then
---			data <= x"00";
---		end if;
-		--if r = '1' then
-			--data <= buff;
-		--end if;
-	end process;
-	
-	new_data <= (not fetched);
 end Behavioral;
 

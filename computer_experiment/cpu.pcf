@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Aug 03 11:58:43 2015
+// Written by: Map P.20131013 on Wed Aug 05 08:34:31 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -165,8 +165,8 @@ COMP "FlashAddr<8>" LOCATE = SITE "D6" LEVEL 1;
 COMP "FlashAddr<9>" LOCATE = SITE "A6" LEVEL 1;
 COMP "clk_kb" LOCATE = SITE "R24" LEVEL 1;
 COMP "enet_cmd" LOCATE = SITE "B12" LEVEL 1;
-COMP "enet_int" LOCATE = SITE "D13" LEVEL 1;
 COMP "enet_ior" LOCATE = SITE "C13" LEVEL 1;
+COMP "enet_int" LOCATE = SITE "D13" LEVEL 1;
 COMP "enet_iow" LOCATE = SITE "A13" LEVEL 1;
 COMP "enet_reset" LOCATE = SITE "A14" LEVEL 1;
 COMP "FlashData<0>" LOCATE = SITE "G4" LEVEL 1;

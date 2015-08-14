@@ -17,6 +17,7 @@
 #include <fs.h>
 #include <vfs.h>
 #include <sysfile.h>
+#include <arp.h>
 
 /* ------------- process/thread mechanism design&implementation -------------
 (an simplified Linux process/thread mechanism )
@@ -892,7 +893,9 @@ const char *argv[] = {path, ##__VA_ARGS__, NULL};       \
 // user_main - kernel thread used to exec a user program
 static int
 user_main(void *arg) {
-#ifdef TEST
+    arp_request();
+	tcp_request();
+	#ifdef TEST
 #ifdef TESTSCRIPT
     KERNEL_EXECVE3(TEST, TESTSCRIPT);
 #else

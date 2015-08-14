@@ -93,6 +93,7 @@ architecture Behavioral of cpu is
 	signal timer_int : STD_LOGIC := '0';
 	signal com_int : STD_LOGIC := '0';
    signal kbd_int : STD_LOGIC := '0';
+	signal net_int : STD_LOGIC;
 	signal exc_code : STD_LOGIC_VECTOR (4 downto 0);
 	signal CLK : STD_LOGIC;
 	signal CLKx : STD_LOGIC;
@@ -223,6 +224,7 @@ architecture Behavioral of cpu is
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 kbd_int : out STD_LOGIC;
+			 net_int : out STD_LOGIC;
 			 u_txd : in std_logic;
 			 u_rxd : out std_logic
 	);
@@ -344,6 +346,7 @@ begin
 		CLK11 => CLK11,
 		com_int => com_int,
 		kbd_int => kbd_int,
+		net_int => net_int,
 		u_txd => u_txd,
 		u_rxd => u_rxd
 	);
@@ -375,11 +378,12 @@ process(CLK, RST)
 		elsif CLK'event and CLK = '1' then
 			--STEP 0
 			if condi = 0 then
-				if Status(0) = '1' and Status(1) = '0' and ((Status(15) = '1' and timer_int = '1') or (Status(10) = '1' and com_int = '1') or (Status(11) = '1' and kbd_int = '1'))then
+				if Status(0) = '1' and Status(1) = '0' and ((Status(15) = '1' and timer_int = '1') or (Status(10) = '1' and com_int = '1') or (Status(11) = '1' and kbd_int = '1') or (Status(12) = '1' and net_int = '1'))then
 					exc_code <= "00000";
 					Cause(15) <= Status(15) and timer_int;
 					Cause(10) <= Status(10) and com_int;
 					Cause(11) <= Status(11) and kbd_int;
+					Cause(12) <= Status(12) and net_int;
 					PC <= PC + 4;
 					condi <= "00111";
 				else

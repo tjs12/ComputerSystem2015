@@ -91,6 +91,7 @@ entity phy_mem is
 			 CLK11 : in STD_LOGIC;
 			 com_int : out STD_LOGIC;
 			 kbd_int : out STD_LOGIC;
+			 net_int : out STD_LOGIC;
 			 u_txd : in std_logic;
 			 u_rxd : out std_logic
 	);
@@ -165,12 +166,14 @@ architecture Behavioral of phy_mem is
 			  w : in STD_LOGIC;
 			  data_in : in STD_LOGIC_VECTOR(15 downto 0);
 			  data_out : out STD_LOGIC_VECTOR(15 downto 0);
+			  ready : out STD_LOGIC;
 			  status_out : out STD_LOGIC_VECTOR(2 downto 0));
 	end component;
 	
 	signal netr, netw : STD_LOGIC;
 	signal nd_in, nd_out : STD_LOGIC_VECTOR(15 downto 0);
 	signal n_st : STD_LOGIC_VECTOR(2 downto 0);
+	signal n_ready : STD_LOGIC;
 	
 	component VGA is
    Port ( rst				: in  STD_LOGIC;
@@ -269,6 +272,7 @@ begin
 			  w => netw,
 			  data_in => nd_in,
 			  data_out => nd_out,
+			  ready => n_ready,
 			  status_out => n_st
 	);
 	
@@ -329,6 +333,7 @@ process(RST, CLK, MemRead, MemWrite)
 			mem_error <= "00";
 			netr <= '0';
 			netw <= '0';
+			keyboard_r <= '0';
 		elsif CLK'event and CLK = '1' then
 			if condi = "111111" then
 				if (Vaddr(31) = '1' and Status(4) = '1' and Status(1) = '0') 
@@ -782,6 +787,13 @@ process(RST, CLK, MemRead, MemWrite)
 					else
 						ready <= '0';
 					end if;
+--					if n_ready <= '1' then
+--						data_read(15 downto 0) <= nd_out;
+--						data_read(31 downto 16) <= x"0000";
+--						ready <= '1';
+--					else
+--						ready <= '0';
+--					end if;
 				elsif MemWrite = '1' then
 					netr <= '0';
 					netw <= '1';
@@ -791,6 +803,7 @@ process(RST, CLK, MemRead, MemWrite)
 					else
 						ready <= '0';
 					end if;
+					--ready <= n_ready;
 				end if;
 			elsif addr = x"1FC03000" then --VGA
 				if MemRead = '1' then
@@ -808,14 +821,22 @@ process(RST, CLK, MemRead, MemWrite)
 				end if;
 			elsif addr = x"0F000000" then --keyboard
 				if MemRead = '1' then
-					data_read(7 downto 0) <= keyboard_data;
-					if keyboard_r = '0' then
+					
+					if condi = 0 then
 						keyboard_r <= '1';
 						ready <= '0';
-					elsif keyboard_r = '1' then
+						condi <= condi + 1;
+					--elsif keyboard_r = '1' then
+					elsif condi = 1 or condi = 2 or condi = 3 or condi = 4 or condi = 5 then
+						data_read(7 downto 0) <= keyboard_data;
+						data_read(31 downto 8) <= x"000000";
+						condi <= condi + 1;
+					elsif condi = 6 then
 						keyboard_r <= '0';
 						ready <= '1';
+						condi <= condi + 1;
 					end if;
+					
 				else
 					keyboard_r <= '0';
 					ready <= '1';
@@ -843,6 +864,7 @@ rcvrrst <= '0' when cond = 3 or RST = '0' else '1';
 txmtrst <= RST;
 
 --kbd_int <= '1' when keyboard_data /= "00000000"  else '0';
+net_int <= enet_int;
 
 process(CLK, RST)
 	begin
@@ -878,35 +900,35 @@ end process;
 
 
 
---process(condi)
---	begin
---	
---	case keyboard_data(3 downto 0) is --以下是0~F的编码规则
---           when"0000"=> DYP2<="1111110";--0
---           when"0001"=> DYP2<="0110000";--1
---           when"0010"=> DYP2<="1101101";--2
---           when"0011"=> DYP2<="1111001";--3
---           when"0100"=> DYP2<="0110011";--4
---           when"0101"=> DYP2<="1011011";--5
---           when"0110"=> DYP2<="1011111";--6
---           when"0111"=> DYP2<="1110000";--7
---           when"1000"=> DYP2<="1111111";--8
---           when"1001"=> DYP2<="1110011";--9
---           when"1010"=> DYP2<="1110111";--A
---           when"1011"=> DYP2<="0011111";--B
---           when"1100"=> DYP2<="1001110";--C
---           when"1101"=> DYP2<="0111101";--D
---           when"1110"=> DYP2<="1001111";--E
---           when"1111"=> DYP2<="1000111";--F
---           when others=>DYP2<="0000000";--其他情况 全灭
---        end case;
---	
---end process;
+process(enet_data)
+	begin
+	
+	case enet_data(15 downto 12) is --以下是0~F的编码规则
+           when"0000"=> DYP2<="1111110";--0
+           when"0001"=> DYP2<="0110000";--1
+           when"0010"=> DYP2<="1101101";--2
+           when"0011"=> DYP2<="1111001";--3
+           when"0100"=> DYP2<="0110011";--4
+           when"0101"=> DYP2<="1011011";--5
+           when"0110"=> DYP2<="1011111";--6
+           when"0111"=> DYP2<="1110000";--7
+           when"1000"=> DYP2<="1111111";--8
+           when"1001"=> DYP2<="1110011";--9
+           when"1010"=> DYP2<="1110111";--A
+           when"1011"=> DYP2<="0011111";--B
+           when"1100"=> DYP2<="1001110";--C
+           when"1101"=> DYP2<="0111101";--D
+           when"1110"=> DYP2<="1001111";--E
+           when"1111"=> DYP2<="1000111";--F
+           when others=>DYP2<="0000000";--其他情况 全灭
+        end case;
+	
+end process;
 
-DYP2(0) <= kbd_int1;
-DYP2(1) <= MemRead;
-DYP2(2) <= keyboard_r;
-DYP2(6 downto 3) <= keyboard_data(3 downto 0);
+--DYP2(0) <= kbd_int1;
+--DYP2(1) <= MemRead;
+--DYP2(2) <= keyboard_r;
+--DYP2(6 downto 3) <= keyboard_data(3 downto 0);
 
 end Behavioral;
 

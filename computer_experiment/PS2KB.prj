@@ -1,0 +1,4 @@
+vhdl work "../PS2KB_to_VGA/PS2KB/PS2KB_Listener.vhd"
+vhdl work "../PS2KB_to_VGA/PS2KB/PS2KB_Divider.vhd"
+vhdl work "../PS2KB_to_VGA/PS2KB/PS2KB_Decoder.vhd"
+vhdl work "../PS2KB_to_VGA/PS2KB/PS2KB.vhd"

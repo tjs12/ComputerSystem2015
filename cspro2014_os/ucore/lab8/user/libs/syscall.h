@@ -28,6 +28,11 @@ int sys_getdirentry(int fd, struct dirent *dirent);
 int sys_dup(int fd1, int fd2);
 void sys_lab6_set_priority(uint32_t priority); //only for lab6
 
+void sys_udp_send_packet(int *data, int len);
+int sys_get_udp_status();
+int *sys_get_udp_data();
+int sys_get_udp_data_len();
+void sys_set_udp_status(unsigned int val);
 
 #endif /* !__USER_LIBS_SYSCALL_H__ */
 

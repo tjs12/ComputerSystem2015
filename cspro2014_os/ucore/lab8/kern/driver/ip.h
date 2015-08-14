@@ -20,4 +20,6 @@
 void ip_handle();
 void ip_make_reply(int proto, int length);
 
+#define IP_PROTOCAL_UDP 0x11
+
 #endif

@@ -10,6 +10,7 @@
 #include <stat.h>
 #include <dirent.h>
 #include <sysfile.h>
+#include <udp.h>
 
 static int
 sys_exit(uint32_t arg[]) {
@@ -157,6 +158,33 @@ sys_dup(uint32_t arg[]) {
     return sysfile_dup(fd1, fd2);
 }
 
+
+void sys_udp_send_packet(int *data, int len)
+{
+	cprintf("send packet syscall succeed");
+	udp_send_packet(data, len);
+}
+
+int sys_get_udp_status()
+{
+	return get_udp_status();
+}
+
+int *sys_get_udp_data()
+{
+	return get_udp_data();
+}
+
+int sys_get_udp_data_len()
+{
+	return get_udp_data_len();
+}
+
+void sys_set_udp_status(unsigned int val)
+{
+	set_udp_status(val);
+}
+
 static int (*syscalls[])(uint32_t arg[]) = {
     [SYS_exit]              sys_exit,
     [SYS_fork]              sys_fork,
@@ -180,7 +208,13 @@ static int (*syscalls[])(uint32_t arg[]) = {
     [SYS_getcwd]            sys_getcwd,
     [SYS_getdirentry]       sys_getdirentry,
     [SYS_dup]               sys_dup,
+	[SYS_UDP_SEND]			sys_udp_send_packet,
+	[SYS_UDP_GETSTATUS]     sys_get_udp_status,
+	[SYS_UDP_SETSTATUS]		sys_set_udp_status,
+	[SYS_UDP_DATA]			sys_get_udp_data,
+	[SYS_UDP_DATA_LEN]		sys_get_udp_data_len
 };
+
 
 #define NUM_SYSCALLS        ((sizeof(syscalls)) / (sizeof(syscalls[0])))
 
